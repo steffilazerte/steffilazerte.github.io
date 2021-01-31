@@ -1,0 +1,65 @@
+.container-fluid.main-container {
+  background-color: #ffffff !important;
+  padding-bottom: 20px;
+}
+
+
+@media (max-wdith: 576px) {
+  
+}
+body {
+  font-size: 16px;
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url(images/steffi_muskoka_wide_paint.jpg);
+  background-repeat: no-repeat;
+}
+
+a {
+  color: #587d21;
+  font-weight: bold;
+}
+
+.section h3, .section h4 {
+  margin-top: -44px !important;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  background-image: url(images/logo_gear.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 35px;
+  margin-left: 5px;
+}
+
+.navbar .nav a {
+  font-size: 14px !important;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  color: #587d21;
+}
+
+
+
+.bibbase_group {
+ background-color: #3e3f3a;
+ color: #ffffff;
+ margin-top: 15px;
+}
+
+.bibbase_paper {
+  padding-left: 22px ;
+  text-indent: -22px ;
+  margin-top: 5px;
+}
+
+.bibbase_paper a {
+  color: #000000;
+}
+
+
+

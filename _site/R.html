@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>R Projects</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+<link rel="shortcut icon" href="images/favicon.png" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="mystyles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 61px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h2 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h3 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h4 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h5 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h6 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Dr. Steffi LaZerte</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown-header"></li>
+<li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="R.html">R Projects</a>
+</li>
+<li>
+  <a href="cv.html">Academic Activities and CV</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">R Projects</h1>
+
+</div>
+
+
+<div style="text-align: center; max-width: 75%; margin: auto;">
+<p><a href="#r-packages">R Packages</a> | <a href="#r-work">R Work</a> | <a href="#teaching-r">Teaching R</a></p>
+</div>
+<hr />
+<div id="r-packages" class="section level2">
+<h2>R Packages</h2>
+<p><strong>Authored</strong></p>
+<ul>
+<li><a href="http://github.com/ropensci/weathercan">weathercan</a> - Easily access and download Environment and Climate Change Canada historical weather data</li>
+<li><a href="http://github.com/steffilazerte/cavityuse">cavityuse</a> - Detect cavity use from geolocator data</li>
+<li><a href="http://github.com/animalnexus/feedr">feedr</a> - Transform RFID read data into various biologically relevant datasets. Also includes Shiny-app (web-based platform, <a href="http://animalnexus.ca">animalnexus.ca</a>)<br />
+</li>
+<li><a href="http://github.com/steffilazerte/LITAP">LITAP</a> - Map water flow through watersheds</li>
+</ul>
+<p><strong>Contributed</strong></p>
+<ul>
+<li><a href="https://github.com/MotusWTS/motus">motus</a> - Access data from Motus Wildlife Tracking System</li>
+<li><a href="https://github.com/BirdStudiesCanada/naturecounts">naturecounts</a> - Access data from the NatureCounts platform by Bird Studies Canada</li>
+<li><a href="https://github.com/bcgov/bcgroundwater">bcgroundwater</a> - Download data on groundwater levels at specific observation wells</li>
+<li><a href="https://github.com/bcgov/envreportutils">envreportutils</a> - ggplot2 themes &amp; other functions related to Environmental Reporting BC work flows</li>
+<li><a href="https://github.com/bcgov/rcaaqs">rcaaqs</a> - Calculate Canadian Ambient Air Quality Standards (CAAQS)</li>
+</ul>
+<hr />
+</div>
+<div id="r-work" class="section level2">
+<h2>R Work</h2>
+<p><a href="#top">(Back to top)</a></p>
+<div id="present-programming-support-for-motus-and-naturecounts-packages" class="section level4">
+<h4>2019-Present Programming support for <code>motus</code> and <code>naturecounts</code> packages</h4>
+<p><strong>Organization:</strong> Bird Studies Canada<br />
+<strong>Description:</strong> Programming support to further develop R package <code>motus</code> for accessing data from the Motus Wildlife Tracking System, and to developing the R package <code>naturecounts</code> for accessing data from the NatureCounts platform by Bird Studies Canada.<br />
+<strong>Details:</strong> <a href="https://github.com/MotusWTS/motus"><code>motus</code> Code Repository</a>; <a href="https://github.com/BirdStudiesCanada/naturecounts"><code>naturecounts</code> Code Repository</a></p>
+</div>
+<div id="present-migration-analysis-of-ebird-data" class="section level4">
+<h4>2019-Present Migration analysis of eBird data</h4>
+<p><strong>Client:</strong> Dr. Matt Reudink, Thompson Rivers University, BC<br />
+<strong>Description:</strong> Creating R scripts to programmatically extract, clean and summarize eBird observations into migration routes, statistical analyses and figures.</p>
+</div>
+<div id="present-r-support-for-data-analysis" class="section level4">
+<h4>2017-Present R support for Data Analysis</h4>
+<p><strong>Client:</strong> Dr. Martin Lechowicz, McGill University, QC<br />
+<strong>Description:</strong> Organizing, summarizing and analyzing various datasets, providing R Markdown reports<br />
+<strong>Details:</strong> <a href="http://doi.org/10.1111/nph.16109">New Phytologist Publication</a></p>
+</div>
+<div id="signal-to-noise-ratios-data-extraction" class="section level4">
+<h4>2020 Signal-to-noise ratios data extraction</h4>
+<p><strong>Client:</strong> Dr. Ken Otter, University of Northern British Columbia, BC<br />
+<strong>Description:</strong> Creating R scripts to programmatically extract root-mean-square sound profiles from chickadee songs and calculate signal-to-noise ratios (SNR).</p>
+</div>
+<div id="r-support-for-aquifer-factsheets" class="section level4">
+<h4>2017-2020 R support for Aquifer Factsheets</h4>
+<p><strong>Organization:</strong> British Columbia Ministry of Environment and Climate Change Strategy<br />
+<strong>Description:</strong> Support for R workflow creating Aquifer Factsheets using R Markdown<br />
+<strong>Details:</strong> <a href="https://github.com/bcgov/aquifer-factsheets">Code Repository</a>; <a href="https://s3.ca-central-1.amazonaws.com/aquifer-docs/00400/AQ_00451_Aquifer_Factsheet.pdf">Example factsheet</a></p>
+</div>
+<div id="ozone-and-pm2.5-indicator-maps" class="section level4">
+<h4>2018 Ozone and PM2.5 Indicator Maps</h4>
+<p><strong>Client:</strong> British Columbia Ministry of Environment and Climate Change Strategy<br />
+<strong>Description:</strong> R scripts to create indicator maps of British Columbia’s Canadian Ambient Air Quality Standards (CAAQS) for Ozone and fine particulate matter (PM2.5)<br />
+<strong>Code:</strong> <a href="https://github.com/bcgov/ozone-caaqs-indicator">Ozone Code Repository</a>; <a href="https://github.com/bcgov/pm25-caaqs-indicator">PM2.5 Code Repository</a><br />
+<strong>Maps:</strong> <a href="http://www.env.gov.bc.ca/soe/indicators/air/ozone.html">Ozone Map</a>; <a href="http://www.env.gov.bc.ca/soe/indicators/air/fine-pm.html">PM2.5 Map</a></p>
+</div>
+<div id="groundwater-level-indicator-maps" class="section level4">
+<h4>2018 Groundwater Level Indicator Maps</h4>
+<p><strong>Client:</strong> British Columbia Ministry of Environment and Climate Change Strategy<br />
+<strong>Description:</strong> R scripts to create indicator maps of British Columbia’s long-term trends in groundwater levels<br />
+<strong>Code:</strong> <a href="https://github.com/bcgov/groundwater-levels-indicator">Code Repository</a><br />
+<strong>Map:</strong> <a href="http://www.env.gov.bc.ca/soe/indicators/water/groundwater-levels.html">Groundwater Levels Map</a></p>
+</div>
+<div id="litap-package-to-plot-flow-of-water-through-a-landscape" class="section level4">
+<h4>2017-2020 <code>LITAP</code> package to plot flow of water through a landscape</h4>
+<p><strong>Client:</strong> Dr. Li, Sheng, Agriculture and Agri-food Canada<br />
+<strong>Description:</strong> Package designed to imitate the previously developed program, LandMapR, in mapping the flow of water through a watershed. Includes mapping waterflow into, and overflow from, pit depressions into neighbouring catchment areas.<br />
+<strong>Code:</strong> <a href="http://github.com/steffilazerte/LITAP">Code Repository</a></p>
+</div>
+<div id="programming-support-for-rcaaqs-and-bcgroundwater-packages" class="section level4">
+<h4>2017-2018 Programming support for <code>rcaaqs</code> and <code>bcgroundwater</code> packages</h4>
+<p><strong>Client:</strong> British Columbia Ministry of Environment and Climate Change Strategy<br />
+<strong>Description:</strong> Programming support to fix and further develop R packages for calculating of Canadian Ambient Air Quality Standards (CAAQS), and for downloading data on groundwater levels at specific observation wells.<br />
+<strong>Code:</strong> <a href="https://github.com/bcgov/rcaaqs"><code>rcaaqs</code> Code Repository</a>; <a href="https://github.com/bcgov/bcgroundwater"><code>bcgroundwater</code> Code Repository</a></p>
+</div>
+<div id="feedr-package-to-transform-and-visualize-rfid-data" class="section level4">
+<h4>2015-2017 <code>feedr</code> package to transform and visualize RFID data</h4>
+<p><strong>Post-Doc Supervisors:</strong> Drs. Ken Otter (2015-2016) and David Hill (2016-2017), University of Northern British Columbia and Thompson Rivers University, BC<br />
+<strong>Description:</strong> Package designed to deal with data collected from RFID feeders including the design of an online Shiny Web App as a graphical user interface.<br />
+<strong>Code:</strong> <a href="http://github.com/animalnexus/feedr"><code>feedr</code> Code Repository</a><br />
+<strong>Shiny App:</strong> <a href="http://animalnexus.ca">Online Shiny App at animalnexus.ca</a></p>
+</div>
+<div id="white-throated-sparrow-song-variation" class="section level4">
+<h4>2016-2017 White-throated sparrow song variation</h4>
+<p><strong>Post-Doc Supervisor:</strong> Dr. Ken Otter, University of Northern British Columbia, BC<br />
+<strong>Description:</strong> R lessons on data cleaning, management and exploration. Designed and maintained a website for the White-throated Sparrow Citizen Science Project including an R Shiny map of current data.<br />
+<strong>Website:</strong> <a href="http://whitethroatsong.ca" class="uri">http://whitethroatsong.ca</a><br />
+<strong>Shiny Map:</strong> <a href="http://doi.org/10.1016/j.cub.2020.05.084">Current Biology Publication</a>; <a href="http://whitethroatsong.ca/about-project/#map">Data Map</a></p>
+</div>
+<div id="bull-trout-telemetry" class="section level4">
+<h4>2017 Bull trout telemetry</h4>
+<p><strong>Client:</strong> British Columbia Ministry of Forests, Lands and Natural Resource Operations<br />
+<strong>Description:</strong> Exploring migration of bull trout through tagging and detections at telemetry stations. Five years of telemetry data was filtered of background noise and organized into bouts of detection and assessing direction of movements. End product included annotated R scripts designed to return informative HTML reports, a series of clean datasets, and a series of figures for analysis. Tutorials were delivered to discuss, develop and explain R scripts.</p>
+<hr />
+</div>
+</div>
+<div id="teaching-r" class="section level2">
+<h2>Teaching R</h2>
+<p><a href="#top">(Back to top)</a></p>
+<div id="nri-7350-r-lab-instructor" class="section level4">
+<h4>2018 &amp; 2020 NRI 7350 R Lab Instructor</h4>
+<p><strong>Organization:</strong> University of Manitoba, MB<br />
+<strong>Description:</strong> R statistics instructor for graduate course, Study Design and Quantitative Methods for Resource and Environmental Management</p>
+</div>
+<div id="r-tutoring" class="section level4">
+<h4>2020 R tutoring</h4>
+<p><strong>Client:</strong> Dr Catherine Ortner, Thompson Rivers University, BC<br />
+<strong>Description:</strong> One-on-one R tutoring for mixed models and power analysis</p>
+</div>
+<div id="r-support" class="section level4">
+<h4>2017-2020 R support</h4>
+<p><strong>Organization:</strong> British Columbia Ministry of Environment and Climate Change Strategy<br />
+<strong>Description:</strong> Workshops and one-on-one R programming support and tutoring</p>
+</div>
+<div id="university-of-manitoba-r-workshop" class="section level4">
+<h4>2020 University of Manitoba R workshop</h4>
+<p><strong>Organization:</strong> University of Manitoba, MB<br />
+<strong>Description:</strong> Two-day hands-on workshop teaching graduate and undergraduate students how to use R with a focus on creating figures and data visualizations, loading, cleaning and summarizing data, and troubleshooting in R.</p>
+</div>
+<div id="brandon-university-r-workshops" class="section level4">
+<h4>2019-2020 Brandon University R workshops</h4>
+<p><strong>Organization:</strong> Brandon University, MB<br />
+<strong>Description:</strong> Two-day hands-on workshops teaching graduate and undergraduate students how to use R with a focus on creating figures and data visualizations, loading, cleaning and summarizing data, and conducting statistical analyses.</p>
+</div>
+<div id="soil-7240-module-1-preparing-data-in-r" class="section level4">
+<h4>2017 SOIL 7240 Module 1: Preparing Data in R</h4>
+<p><strong>Organization:</strong> University of Manitoba, MB<br />
+<strong>Description:</strong> Remote instructor for 4-week module concerning data management, preparation, and exploration in R (SOIL 7240, University of Manitoba graduate course).</p>
+</div>
+<div id="one-on-one-r-instruction" class="section level4">
+<h4>2016-2017 One-on-one R instruction</h4>
+<p><strong>Organization:</strong> Dr. Ken Otter, University of Northern British Columbia, BC<br />
+<strong>Description:</strong> One-on-one tutoring teaching R basics, data management with <code>tidyverse</code>, figures, PCA analysis and mapping</p>
+</div>
+<div id="volunteer-teaching" class="section level4">
+<h4>Volunteer Teaching</h4>
+<ul>
+<li><strong>R group at UNB</strong> Casual meetings at University of New Brunswick to help graduate students get advice and assistance working with R statistical software</li>
+<li><strong>R Coffee Hour at UNBC</strong> Casual meetings at University of Northern British Columbia to help graduate students get advice and assistance working with R statistical software</li>
+<li><strong>Guest lectures</strong> about using R across a variety of fields</li>
+<li><strong>One-on-one tutoring</strong></li>
+</ul>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

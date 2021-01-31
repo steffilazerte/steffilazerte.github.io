@@ -1,0 +1,20 @@
+name: "Dr. Steffi LaZerte"
+navbar:
+  title: "Dr. Steffi LaZerte"
+  left:
+    - text: ""
+    - text: "Home"
+      href: index.html
+    - text: "R Projects"
+      href: R.html
+    - text: "Academic Activities and CV"
+      href: cv.html
+    - text: "About"
+      href: about.html
+output:
+  html_document:
+    includes:
+      in_header: header.html
+    theme: sandstone
+    css: mystyles.css
+exclude: ["UPLOAD_INFO.txt"]
