@@ -18,3 +18,4 @@ output:
     theme: sandstone
     css: mystyles.css
 exclude: ["UPLOAD_INFO.txt"]
+output_dir: "docs"
