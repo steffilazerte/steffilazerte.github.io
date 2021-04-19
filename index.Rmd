@@ -8,7 +8,7 @@ Independent biological consultant and R programmer
 
 I provide services in **R programming**, **R instruction**, **data management/cleaning**, and **data analysis**. If you are interested in any of these services, please feel free to [contact me](mailto:sel@steffilazerte.ca).
 
-> I was honoured to receive the Society of Canadian Ornithologists/Société des ornithologistes du Canada's inaugural **[Early Career Research Award](https://www.sco-soc.ca/copy-of-speirs-award)** for 2017
+> I was honoured to receive the Society of Canadian Ornithologists/Société des ornithologistes du Canada's inaugural **[Early Career Research Award](https://www.sco-soc.ca/ecr)** for 2017
 
 ## Services
 
