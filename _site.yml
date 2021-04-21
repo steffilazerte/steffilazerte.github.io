@@ -9,6 +9,8 @@ navbar:
       href: R.html
     - text: "Academic Activities and CV"
       href: cv.html
+    - text: "Presentations"
+      href: presentations.html
     - text: "About"
       href: about.html
 output:

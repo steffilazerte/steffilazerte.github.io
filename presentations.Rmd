@@ -1,0 +1,9 @@
+---
+title: "Presentations and Documents"
+---
+
+
+
+
+- 2021-04 rOpenSci Community Call - Set Up Your Package to Foster a Community - 
+[Labelling issues](https://steffilazerte.ca/Presentations/2021-04 rOpenSci - Community/2021-04_rOpenSci_community.html)
