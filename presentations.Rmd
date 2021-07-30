@@ -19,15 +19,17 @@ g2 <- tibble(name = map_chr(g, "name"),
                                   file_url = map_chr(., "html_url")))) %>%
   unnest(pres)
 
-filter(g2, str_detect(file_name, ".(pdf|html|Rmd)$"),) %>%
-  mutate(type = str_extract(file_name, "(pdf|html|Rmd)$"),
-         file_name = str_remove(file_name, ".(pdf|html|Rmd)$")) %>%
+filter(g2, str_detect(file_name, ".(pdf|html|Rmd|mp4)$"),) %>%
+  mutate(type = str_extract(file_name, "(pdf|html|Rmd|mp4)$"),
+         ext = type,
+         file_name = str_remove(file_name, ".(pdf|html|Rmd|mp4)$")) %>%
   filter(!file_name %in% c("script")) %>%
   group_by(name, date, url, file_name) %>%
   mutate(
+    type = if_else(type %in% c("mp4"), "video", type),
     links = case_when(type == "Rmd" ~ glue("[{type}]({file_url})"),
                       TRUE ~ 
-                        glue("[{type}](https://steffilazerte.ca/Presentations/{name}/{file_name[1]}.{type})"))) %>%
+                        glue("[{type}](https://steffilazerte.ca/Presentations/{name}/{file_name[1]}.{ext})"))) %>%
   summarize(links = glue_collapse(links, sep = " | "), .groups = "drop_last") %>%
   mutate(files = glue("- {file_name} ({links})\n")) %>%
   summarize(files = glue_collapse(files, sep = "\n"), .groups = "drop_last") %>%
