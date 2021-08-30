@@ -1,7 +1,56 @@
 ---
-title: "Presentations and Documents"
+title: "Presentations"
 ---
 
+## Organized Symposia
+
+### Lightning Symposium - Great R packages for Ornithologists
+
+Organized and invited speakers for this lightning symposium at the 2021-08 Joint meeting of the American Ornithological Society and Society of Canadian Ornithologists / Société des ornithologistes du Canada
+
+- Steffi LaZerte - "**How can ornithologists find R packages?**" 
+  ([GitHub](https://github.com/steffilazerte/Presentations/blob/master/2021-08%20AOS%7CSOC%20-%20R%20Symposium/) |
+  [html](https://steffilazerte.ca/Presentations/2021-08%20AOS%7CSOC%20-%20R%20Symposium/AOS_SCO_2021_LaZerte.html#1) | 
+  [pdf](https://steffilazerte.ca/Presentations/2021-08%20AOS%7CSOC%20-%20R%20Symposium/AOS_SCO_2021_LaZerte.pdf) | 
+  [video](https://steffilazerte.ca/Presentations/2021-08%20AOS%7CSOC%20-%20R%20Symposium/AOS_SCO_2021_LaZerte.mp4))
+  
+- Stepfanie Aguillon - "**[dplyr](https://dplyr.tidyverse.org/): A useful toolbox for manipulating data**" ([GitHub](https://github.com/stepfanie-aguillon/AOS2021-dplyr))
+
+- Matt Dyson - "**[sf](https://r-spatial.github.io/sf/), [raster](https://github.com/rspatial/raster), and [tmap](https://mtennekes.github.io/tmap/): The spatial data trinity**" ([GitHub](https://github.com/dysonwildlife/AOS_2021))
+
+- Mark Padgham - "**[osmdata](https://docs.ropensci.org/osmdata/): Roadless areas and avian diversity**" ([GitHub](https://github.com/mpadge/presentations/tree/main/2021/aos21) | [video](https://github.com/mpadge/presentations/releases/download/aos21/padgham.mp4))
+
+- Sunny Tseng - "**[seewave](https://rug.mnhn.fr/seewave/) and [tuneR](https://cran.r-project.org/web/packages/tuneR/index.html): Sound analysis in ornithology**"
+
+- María Juliana Benítez Saldívar - "**[warbler](https://marce10.github.io/warbleR/) and [Rraven](https://marce10.github.io/Rraven/): Bioacoustics in R**"
+
+- John Quinn - "**[soundecology](http://ljvillanueva.github.io/soundecology/): Using acoustic indices for landscape assessment and monitoring**"
+
+- Danielle Ethier - "**[naturecounts](https://birdstudiescanada.github.io/naturecounts/): Millions of bird occurrence records at your fingertips**" 
+  ([pdf](https://steffilazerte.ca/Presentations/2021-08%20AOS%7CSOC%20-%20R%20Symposium/naturecounts_AOS_SCO%20Aug%202021%20Final%20ENG-FR.pdf))
+
+- Jessica Burnett - "**[bbsAssistant](https://github.com/trashbirdecology/bbsAssistant): An R package for downloading and handling data and information from the North American Breeding Bird Survey**" (Contact for details)
+
+- Amie MacDonald - "**[motus](https://motuswts.github.io/motus/): Managing motus data in R**"
+
+- Martin Beal - "**[track2KBA](https://github.com/BirdLifeInternational/track2kba): An R package for identifying important sites for biodiversity from tracking data**"
+
+- Elena West - "**[MixSIAR](https://brianstock.github.io/MixSIAR/index.html): An R package for avian diet analysis**"
+
+- Evan Adams - "**[INLA](https://www.r-inla.org/): A way for ecologists to overcome their worst impulses**"
+
+- Luke Campillo - "**[pavo](http://pavo.colrverse.com/): Color analysis in birds**"
+
+- Philipp Boersch-Supan - "**[moult](https://cran.r-project.org/web/packages/moult/index.html) and [moultmcmc](https://pboesu.github.io/moultmcmc/index.html): Inference for moult phenology models**" 
+  ([pdf](https://raw.githubusercontent.com/pboesu/aos_sco_2021_moult_models/main/AOS_SCO_LightningTalk_slides.pdf) | 
+  [transcript](https://raw.githubusercontent.com/pboesu/aos_sco_2021_moult_models/main/2021_AOS_SCO_lightning_talk_transcript.pdf))
+
+- Marc-Olivier Beausoleil - "**Putting it all together: [Ornithometrics](https://beausoleilmo.github.io/Ornithometrics-ctv/Ornithometrics.html) — a task view for ornithology**"
+
+
+---
+
+## Other
 
 ```{r, message = FALSE, echo = FALSE, results = "asis"}
 library(gh)
