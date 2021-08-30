@@ -4,9 +4,11 @@ title: "Presentations"
 
 ## Organized Symposia
 
-### Lightning Symposium - Great R packages for Ornithologists
-
+### Great R packages for Ornithologists
 Organized and invited speakers for this lightning symposium at the 2021-08 Joint meeting of the American Ornithological Society and Society of Canadian Ornithologists / Société des ornithologistes du Canada
+
+<details>
+  <summary>**Symposium details**<p></summary>
 
 - Steffi LaZerte - "**How can ornithologists find R packages?**" 
   ([GitHub](https://github.com/steffilazerte/Presentations/blob/master/2021-08%20AOS%7CSOC%20-%20R%20Symposium/) |
@@ -47,6 +49,7 @@ Organized and invited speakers for this lightning symposium at the 2021-08 Joint
 
 - Marc-Olivier Beausoleil - "**Putting it all together: [Ornithometrics](https://beausoleilmo.github.io/Ornithometrics-ctv/Ornithometrics.html) — a task view for ornithology**"
 
+</details>
 
 ---
 
