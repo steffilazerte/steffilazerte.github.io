@@ -37,7 +37,7 @@ Organized and invited speakers for this lightning symposium at the 2021-08 Joint
 
 - Martin Beal - "**[track2KBA](https://github.com/BirdLifeInternational/track2kba): An R package for identifying important sites for biodiversity from tracking data**"
 
-- Elena West - "**[MixSIAR](https://brianstock.github.io/MixSIAR/index.html): An R package for avian diet analysis**" ([pdf](https://steffilazerte.ca/Presentations/2021-08%20AOS%7CSOC%20-%20R%20Symposium/ElenaWest_LightningTalk_MixSIAR.pdf)
+- Elena West - "**[MixSIAR](https://brianstock.github.io/MixSIAR/index.html): An R package for avian diet analysis**" ([pdf](https://steffilazerte.ca/Presentations/2021-08%20AOS%7CSOC%20-%20R%20Symposium/ElenaWest_LightningTalk_MixSIAR.pdf))
 
 - Evan Adams - "**[INLA](https://www.r-inla.org/): A way for ecologists to overcome their worst impulses**"
 
