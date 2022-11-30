@@ -8,7 +8,6 @@ Independent biological consultant and R programmer
 
 I provide services in **R programming**, **R instruction**, **data management/cleaning**, and **data analysis**. If you are interested in any of these services, please feel free to [contact me](mailto:sel@steffilazerte.ca).
 
-
 ## Services
 
 
@@ -29,7 +28,10 @@ As a biologist specializing in behavioural ecology I also have the training to c
 
 ---
 
-```{r, results = "asis", echo = FALSE}
-cat("Created with Quarto by Steffi LaZerte; Updated ", as.character(Sys.Date()))
-```
+
+Created with Quarto by Steffi LaZerte; Updated `r as.character(Sys.Date())`  
+
+[Twitter](https://twitter.com/steffilazerte)|<a rel="me" href="https://fosstodon.org/@steffilazerte">Mastodon</a>|[Email](mailto:sel@steffilazerte.ca)
+
+
 
