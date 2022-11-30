@@ -1,0 +1,185 @@
+---
+title: Academic Activities and CV
+toc: true
+---
+
+```{r, include = FALSE}
+source("pre-render.R")
+```
+
+
+> I was honoured to receive the Society of Canadian Ornithologists/Société des ornithologistes du Canada's inaugural **[Early Career Research Award](https://www.sco-soc.ca/ecr)** for 2017
+
+
+## Academic Activities 
+
+#### Positions
+**2018-Present** Adjunct Professor, Department of Biology, Brandon University
+
+#### MSc Committees
+**2019-Present** Department of Geography & Environment, Brandon University  
+**2019-Present** Department of Biology, Brandon University  
+**2019-2020** Department of Biological Sciences, University of Manitoba  
+
+
+## Education
+
+__PhD (2010 – 2015)__
+University of Northern BC, Natural Resources and Environmental Studies  
+Supervisor: Dr. Ken A. Otter  
+Thesis: [Chickadee vocalizations in human-altered environments](http://www.unbc.ca/sites/default/files/sections/ken-otter/lazerte-dissertation2015-04-28final.pdf)
+
+__MSc (2007 – 2010)__
+McGill University, Biology  
+Supervisor: Dr. Don L. Kramer  
+Thesis: [Using thermosensitive telemetry to measure activity in eastern chipmunks (_Tamias striatus_)](http://digitool.library.mcgill.ca/R/-?func=dbin-jump-full&object_id=95000&silo_library=GEN01)
+
+__BSc (2003 – 2007)__
+University of Toronto, Honours Zoology, Behaviour Specialist  
+Supervisor: Dr. Allan Baker  
+Independent Project: Genomic scan using AFLPs reveals that red knot subspecies are genetically differentiated
+
+## Post-Docs
+
+__Post-Doc (2016 – 2017)__
+Thompson Rivers University, Geography and Environmental Studies  
+Supervisor: Dr. David J. Hill  
+Details: Developing citizen science tools, in particular an open system for the web-based visualization and analysis of animal movement data
+
+__Post-Doc (2015 – 2016)__
+University of Northern BC, Natural Resources and Environmental Studies  
+Supervisor: Dr. Ken A. Otter  
+Details: Tracking gap-crossing in small birds through automated RFID feeders.
+
+__Post-Doc (2015)__
+University of Northern BC, Natural Resources and Environmental Studies  
+Supervisor: Dr. Ken A. Otter  
+Details: A follow up study to playback studies conducted during my PhD looking at audibility of different vocalizations in noisy environments.
+
+## Publications
+
+<script src="https://bibbase.org/show?bib=https%3A%2F%2Fapi.zotero.org%2Fusers%2F1841%2Fcollections%2FFNZPV2RA%2Fitems%3Fkey%3DIuq7CUIMuNjpsrwtNRycDTsQ%26format%3Dbibtex%26limit%3D100&group0=year&nocache=1&authorFirst=1&jsonp=1"></script>
+
+
+## Presentations
+
+<script src="https://bibbase.org/show?bib=https%3A%2F%2Fapi.zotero.org%2Fusers%2F1841%2Fcollections%2FP9S6VACZ%2Fitems%3Fkey%3DIuq7CUIMuNjpsrwtNRycDTsQ%26format%3Dbibtex%26limit%3D100&group0=year&nocache=1&authorFirst=1&jsonp=1"></script>
+
+
+## Teaching
+
+### R University Teaching
+
+```{r}
+jobs %>%
+  filter(type == "r teaching") %>%
+  fmt_teaching(type = "html") %>%
+  fmt_gt()
+```
+
+### R Workshops
+```{r}
+jobs %>%
+  filter(type == "r workshop") %>%
+  mutate(title = str_remove(title, " Workshop")) %>%
+  fmt_teaching(type = "html") %>%
+  fmt_gt()
+```
+
+### R Volunteering
+```{r}
+tibble(start = c(2012, 2012), 
+       end = c("Present", 2017),
+       content = c(
+         glue("**One-on-one assistance**\n",
+              "- University of Manitoba, Winnipeg, MB\n",
+              "- Brandon University, Brandon, MB\n",
+              "- University of New Brunswick, Fredericton, NB\n",
+              "- Wilfrid Laurier, Waterloo, ON\n",
+              "- University of Northern BC, Prince George, BC"),
+         glue("**Organized R Help Groups**\n",
+              "- R Group (2016-2017) {small('University of New Brunswick, Fredericton, NB', 'html')}\n",
+              "- R Coffee Hour (2012-2016) {small('University of Northern BC, Prince George, BC', 'html')}"))) %>%
+  fmt_gt()
+```
+
+### Other University Teaching
+```{r}
+jobs %>%
+  filter(type == "teaching") %>%
+  fmt_teaching(type = "html") %>%
+  fmt_gt()
+```
+
+
+#### Large events
+- 2015 __UNBC Discovery Centre__  
+This centre was a 3-day event held in November 2015. I was one of three coordinators and organized events, volunteers and panellists, and supervised on all event days.
+
+
+#### Attendance at Teaching Conferences and Workshops
+```{r}
+tribble(
+  ~start,     ~title, ~location,
+  "2018-08", "Brandon University Teaching Excellence Conference", "Brandon, MB", 
+  "2011–2016", "UNBC and CNC Annual Teaching and Learning Conference", "Prince George, BC",
+  "2014-09", "Teaching Dossier Workshop", "Prince George, BC", 
+  "2011-08", "Instructional Skills Workshop", "Prince George, BC",  
+  "2011-01", "UNBC Teaching Assistant Workshop", "Prince George, BC",   
+  "2008-03", "McGill Professional development workshop: Learning to Teach", "Montreal, QC", 
+  "2008-01", "Teaching Workshop – McGill Tomlinson Project in University-Level Science Education", "Montreal, QC") %>%
+   fmt_other(type = "html") %>%
+  fmt_gt()
+```
+
+
+#### Community presentations and outreach
+ 
+```{r}
+tribble(
+  ~date, ~title, ~role, ~desc, ~location,
+  "2015-01", "Prince George Naturalists Club", "Guest speaker", "Singing through the noise: How birds compensate for effects urbanization on communication", "Prince George, BC",
+  "2013-11", "Williams Lake Naturalists Club", "Guest speaker", "Singing through the noise: How birds compensate for effects urbanization on communication", "Williams Lake, BC",
+  "2014-05", "Prince George Young Naturalists Club", "Guest speaker", "Come learn all about Chickadees!", "Prince George, BC",
+  "2014-03", "Immaculate Conception School Science Fair", "Judge", NA, "Prince George, BC",
+  "2013-11", "Lake City Secondary School Science 8 and 9", "Guest Educator", "Early bird gets the worm!", "Williams Lake, BC", 
+  "2013-10", "UNBC Northern Research Group Trail Talks", "Guest Guide", "Birds and Glacial Lakes", "Prince George, BC",
+  "2013-09", "Quesnel River Research Centre High School Salmon Day", "Guest Scientist", "Chickadee communication and sound transmission activities",  "Likely, BC",
+  "2012/09 & 2013/09", "Kelowna Kokanee Salmon Festival", "Exhibitor", NA, "Kelowna, BC") %>%
+  fmt_other(type = "html") %>%
+  fmt_gt()
+```
+ 
+
+## Awards and Scholarships
+
+- SCO-SOC [Early Career Researcher Award](https://www.sco-soc.ca/_files/ugd/c932da_1f8708c113e74becb953548b95b13020.pdf) (2017/08)
+- NSERC Postgraduate Scholarship (PGS) Doctoral (2011/05 – 2014/05)
+- Society of Canadian Ornithologists (SCO-SOC) First Place Student Presentation (2013/08)
+- Society of Canadian Ornithologists (SCO-SOC) James L. Baillie Award (2012)
+- NSERC Alexander Graham Bell Canada Graduate Scholarship (CGS) Masters (2008/04 – 2009/04)
+- NSERC Undergraduate Student Research Award (2006)
+
+## Media
+
+Over the years several projects I've been involved with have been fortunate enough to attract some media attention.
+
+### Chickadees and Noise
+
+- __2016/07__ Media attention surrounding publication of "Learning to cope: Vocal adjustment to urban noise is correlated with prior experience in black-capped chickadees"  
+  - TV: [CKPG (watch)](http://www.ckpg.com/2016/07/11/unbc-scientist-makes-new-discovery/)
+  - Radio: [CBC Daybreak North (listen)](images/2016-07-12 - CBC Daybreak.mp3)
+  - Newspaper: [Prince George Citizen (read)](http://www.princegeorgecitizen.com/news/local-news/unbc-researcher-shows-chickadees-adapt-song-to-city-1.2299671)
+  - Newsite: [250news.org (read)](https://www.250news.com/2016/07/11/study-shows-urban-rural-chickadees-chirp-to-a-different-tune/)
+
+- __2013/09__ SCO award for best student presentation highlighted by Ducks Unlimited
+-- [Ducks Unlimited facebook post](https://www.facebook.com/ducksunlimitedcanada/posts/10151864386454800)
+
+- __2012/04__ Sharing relevant findings with the Stanley Park Ecological Society -- [Stanley Park Ecological Society (read)](http://stanleyparkecology.ca/2012/04/09/vancouvers-chickadees-sing-a-different-tune-2/)
+
+
+### White-throated Sparrows Citizen Science
+
+- __2016/03__ Start of the citizen science study -- [CKPG (watch)](http://www.ckpg.com/2016/03/28/sparrows-singing-a-new-tune/)
+- __2016/05__ Geolocators and tracking movements -- [CKPG (watch)](http://www.ckpg.com/2016/05/26/live-capture-and-release/)
+

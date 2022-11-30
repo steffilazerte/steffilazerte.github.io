@@ -1,0 +1,64 @@
+---
+title: "Running Basic Linear Models"
+date: "2022-11-13"
+categories: [stats, lm]
+---
+
+In R, basic linear models are run with the `lm()` function. 
+
+```{r, eval = FALSE}
+lm(y ~ x1 + x2, data = data)
+```
+
+R will choose which type of linear model to do depending on the type of values 
+in `x1` and `x2`.
+
+- **Regression** - One continuous predictor (`x1` only and is continuous)
+- **Multiple regression** - More than one continuous predictor 
+  (both `x1` and `x2` are continuous)
+- **ANOVA** - Categorical predictor(s) (both `x1` and `x2` are categorical - factors)
+- **ANCOVA** - Mix of categorical and continuous predictors (`x1` is continuous and `x2` is categorical)
+
+
+In all cases, `y` is continuous.  
+
+No count data, no binary (binomial) data, no proprotions.
+
+[(Although technically sometimes count data is close enough to continuous and 
+proportions can be transformed)]{.small}
+
+
+### Quick example
+
+```{r}
+library(palmerpenguins) # To access the penguins data set
+m <- lm(body_mass_g ~ bill_depth_mm, data = penguins)
+m
+```
+
+> But wait! How do I interpret that?
+
+All the details are stored in the model object `m`. We can use many other
+R functions to check our assumptions, summarize the results, or create ANOVA tables.
+
+But first, you really should check your [Diagnostics](../diagnostics-lm)!
+
+### Side note on `NA`'s
+
+By default missing values (`NA`'s) are dropped from the analysis and from the
+data contained by the model. However, even better is to use `na.exclude`.
+
+```{r}
+m <- lm(body_mass_g ~ bill_depth_mm, data = penguins, na.action = na.exclude)
+```
+
+This also excludes missing values (`NA`'s) from the analysis, but *not* from the
+data you extract from the model (which makes it much easier to combine back with
+your raw data set when performing [Diagnostics](../diagnostics-lm)).
+
+
+### Session Info
+```{r}
+devtools::session_info()
+```
+

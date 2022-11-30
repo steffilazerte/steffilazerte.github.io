@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Dr. Steffi LaZerte"
+  favicon: "images/logo_gear.png"
+  navbar:
+    pinned: true
+    logo: "/images/logo_gear.png"
+    right:
+      - text: "Home"
+        file: index.qmd
+      - text: "R Projects"
+        file: R.qmd
+      - text: "Academic Activities and CV"
+        file: cv.qmd
+      - text: "Presentations"
+        file: presentations.qmd
+      - text: "Tips & Tricks"
+        file: tips_and_tricks.qmd
+      - text: "About"
+        file: about.qmd
+      - icon: github
+        href: https://github.com/steffilazerte
+      - icon: twitter
+        href: https://twitter.com/steffilazerte
+      - icon: mastodon
+        href: https://fosstodon.org/@steffilazerte
+format:
+  html:
+    includes:
+      in_header: header.html
+    theme:
+      - simplex
+      - styles.scss
+
+execute:
+  echo: false
+  message: false

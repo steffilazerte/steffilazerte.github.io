@@ -1,0 +1,127 @@
+---
+title: "Presentations"
+---
+
+## Organized Symposia
+
+### 2021 - Great R packages for Ornithologists
+Organized and invited speakers for this lightning symposium at the 2021-08 Joint meeting of the American Ornithological Society and Society of Canadian Ornithologists / Société des ornithologistes du Canada
+
+<details>
+  <summary>**Symposium details**<p></summary>
+
+- Steffi LaZerte - "**How can ornithologists find R packages?**" 
+  ([GitHub](https://github.com/steffilazerte/Presentations/blob/master/2021-08%20AOS%7CSOC%20-%20R%20Symposium/) |
+  [html](https://steffilazerte.ca/Presentations/2021-08%20AOS%7CSOC%20-%20R%20Symposium/AOS_SCO_2021_LaZerte.html#1) | 
+  [pdf](https://steffilazerte.ca/Presentations/2021-08%20AOS%7CSOC%20-%20R%20Symposium/AOS_SCO_2021_LaZerte.pdf) | 
+  [video](https://steffilazerte.ca/Presentations/2021-08%20AOS%7CSOC%20-%20R%20Symposium/AOS_SCO_2021_LaZerte.mp4))
+  
+- Stepfanie Aguillon - "**[`dplyr`](https://dplyr.tidyverse.org/): A useful toolbox for manipulating data**" ([GitHub](https://github.com/stepfanie-aguillon/AOS2021-dplyr))
+
+- Matt Dyson - "**[`sf`](https://r-spatial.github.io/sf/), [`raster`](https://github.com/rspatial/raster), and [`tmap`](https://mtennekes.github.io/tmap/): The spatial data trinity**" ([GitHub](https://github.com/dysonwildlife/AOS_2021))
+
+- Mark Padgham - "**[`osmdata`](https://docs.ropensci.org/osmdata/): Roadless areas and avian diversity**" ([GitHub](https://github.com/mpadge/presentations/tree/main/2021/aos21) | [video](https://github.com/mpadge/presentations/releases/download/aos21/padgham.mp4))
+
+- Sunny Tseng - "**[`seewave`](https://rug.mnhn.fr/seewave/) and [tuneR](https://cran.r-project.org/web/packages/tuneR/index.html): Sound analysis in ornithology**"
+
+- María Juliana Benítez Saldívar - "**[`warbler`](https://marce10.github.io/warbleR/) and [`Rraven`](https://marce10.github.io/Rraven/): Bioacoustics in R**"
+
+- John Quinn - "**[`soundecology`](http://ljvillanueva.github.io/soundecology/): Using acoustic indices for landscape assessment and monitoring**"
+
+- Danielle Ethier - "**[`naturecounts`](https://birdstudiescanada.github.io/naturecounts/): Millions of bird occurrence records at your fingertips**" 
+  ([pdf](https://steffilazerte.ca/Presentations/2021-08%20AOS%7CSOC%20-%20R%20Symposium/naturecounts_AOS_SCO%20Aug%202021%20Final%20ENG-FR.pdf))
+
+- Jessica Burnett - "**[`bbsAssistant`](https://github.com/trashbirdecology/bbsAssistant): An R package for downloading and handling data and information from the North American Breeding Bird Survey**" (Contact for details)
+
+- Amie MacDonald - "**[`motus`](https://motuswts.github.io/motus/): Managing motus data in R**"
+
+- Martin Beal - "**[`track2KBA`](https://github.com/BirdLifeInternational/track2kba): An R package for identifying important sites for biodiversity from tracking data**"
+
+- Elena West - "**[`MixSIAR`](https://brianstock.github.io/MixSIAR/index.html): An R package for avian diet analysis**" ([pdf](https://steffilazerte.ca/Presentations/2021-08%20AOS%7CSOC%20-%20R%20Symposium/ElenaWest_LightningTalk_MixSIAR.pdf))
+
+- Evan Adams - "**[`INLA`](https://www.r-inla.org/): A way for ecologists to overcome their worst impulses**"
+
+- Luke Campillo - "**[`pavo`](http://pavo.colrverse.com/): Color analysis in birds**"
+
+- Philipp Boersch-Supan - "**[`moult`](https://cran.r-project.org/web/packages/moult/index.html) and [moultmcmc](https://pboesu.github.io/moultmcmc/index.html): Inference for moult phenology models**" 
+  ([pdf](https://raw.githubusercontent.com/pboesu/aos_sco_2021_moult_models/main/AOS_SCO_LightningTalk_slides.pdf) | 
+  [transcript](https://raw.githubusercontent.com/pboesu/aos_sco_2021_moult_models/main/2021_AOS_SCO_lightning_talk_transcript.pdf))
+
+- Marc-Olivier Beausoleil - "**Putting it all together: [Ornithometrics](https://beausoleilmo.github.io/Ornithometrics-ctv/Ornithometrics.html) — a task view for ornithology**"
+
+</details>
+
+
+### 2019 - R for Ornithologist: Perspectives from useRs to programmeRs
+Organized and invited speakers for this symposium at the 2019-08 
+Society of Canadian Ornithologists / Société des ornithologistes du Canada
+
+<details>
+  <summary>**Symposium details**<p></summary>
+
+- Steffi LaZerte - "**R for Ornithologists: How R can benefit the study of Ornithology**" 
+  ([GitHub](https://github.com/steffilazerte/Presentations/tree/master/2019-08%20SOC%20-%20R%20Symposium) |
+  [html EN](https://steffilazerte.ca/Presentations/2019-08%20SOC%20-%20R%20Symposium/LaZerte_SCO_SOC_2019_en.html#1) | 
+  [pdf EN](http://steffilazerte.github.io/Presentations/2019-08%20SOC%20-%20R%20Symposium/LaZerte_SCO_SOC_2019_en.pdf) |
+  [html FR](http://steffilazerte.github.io/Presentations/2019-08%20SOC%20-%20R%20Symposium/LaZerte_SCO_SOC_2019_fr.html) | 
+  [pdf FR]([pdf EN](http://steffilazerte.github.io/Presentations/2019-08%20SOC%20-%20R%20Symposium/LaZerte_SCO_SOC_2019_en.pdf))
+  
+- Ken A. Otter, Steffi LaZerte & Isobel Hartley - "**The blessing and curse of automated data collection: R and dealing with big data in a modern age**"
+
+- Denis LePage, Steffi LaZerte & Danielle Ethier - "**naturecounts: a new R package to access standardized data on bird populations**" ([pdf FR](https://steffilazerte.ca/Presentations/2019-08%20SOC%20-%20R%20Symposium/SCO_2019_naturecounts_R_Ethier_Final.pdf))
+
+- Adam C. Smith & Brandon P.M. Edwards - "**Super-computing with R: Harnessing the power of the cloud to analyze big-bird-data, or just run your simulations, models, and cross-validations faster**"
+
+- Brandon P.M. Edwards, Adam C. Smith, Marie-Anne R. Hudson, Charles M. Francis, Keith L. Pardieck, David J. Ziolkowski Jr. - "**`bbsBayes`: An R package for hierarchical Bayesian modelling of Breeding Bird Survey data**"
+
+- Eliza M. Grames, Andrew N. Stillman, Carolyn V. Mills, Morgan W. Tingley, Chris S. Elphick - "**Conducting partially automated systematic reviews with the `litsearchr` package in R**" ([pdf EN/FR](https://steffilazerte.ca/Presentations/2019-08%20SOC%20-%20R%20Symposium/Grames_SCO-SOC_slides.pdf))
+
+- Darren S. Proppe - "**Using R in the undergraduate biology classroom: Hurdles, hints, and aha moments**"
+
+</details>
+
+
+
+
+
+---
+
+## Other
+
+```{r, message = FALSE, echo = FALSE, results = "asis"}
+library(gh)
+library(jsonlite)
+library(tidyverse)
+library(glue)
+g <- gh("/repos/steffilazerte/Presentations/contents/")
+
+g2 <- tibble(name = map_chr(g, "name"),
+             url = map_chr(g, "html_url")) %>%
+  mutate(date = str_extract(name, "[0-9]{4}-[0-9]{2}")) %>%
+  filter(!is.na(date)) %>%
+  mutate(pres = map(name, ~gh("/repos/steffilazerte/Presentations/contents/{pres}", pres = .)),
+         pres = map(pres, ~tibble(file_name = map_chr(., "name"), 
+                                  file_url = map_chr(., "html_url")))) %>%
+  unnest(pres)
+
+filter(g2, str_detect(file_name, ".(pdf|html|Rmd|mp4)$"),) %>%
+  mutate(type = str_extract(file_name, "(pdf|html|Rmd|mp4)$"),
+         ext = type,
+         file_name = str_remove(file_name, ".(pdf|html|Rmd|mp4)$")) %>%
+  filter(!file_name %in% c("script")) %>%
+  group_by(name, date, url, file_name) %>%
+  mutate(
+    type = if_else(type %in% c("mp4"), "video", type),
+    links = case_when(type == "Rmd" ~ glue("[{type}]({file_url})"),
+                      TRUE ~ 
+                        glue("[{type}](https://steffilazerte.ca/Presentations/{name}/{file_name[1]}.{ext})"))) %>%
+  summarize(links = glue_collapse(links, sep = " | "), .groups = "drop_last") %>%
+  mutate(files = glue("- {file_name} ({links})\n")) %>%
+  summarize(files = glue_collapse(files, sep = "\n"), .groups = "drop_last") %>%
+  summarize(name = glue("{name} ([GitHub]({url}))"), 
+            entry = glue("\n\n**{name}**\n\n{files}\n\n", trim = FALSE),
+            .groups = "drop") %>%
+  arrange(desc(date)) %>%
+  pull(entry) %>%
+  cat()
+```

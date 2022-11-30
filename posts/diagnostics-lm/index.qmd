@@ -1,0 +1,221 @@
+---
+title: "Diagnostics for Simple Linear Models"
+date: "2022-11-15"
+categories: [stats, lm, vif, normality, diagnostics, residuals, cooks-d]
+toc: true
+toc-depth: 4
+execute:
+  message: false
+  warning: false
+fig-width: 10
+---
+
+
+All models have assumptions and cautions. Understanding whether you've satisfied
+these assumptions and checking for potential problems are some of the hardest
+things to do in statistics. 
+
+For simple linear models (`lm()`) the **main assumptions** are
+
+- **Linear relationship** between response (`y`) and predictors (`x`'s).
+- **Independence** - Observations are independent
+  - no hierarchical sampling, no nested designs, no variables are calculated from each other
+- **Normality** - Residuals are normally distributed
+- **Constant variance** - There is constant variance in residuals (no heteroscedasticity)
+
+> Note that it's the normality of **residuals** and NOT the raw data that matters
+
+And the **main cautions** are
+
+- **Multicollinearity** - You don't want high levels of multicollinearity
+  - When predictors are highly correlated they can to influence the parameters calculated
+- **Influence** - You don't want one or two points have an undue influence on your model
+  - Otherwise you should think about how relevant (and generalizable) that model really is
+
+
+### Diagnostics in R
+
+Some assumptions/cautions are those of design (i.e. Independence), and some are
+assessed by evaluating your model fit in R. Some, like the expectation of a
+Linear Relationship, can be assessed in different ways, by plotting your
+relationship, or by looking at your residuals (as if there's a problem, you'll
+see problems in the Normality and Variance of your residuals).
+
+In R, we can extract the *residuals* (`residuals()`) and *fitted* (`fitted()`)
+values to assess Normality and Constant variance. We can also use functions like
+`vif()` and `cooks.distance()` to calculate metrics which will help us assess
+Multicollinearity and Influential observations.
+
+Let's extract and calculate the observation-level values we'll need for these 
+assessments.
+
+```{r}
+library(palmerpenguins) # For penguins data set
+library(dplyr)          # For data manipulation
+
+# We'll only use Adelie penguins for now
+p <- filter(penguins, species == "Adelie") 
+
+# Run model
+m <- lm(body_mass_g ~ bill_depth_mm, data = p, na.action = na.exclude)
+
+# Extract residuals and fitted values
+p <- mutate(p, 
+            resid = residuals(m),      # Residuals
+            fitted = fitted(m),        # Fitted values
+            cooks = cooks.distance(m), # Cook's distance
+            obs = 1:n())               # Observation ids
+```
+
+
+### Assessing Assumptions
+We use **residuals** to look at this fit.
+
+#### What are residuals?
+For a simple linear model, residuals are essentially the error between your
+observations and your model. Fitted values are the predicted value of your 
+response given the model and your explanatory values.
+
+For example, in this linear model looking at the relationship between `body_mass_g`
+and `bill_depth_mm` in Adelie penguins, we can picture the residuals as the 
+degree of difference between the model line and our data points. 
+
+
+```{r}
+#| code-fold: true
+#| fig-asp: 0.4
+library(patchwork)      # To combine plots
+library(ggplot2)        # For plotting
+library(tidyr)          # For data manipulation
+
+# Model plot
+g1 <- ggplot(data = p, aes(x = bill_depth_mm, y = body_mass_g)) +
+  stat_smooth(method = "lm", se = FALSE, colour = "black") +
+  geom_point(size = 2)
+
+# Add residuals
+g2 <- g1 +
+  geom_segment(aes(xend = bill_depth_mm, yend = fitted, colour = resid), size = 1) +
+  scale_colour_viridis_c()
+
+g1 + g2
+```
+
+#### Normality
+We want our residuals from our model to be normally distributed. We can use
+a histogram or a QQ plot to assess this based on the residuals we extract from 
+the model.
+
+```{r}
+#| fig-asp: 0.4
+
+# Histogram
+g1 <- ggplot(data = p, aes(x = resid)) +
+  geom_histogram()
+
+# QQ Plot
+g2 <- ggplot(data = p, aes(sample = resid)) +
+  stat_qq() +
+  stat_qq_line()
+
+g1 + g2
+```
+
+**Looks good!**
+
+#### Constant variance
+We want the variability in our model residuals to be relatively constant
+(or at least to not show any definied patterns). It shouldn't
+increase or decrease with the fitted values, and should be relatively scattered
+throughout. We can plot the residuals by fitted values to make sure we don't
+see any patterns.
+
+We're checking for *heteroscedasticity*
+
+
+```{r}
+#| out-width: 60%
+#| fig-asp: 0.8
+#| fig-width: 6
+#| fig-align: "center"
+
+ggplot(data = p, aes(x = fitted, y = resid)) +
+  geom_point() +
+  geom_hline(yintercept = 0)
+```
+
+**Looks good!**
+
+### Check for problems
+
+#### Multicollinearity
+
+Multicollinearity assess whether your *explanatory* variables are overly
+correlated. This means it only applies if you have a *multiple* regression
+(i.e.. where you have more than one explanatory variable).
+
+Let's consider this model
+```{r}
+m2 <- lm(body_mass_g ~ bill_depth_mm + flipper_length_mm, data = p, na.action = na.exclude)
+```
+
+
+Look at our two explanatory variables
+```{r}
+#| fig-asp: 0.7
+#| fig-width: 6
+
+ggplot(data = p, aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point() +
+  stat_smooth(method = "lm")
+```
+
+They are definitely correlated, but that doesn't mean we have a problem.
+We need to investigate if it interferes with the model.
+
+There are several ways to assess multicollinearity. Here we'll use `vif()`^[VIF:
+variance inflation factor; Can be interpreted as how much influence the
+variable has on the model] function from `car` package.
+
+```{r}
+library(car)
+vif(m2)
+```
+
+Although with all statistical measures, there is no magic number, generally 
+a VIF > 10 is considered a problem, and VIF > 5 is concerning.
+
+So in this case we can assume that while there *is* a correlation, it's not
+haveing an undue effect on how we interpret the model.
+
+
+
+
+
+#### Influence
+You'll want to check if your model results are highly influenced by any specific
+observations. For example, if you remove one observation and the entire model
+changes, you'll have to think about how generalizable that model really is.
+
+One way of checking whether any observations have an unusually high influence 
+on your model is to look at the Cook's distance (D). 
+
+There are several ways of considering what D is too high. One is that D below 1
+is good, the other is that you should aim for a D below 4 / no. observations.
+
+```{r}
+#| out-width: 60%
+#| fig-asp: 0.8
+#| fig-width: 6
+#| fig-align: "center"
+g <- ggplot(p, aes(x = obs, y = cooks)) +
+  geom_point()
+
+g + geom_hline(yintercept = 1, linetype = "dotted")
+g + geom_hline(yintercept = 4/nrow(p), 
+                linetype = "dashed")
+```
+
+**All in all, having a high D doesn't mean you automatically remove the observation, 
+it means you think about what influence that observation is having on your model.
+Try omitting it and see how your model changes!**

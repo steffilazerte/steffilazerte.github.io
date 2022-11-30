@@ -1,0 +1,22 @@
+---
+title: "Tips and Tricks"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: unnumbered
+---
+
+This is a collection statistical notes, general tips and tricks, and useful citations which 
+serve as a reference I can use when helping others with R, especially for statistics in the natural sciences.
+
+I sometimes include some statistical guidance, but generally speaking I assume
+some background in statistics. 
+**Generally, these notes cover more of the *how*, not the *why* of statistics**.
+
+Everywhere possible I cite my information be it a stackoverflow question or an
+academic journal article. 
+If you have a citation you think I should include or think there's something I'm missing, 
+please open an issue in the GitHub repository and let me know (ideally with a citation!)
+
+> **This is a living collection** and things might change!

@@ -1,0 +1,27 @@
+---
+title: "Statistical Workflow"
+date: "2022-11-10"
+categories: [stats, lm]
+---
+
+A statistical workflow is generally the same for most analyses, and thinking
+your way through this workflow can help you decide what kind of analysis you'd
+like to do. 
+
+1. Decide on your question(s)
+    - Helps guide exploration and models
+2. Preliminary data exploration
+    - Helps determine answers to questions and guide model development
+3. Decide on a model type 
+    - [Simple linear model](../basic-models/), generalized linear model, mixed model, etc.
+    - What package to use for this model
+4. Run model
+5. Check model [diagnostics/assumptions](../diagnostics-lm)
+   - As required, go back to Step 3 (Model type)
+6. Consider transformations if required 
+   - If so, go back to Step 4 (Run Model)
+7. Interpret model
+   - Summary tables
+   - ANOVA tables
+   - Post-Hoc analyses
+8. Create figures to visually show your model results

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Dr.&nbsp;Steffi LaZerte - Teaching and Outreach</title>
+<title>Dr.&nbsp;Steffi LaZerte - Tips and Tricks</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,6 +25,8 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./images/logo_gear.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -53,11 +55,41 @@ ul.task-list{list-style: none;}
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -85,7 +117,7 @@ ul.task-list{list-style: none;}
     <a class="nav-link" href="./presentations.html">Presentations</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./tips_and_tricks.html">Tips &amp; Tricks</a>
+    <a class="nav-link active" href="./tips_and_tricks.html" aria-current="page">Tips &amp; Tricks</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html">About</a>
@@ -115,13 +147,15 @@ ul.task-list{list-style: none;}
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-unnumbered"><div class="category" data-category="cooks-d">cooks-d</div><div class="category" data-category="diagnostics">diagnostics</div><div class="category" data-category="lm">lm</div><div class="category" data-category="normality">normality</div><div class="category" data-category="residuals">residuals</div><div class="category" data-category="stats">stats</div><div class="category" data-category="vif">vif</div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Teaching and Outreach</h1>
+<h1 class="title">Tips and Tricks</h1>
 </div>
 
 
@@ -135,13 +169,134 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>I find teaching and sharing my research with others immensely gratifying. In the past I have hosted R Coffee Hours and the corresponding <a href="../thinkR/">ThinkR website</a> as a way of helping students working with R statistical software. Further, as most research is publicly funded, to some degree I consider outreach and education a social responsibility. I enjoy having discussions about research and sharing or inspiring exciting and interesting ideas. I also enjoy hearing about new and interesting ideas or concerns about research. I have, therefore, deliberately sought opportunities to both improve my teaching skills and share the results of my research with interested parties.</p>
-<p>For a list of teaching related activities see the <a href="%7B%7B%20site.baseurl%20%7D%7D/skills/#teaching">Teaching</a> section of my CV.</p>
-<p>For a list of outreach related activities see the <a href="%7B%7B%20site.baseurl%20%7D%7D/skills/#community-presentations-and-outreach">Outreach</a> section of my CV.</p>
+<p>This is a collection statistical notes, general tips and tricks, and useful citations which serve as a reference I can use when helping others with R, especially for statistics in the natural sciences.</p>
+<p>I sometimes include some statistical guidance, but generally speaking I assume some background in statistics. <strong>Generally, these notes cover more of the <em>how</em>, not the <em>why</em> of statistics</strong>.</p>
+<p>Everywhere possible I cite my information be it a stackoverflow question or an academic journal article. If you have a citation you think I should include or think there’s something I’m missing, please open an issue in the GitHub repository and let me know (ideally with a citation!)</p>
+<blockquote class="blockquote">
+<p><strong>This is a living collection</strong> and things might change!</p>
+</blockquote>
 
 
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="stats,lm,vif,normality,diagnostics,residuals,cooks-d" data-listing-date-sort="1668492000000" data-listing-file-modified-sort="1668618400557" data-listing-reading-time-sort="5.185">
+<div class="body">
+<a href="./posts/diagnostics-lm/index.html">
+<h3 class="no-anchor listing-title">
+Diagnostics for Simple Linear Models
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('stats'); return false;">
+stats
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('lm'); return false;">
+lm
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('vif'); return false;">
+vif
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('normality'); return false;">
+normality
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('diagnostics'); return false;">
+diagnostics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('residuals'); return false;">
+residuals
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('cooks-d'); return false;">
+cooks-d
+</div>
+</div>
+<a href="./posts/diagnostics-lm/index.html">
+<div class="listing-description">
+All models have assumptions and cautions. Understanding whether you’ve satisfied these assumptions and checking for potential problems are some of the hardest things to do in statistics.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/diagnostics-lm/index.html">
+<div class="listing-date">
+Nov 15, 2022
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="stats,lm" data-listing-date-sort="1668319200000" data-listing-file-modified-sort="1668620732195" data-listing-reading-time-sort="1.24">
+<div class="body">
+<a href="./posts/basic-models/index.html">
+<h3 class="no-anchor listing-title">
+Running Basic Linear Models
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('stats'); return false;">
+stats
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('lm'); return false;">
+lm
+</div>
+</div>
+<a href="./posts/basic-models/index.html">
+<div class="listing-description">
+In R, basic linear models are run with the <code>lm()</code> function.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/basic-models/index.html">
+<div class="listing-date">
+Nov 13, 2022
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="stats,lm" data-listing-date-sort="1668060000000" data-listing-file-modified-sort="1668618574012" data-listing-reading-time-sort="0.73">
+<div class="body">
+<a href="./posts/workflow/index.html">
+<h3 class="no-anchor listing-title">
+Statistical Workflow
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('stats'); return false;">
+stats
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('lm'); return false;">
+lm
+</div>
+</div>
+<a href="./posts/workflow/index.html">
+<div class="listing-description">
+A statistical workflow is generally the same for most analyses, and thinking your way through this workflow can help you decide what kind of analysis you’d like to do.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/workflow/index.html">
+<div class="listing-date">
+Nov 10, 2022
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";

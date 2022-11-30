@@ -1,0 +1,52 @@
+/*-- scss:defaults --*/
+// Base document colors
+$link-color: #587d21;
+$navbar-bg: #3e3f3a;
+$navbar-fg: white;
+$navbar-hl: #587d21;
+$code-color: #587d21;
+
+// Base sizes
+$font-size-root: 11pt;
+
+
+/*-- scss:rules --*/
+
+.blockquote {
+  color: #25350c;
+}
+
+code {
+  font-size: 100%;
+}
+
+.gt-table {
+  font-size: $font-size-root;
+}
+
+#quarto-document-content {
+  background-color: #ffffff !important;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 1em;
+  margin-top: 1em;
+}
+
+#quarto-margin-sidebar {
+  background-color: #ffffff !important;
+  margin-top: 1em;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 0.5em;
+}
+
+body {
+  font-size: 16px;
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url(images/steffi_muskoka_wide_paint.jpg);
+  background-repeat: no-repeat;
+}
