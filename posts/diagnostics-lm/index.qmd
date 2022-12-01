@@ -2,8 +2,6 @@
 title: "Diagnostics for Simple Linear Models"
 date: "2022-11-15"
 categories: [stats, lm, vif, normality, diagnostics, residuals, cooks-d]
-toc: true
-toc-depth: 4
 execute:
   message: false
   warning: false
@@ -219,3 +217,10 @@ g + geom_hline(yintercept = 4/nrow(p),
 **All in all, having a high D doesn't mean you automatically remove the observation, 
 it means you think about what influence that observation is having on your model.
 Try omitting it and see how your model changes!**
+
+
+### Session Info
+```{r}
+devtools::session_info()
+```
+

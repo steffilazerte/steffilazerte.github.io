@@ -65,9 +65,9 @@ ul.task-list{list-style: none;}
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -149,7 +149,7 @@ ul.task-list{list-style: none;}
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-unnumbered"><div class="category" data-category="cooks-d">cooks-d</div><div class="category" data-category="diagnostics">diagnostics</div><div class="category" data-category="lm">lm</div><div class="category" data-category="normality">normality</div><div class="category" data-category="residuals">residuals</div><div class="category" data-category="stats">stats</div><div class="category" data-category="vif">vif</div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-unnumbered"><div class="category" data-category="cooks-d">cooks-d</div><div class="category" data-category="diagnostics">diagnostics</div><div class="category" data-category="glm">glm</div><div class="category" data-category="lm">lm</div><div class="category" data-category="normality">normality</div><div class="category" data-category="residuals">residuals</div><div class="category" data-category="stats">stats</div><div class="category" data-category="vif">vif</div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -181,7 +181,55 @@ ul.task-list{list-style: none;}
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="stats,lm,vif,normality,diagnostics,residuals,cooks-d" data-listing-date-sort="1668492000000" data-listing-file-modified-sort="1668618400557" data-listing-reading-time-sort="5.185">
+<div class="quarto-post image-right" data-index="0" data-categories="stats,lm,diagnostics,glm" data-listing-date-sort="1669874400000" data-listing-file-modified-sort="1669916167559" data-listing-reading-time-sort="3.255">
+<div class="thumbnail">
+<p><a href="./posts/dharma/index.html"> <img src="./posts/dharma/ECDFmotivation.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/dharma/index.html">
+<h3 class="no-anchor listing-title">
+DHARMa - Diagnostics for General Linear Models
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('stats'); return false;">
+stats
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('lm'); return false;">
+lm
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('diagnostics'); return false;">
+diagnostics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('glm'); return false;">
+glm
+</div>
+</div>
+<a href="./posts/dharma/index.html">
+<div class="listing-description">
+DHARMa is a great R package for checking model diagnostics, especially for models that are typically hard to evaluate (e.g., glms etc.).
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/dharma/index.html">
+<div class="listing-date">
+Dec 1, 2022
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="stats,lm,vif,normality,diagnostics,residuals,cooks-d" data-listing-date-sort="1668492000000" data-listing-file-modified-sort="1669915693112" data-listing-reading-time-sort="5.195">
+<div class="thumbnail">
+<a href="./posts/diagnostics-lm/index.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="./posts/diagnostics-lm/index.html"></a></p>
+</div>
 <div class="body">
 <a href="./posts/diagnostics-lm/index.html">
 <h3 class="no-anchor listing-title">
@@ -228,7 +276,14 @@ Nov 15, 2022
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="stats,lm" data-listing-date-sort="1668319200000" data-listing-file-modified-sort="1668620732195" data-listing-reading-time-sort="1.24">
+<div class="quarto-post image-right" data-index="2" data-categories="stats,lm" data-listing-date-sort="1668319200000" data-listing-file-modified-sort="1668620732195" data-listing-reading-time-sort="1.24">
+<div class="thumbnail">
+<a href="./posts/basic-models/index.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="./posts/basic-models/index.html"></a></p>
+</div>
 <div class="body">
 <a href="./posts/basic-models/index.html">
 <h3 class="no-anchor listing-title">
@@ -260,7 +315,14 @@ Nov 13, 2022
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="stats,lm" data-listing-date-sort="1668060000000" data-listing-file-modified-sort="1668618574012" data-listing-reading-time-sort="0.73">
+<div class="quarto-post image-right" data-index="3" data-categories="stats,lm" data-listing-date-sort="1668060000000" data-listing-file-modified-sort="1669915572089" data-listing-reading-time-sort="0.73">
+<div class="thumbnail">
+<a href="./posts/workflow/index.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="./posts/workflow/index.html"></a></p>
+</div>
 <div class="body">
 <a href="./posts/workflow/index.html">
 <h3 class="no-anchor listing-title">
