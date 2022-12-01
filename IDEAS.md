@@ -11,3 +11,7 @@
 - Interpreting glms (converting estimates)
 
 - R2 for non-simple linear models
+
+- Re-ordering factors in ggplot2
+
+- Using assertr
