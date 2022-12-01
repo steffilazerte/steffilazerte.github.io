@@ -1,0 +1,167 @@
+---
+title: "DHARMa - Diagnostics for General Linear Models"
+date: "2022-12-01"
+categories: [stats, lm, diagnostics, glm]
+---
+
+```{r}
+#| include: false
+
+if(!file.exists("ECDFmotivation.png")) {
+  download.file("https://github.com/florianhartig/DHARMa/blob/master/DHARMa/vignettes/ECDFmotivation.png?raw=true",
+                "ECDFmotivation.png")
+}
+
+knitr::opts_chunk$set(fig.width = 10, out.width = "100%", fig.asp = 0.6,
+                      fig.align = "center")
+
+```
+
+
+[DHARMa](https://github.com/florianhartig/DHARMa) is a great R package for
+checking model diagnostics, especially for models that are typically hard to
+evaluate (e.g., glms etc.).
+
+### Simulated Residuals
+
+DHARMa works by *simulating* residuals.
+
+This figure (from the [DHARMa tutorial](https://cran.r-project.org/web/packages/DHARMa/vignettes/DHARMa.html)) is an illustration of how the residuals are calculated...
+
+![](ECDFmotivation.png){fig-alt="Pink histogram showing simulated values for data point1 on the x-axis and cumulative density on the y" width=60% fig-align="center"}
+
+
+- **If** your data perfectly matched your model, what would the values look like?  
+  - Pink histogram values show repeatedly *simulated* values expected
+ 
+- How do your *actual* values compare?  
+  - Black arrow on x-axis shows *actual* value
+  - Black arrow on y-axis shows residual calculated
+  - Residuals calculated by where observation lies on cumulative density
+    of simulated values
+
+- Residuals are scaled (0 to 1)
+  - If data fits model perfectly, expect all residuals ~ 0.5
+  - Therefore, a good fit is *always* = flat/uniform distribution
+
+### Interpreting Residuals
+
+**If** your data fits the model
+
+- Residuals follow a flat (uniform) distribution (no matter what  model!)  
+- Expect: Straight line on QQ plot of **uniform** distribution [**(similar to [QQ Normal plot](../diagnostics-lm/#normality))**]{.small}
+- Expect: No patterns between residuals and model predictions [**(similar to [heteroscedasticity plot](../diagnostics-lm/#constant-variance), resid vs. fitted)**]{.small}
+
+```{r}
+#| echo: false
+#| message: false
+#| fig-width: 8
+#| fig-asp: 0.5
+
+library(DHARMa)
+library(palmerpenguins)
+library(readr)
+library(dplyr)
+p <- read_csv("https://stats.idre.ucla.edu/stat/data/poisson_sim.csv")
+p <- mutate(p, program = factor(prog, levels = 1:3,
+                                labels = c("General", "Academic", "Vocational")))
+m <- glm(num_awards ~ math + program, family = "poisson", data = p)
+orig <- par(mar = c(4,4,3,0))
+r <- simulateResiduals(m, n = 1000, plot = TRUE)
+par(orig)
+```
+
+
+> **Note:**  
+> These aren't the same residual plots that one would usually use to assess
+> model fit, *but* you can interpret them in a similar manner, when looking for problems
+
+**Closer Look at QQ Plots**
+
+- Visual check of **uniform distribution** (expect points to match line)
+- Tests **Uniformity** with Kolmogorov-Smirnov (KS) test (Uniform distribution)
+- Tests for **Over/Underdispersion** with Dispersion Test
+- Tests for more **Outliers** than expected with Outlier test
+
+```{r}
+#| echo: false
+
+orig <- par(mar = c(4,4,3,0))
+plotQQunif(r)
+par(orig)
+```
+
+**Closer Look at Residuals vs. Predicted Plots**
+
+- Check distribution of residuals [(visually and with quantile tests)]{.small}
+- Dotted lines show expected quantiles
+- Black lines show simulated quantiles [(want straight lines)]{.small}
+- Outliers would show up as red stars
+
+```{r}
+#| echo: false
+orig <- par(mar = c(4,4,3,0))
+plotResiduals(r)
+par(orig)
+```
+
+### Usage
+
+```{r fig.show="hide"}
+library(DHARMa)
+library(palmerpenguins)
+
+m <- lm(body_mass_g ~ flipper_length_mm, data = penguins)
+r <- simulateResiduals(m, n = 1000, plot = TRUE)
+```
+
+- `simulateResiduals()` function from 
+- Use `plot = TRUE` to produce diagnostic plots to see if simulated match expectation
+- `n = 1000` isn't strictly necessary but runs more simulations to produce more stable results  
+
+
+### Applicable to Most Linear Models
+
+- REMEMBER! Not assessing residuals in the [traditional](../diagnostics-lm) way...
+- Assessing whether residuals fit expected pattern given this model
+- This *includes* assumptions, but *also* includes general fit, etc.
+- So, we can use this to see if our model could be improved...
+- And we can use DHARMa to test various different types of models
+
+
+For example, binomial models
+```{r}
+penguins <- mutate(penguins, 
+                   size = flipper_length_mm > median(flipper_length_mm, na.rm = TRUE))
+
+m <- glm(size ~ species, family = "binomial", data = penguins)
+r <- simulateResiduals(m, plot = TRUE)
+```
+
+
+### Other Tests
+
+In addition to testing for outliers, over/underdispersion, etc., DHARMa also has
+tests for zero-inflation. 
+
+But important to remember that...
+
+- zero-inflation may also appear as iffy residuals
+- overdispersion can lead to false positives (so address overdispersion first)
+
+
+```{r}
+testZeroInflation(m)
+```
+
+
+### Resources
+
+- [DHARMa Tutorial](https://cran.r-project.org/web/packages/DHARMa/vignettes/DHARMa.html) [(Many great examples of model checking)]{.small}
+
+
+### Session Info
+```{r}
+devtools::session_info()
+```
+

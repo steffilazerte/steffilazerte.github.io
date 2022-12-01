@@ -9,5 +9,9 @@ title-block-banner: false
 
 code-link: true
 
+toc: true
+toc-depth: 4
+
 execute:
   echo: true
+  fig-align: center

@@ -2,6 +2,7 @@
   {
     "listing": "/tips_and_tricks.html",
     "items": [
+      "/posts/dharma/index.html",
       "/posts/diagnostics-lm/index.html",
       "/posts/basic-models/index.html",
       "/posts/workflow/index.html"
