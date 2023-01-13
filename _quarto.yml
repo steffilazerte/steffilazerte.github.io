@@ -1,6 +1,10 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "*.md"
+    - "!IDEAS.md"
 
 website:
   title: "Dr. Steffi LaZerte"
