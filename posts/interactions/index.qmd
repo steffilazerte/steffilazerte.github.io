@@ -1,0 +1,128 @@
+---
+title: "Interpreting interactions"
+date: "2023-06-06"
+categories: [stats, models, interactions, predictions]
+execute:
+  message: false
+  warning: false
+fig-width: 10
+---
+
+[Creating](../basic-models) models and [checking](../dharma) their [assumptions](../diagnostics-lm)
+are the first steps to running an analysis, but once you have a beautiful,
+valid model, what next?
+
+Interpreting models can be tricky as some results aren't intuitive (i.e. often
+interactions, or non-Gaussian models), and to get the most out of your model, 
+you'll want to understand both what parameters are important (or significant),
+as well as *how* they are important (effects size and direction). 
+
+You may also want to run a post-hoc analysis to dive deeper into the effects of 
+categorical predictors.
+
+Here we'll take a quick look at interactions.
+
+```{r}
+library(palmerpenguins)  # penguins data
+library(car)             # Type 3 anova
+library(marginaleffects) # Exploring interactions
+library(ggplot2)
+```
+
+
+### Interpreting Interactions
+
+Let's see if there is an interaction between flipper length and bill depth on bill length.
+This may not be a terribly sensible example (and note that we're skipping the all important
+step of checking our model!), but it should hopefully illustrate these tools.
+
+First let's create a linear model. 
+
+```{r}
+m <- lm(bill_length_mm ~ flipper_length_mm * bill_depth_mm, data = penguins)
+```
+
+We can explore the results by looking at the `summary()` table
+```{r}
+summary(m)
+```
+
+Or with an `Anova()` table (here, from the car package, so we can get type III)
+
+```{r}
+Anova(m, type = "III")
+```
+
+Okay, in our standard interpretation, we would say that yes, there is an interaction 
+(p = `r round(summary(m)$coefficients[4, 4], 3)`). 
+
+With continuous variables, the summary table is often a bit more informative, 
+as we can interpret the estimates. In this case, we can interpret the interaction
+as: for every 1 mm increase in flipper length, the effect of a
+1 mm increase on bill depth increases by `r round(summary(m)$coefficients[4, 1], 3)`.
+
+Hmm, not incredibly intuitive!
+
+The marginalmeans package can be used to explore models with interactions via 
+"conditional marginal effects" and predictions
+
+#### Conditional marginal effects
+
+These are really nice way of visualizing the verbal interpretation we made above.
+
+We'll use the `plot_slopes()` function to plot the effect of one variable on the slope of the other (i.e. an interaction!).
+
+Here, we look at the effect of bill depth on the slope of flipper length (i.e.
+the effect of flipper length on our response, bill length).
+
+The Y-axis represents the slope of the effect of flipper length on bill depth.
+
+```{r}
+plot_slopes(m, variables = "flipper_length_mm", condition = "bill_depth_mm") +
+  theme_minimal() +
+  labs(y = "Slope of flipper length")
+```
+
+This figure is a visualization of our interaction parameter, but also puts things into 
+the proper context and includes confidence intervals!
+
+Here we see that a) the slope is always positive, b) becomes stronger for increasing bill depth.
+
+### Plotting predictions
+
+We can plot the predictions to get a visual of this interaction.
+```{r}
+plot_predictions(m, condition = list("flipper_length_mm", "bill_depth_mm"),
+                 point = 0.5)
+```
+
+Here we can see the various lines (slopes) representing the effect of flipper length on
+bill length across different bill depths. We see that the effect (slope) increases 
+as bill depth increases (compare the line with bill depth at 21.5 to the one with
+bill depth at 13.1). This is another visual representation of what we stated above, 
+with additional context. In addition to seeing that all the slopes are positive, 
+and the changes make them stronger, we see this in relation to the original data.
+
+I find this kind of plot useful for sharing your results as it shows the raw data
+along with the model results and a clear explanation of what that interaction 
+really means.
+
+### Conclusions
+
+Interpreting interactions can be much simpler with visual aids, and it's a 
+good idea to use these figures not only for your benefit but for the benefit of
+anyone you're sharing your work with. 
+
+You can make these figures by hand, but using marginalmeans will make it much 
+easier (if slightly less customizable).
+
+### Further Reading
+
+- https://vincentarelbundock.github.io/marginaleffects/
+- https://www.andrewheiss.com/blog/2022/05/20/marginalia/#tldr-overall-summary-of-all-these-marginal-effects-approaches
+
+### Session Info
+```{r}
+devtools::session_info()
+```
+
