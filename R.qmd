@@ -1,6 +1,8 @@
 ---
 title: R Projects
 toc: true
+warning: false
+message: false
 ---
 
 ```{r, include = FALSE}
@@ -28,6 +30,7 @@ jobs %>%
 jobs %>%
   filter(type %in% c("analysis", "programming")) %>%
   select(-skills) %>%
+  arrange(!is.na(end), desc(end), desc(start)) %>%
   fmt_pkgs(type = "html", ignore_consultant = TRUE) %>%
   fmt_gt() %>%
   cols_width(title ~ "25%")

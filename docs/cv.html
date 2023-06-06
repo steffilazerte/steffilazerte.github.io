@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.613">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -33,7 +38,7 @@ ul.task-list{list-style: none;}
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,47 +68,57 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="./index.html">
-    <img src="./images/logo_gear.png" alt="">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images/logo_gear.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Dr.&nbsp;Steffi LaZerte</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">Home</a>
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./R.html">R Projects</a>
+    <a class="nav-link" href="./R.html">
+ <span class="menu-text">R Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./cv.html" aria-current="page">Academic Activities and CV</a>
+    <a class="nav-link active" href="./cv.html" aria-current="page">
+ <span class="menu-text">Academic Activities and CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./presentations.html">Presentations</a>
+    <a class="nav-link" href="./presentations.html">
+ <span class="menu-text">Presentations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./tips_and_tricks.html">Tips &amp; Tricks</a>
+    <a class="nav-link" href="./tips_and_tricks.html">
+ <span class="menu-text">Tips &amp; Tricks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">About</a>
+    <a class="nav-link" href="./about.html">
+ <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/steffilazerte"><i class="bi bi-github" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/steffilazerte"><i class="bi bi-twitter" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://fosstodon.org/@steffilazerte"><i class="bi bi-mastodon" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -116,7 +131,7 @@ ul.task-list{list-style: none;}
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -154,6 +169,7 @@ ul.task-list{list-style: none;}
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -215,14 +231,26 @@ Details: A follow up study to playback studies conducted during my PhD looking a
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="vvwpjytlga" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+<div id="faonbzeagn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#faonbzeagn table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-#vvwpjytlga .gt_table {
+#faonbzeagn thead, #faonbzeagn tbody, #faonbzeagn tfoot, #faonbzeagn tr, #faonbzeagn td, #faonbzeagn th {
+  border-style: none;
+}
+
+#faonbzeagn p {
+  margin: 0;
+  padding: 0;
+}
+
+#faonbzeagn .gt_table {
   display: table;
   border-collapse: collapse;
+  line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
@@ -245,19 +273,12 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   border-left-color: #D3D3D3;
 }
 
-#vvwpjytlga .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
+#faonbzeagn .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
-#vvwpjytlga .gt_title {
+#faonbzeagn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -269,25 +290,37 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   border-bottom-width: 0;
 }
 
-#vvwpjytlga .gt_subtitle {
+#faonbzeagn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
+  padding-top: 3px;
+  padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#vvwpjytlga .gt_bottom_border {
+#faonbzeagn .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#faonbzeagn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vvwpjytlga .gt_col_headings {
+#faonbzeagn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -302,7 +335,7 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   border-right-color: #D3D3D3;
 }
 
-#vvwpjytlga .gt_col_heading {
+#faonbzeagn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -322,7 +355,7 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   overflow-x: hidden;
 }
 
-#vvwpjytlga .gt_column_spanner_outer {
+#faonbzeagn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -334,15 +367,15 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   padding-right: 4px;
 }
 
-#vvwpjytlga .gt_column_spanner_outer:first-child {
+#faonbzeagn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vvwpjytlga .gt_column_spanner_outer:last-child {
+#faonbzeagn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vvwpjytlga .gt_column_spanner {
+#faonbzeagn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -354,7 +387,11 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   width: 100%;
 }
 
-#vvwpjytlga .gt_group_heading {
+#faonbzeagn .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#faonbzeagn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -377,9 +414,10 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   border-right-width: 1px;
   border-right-color: #D3D3D3;
   vertical-align: middle;
+  text-align: left;
 }
 
-#vvwpjytlga .gt_empty_group_heading {
+#faonbzeagn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -394,15 +432,15 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   vertical-align: middle;
 }
 
-#vvwpjytlga .gt_from_md > :first-child {
+#faonbzeagn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vvwpjytlga .gt_from_md > :last-child {
+#faonbzeagn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vvwpjytlga .gt_row {
+#faonbzeagn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -421,7 +459,7 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   overflow-x: hidden;
 }
 
-#vvwpjytlga .gt_stub {
+#faonbzeagn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -434,7 +472,7 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   padding-right: 5px;
 }
 
-#vvwpjytlga .gt_stub_row_group {
+#faonbzeagn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -448,11 +486,15 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   vertical-align: top;
 }
 
-#vvwpjytlga .gt_row_group_first td {
+#faonbzeagn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vvwpjytlga .gt_summary_row {
+#faonbzeagn .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#faonbzeagn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -462,16 +504,16 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   padding-right: 5px;
 }
 
-#vvwpjytlga .gt_first_summary_row {
+#faonbzeagn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vvwpjytlga .gt_first_summary_row.thick {
+#faonbzeagn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vvwpjytlga .gt_last_summary_row {
+#faonbzeagn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -481,7 +523,7 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   border-bottom-color: #D3D3D3;
 }
 
-#vvwpjytlga .gt_grand_summary_row {
+#faonbzeagn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -491,7 +533,7 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   padding-right: 5px;
 }
 
-#vvwpjytlga .gt_first_grand_summary_row {
+#faonbzeagn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -501,11 +543,21 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   border-top-color: #D3D3D3;
 }
 
-#vvwpjytlga .gt_striped {
+#faonbzeagn .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#faonbzeagn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vvwpjytlga .gt_table_body {
+#faonbzeagn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -514,7 +566,7 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   border-bottom-color: #D3D3D3;
 }
 
-#vvwpjytlga .gt_footnotes {
+#faonbzeagn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -528,30 +580,8 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   border-right-color: #D3D3D3;
 }
 
-#vvwpjytlga .gt_footnote {
+#faonbzeagn .gt_footnote {
   margin: 0px;
-  font-size: 90%;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#vvwpjytlga .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#vvwpjytlga .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -559,89 +589,102 @@ Details: A follow up study to playback studies conducted during my PhD looking a
   padding-right: 5px;
 }
 
-#vvwpjytlga .gt_left {
+#faonbzeagn .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#faonbzeagn .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#faonbzeagn .gt_left {
   text-align: left;
 }
 
-#vvwpjytlga .gt_center {
+#faonbzeagn .gt_center {
   text-align: center;
 }
 
-#vvwpjytlga .gt_right {
+#faonbzeagn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vvwpjytlga .gt_font_normal {
+#faonbzeagn .gt_font_normal {
   font-weight: normal;
 }
 
-#vvwpjytlga .gt_font_bold {
+#faonbzeagn .gt_font_bold {
   font-weight: bold;
 }
 
-#vvwpjytlga .gt_font_italic {
+#faonbzeagn .gt_font_italic {
   font-style: italic;
 }
 
-#vvwpjytlga .gt_super {
+#faonbzeagn .gt_super {
   font-size: 65%;
 }
 
-#vvwpjytlga .gt_two_val_uncert {
-  display: inline-block;
-  line-height: 1em;
-  text-align: right;
-  font-size: 60%;
-  vertical-align: -0.25em;
-  margin-left: 0.1em;
-}
-
-#vvwpjytlga .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
+#faonbzeagn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
+  position: initial;
 }
 
-#vvwpjytlga .gt_asterisk {
+#faonbzeagn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vvwpjytlga .gt_slash_mark {
-  font-size: 0.7em;
-  line-height: 0.7em;
-  vertical-align: 0.15em;
+#faonbzeagn .gt_indent_1 {
+  text-indent: 5px;
 }
 
-#vvwpjytlga .gt_fraction_numerator {
-  font-size: 0.6em;
-  line-height: 0.6em;
-  vertical-align: 0.45em;
+#faonbzeagn .gt_indent_2 {
+  text-indent: 10px;
 }
 
-#vvwpjytlga .gt_fraction_denominator {
-  font-size: 0.6em;
-  line-height: 0.6em;
-  vertical-align: -0.05em;
+#faonbzeagn .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#faonbzeagn .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#faonbzeagn .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
-<table class="gt_table">
-  
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   
   <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left">2018, 2020, 2021</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>NRI 7350 Study design and quantitative methods for resource and
+    <tr><td headers="date" class="gt_row gt_left">2018, 2020, 2021</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>NRI 7350 Study design and quantitative methods for resource and
 environmental management</strong> (<small>Sessional Co-Instructor</small>)
 University of Manitoba (<small>Winnipeg, MB</small>)</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2017</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>SOIL 7240 Preparing Data in R</strong> (<small>Module Instructor</small>)
+    <tr><td headers="date" class="gt_row gt_left">2017</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>SOIL 7240 Preparing Data in R</strong> (<small>Module Instructor</small>)
 University of Manitoba (<small>Winnipeg, MB</small>)</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2014</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>STAT 473/673 Experimental Design and Analysis</strong> (<small>Substitute Instructor</small>)
+    <tr><td headers="date" class="gt_row gt_left">2014</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>STAT 473/673 Experimental Design and Analysis</strong> (<small>Substitute Instructor</small>)
 University of Northern BC (<small>Prince George, BC</small>)</p>
 </div></td></tr>
   </tbody>
@@ -657,14 +700,26 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="ehahvqtxvf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+<div id="kspcbeeuba" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kspcbeeuba table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-#ehahvqtxvf .gt_table {
+#kspcbeeuba thead, #kspcbeeuba tbody, #kspcbeeuba tfoot, #kspcbeeuba tr, #kspcbeeuba td, #kspcbeeuba th {
+  border-style: none;
+}
+
+#kspcbeeuba p {
+  margin: 0;
+  padding: 0;
+}
+
+#kspcbeeuba .gt_table {
   display: table;
   border-collapse: collapse;
+  line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
@@ -687,19 +742,12 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   border-left-color: #D3D3D3;
 }
 
-#ehahvqtxvf .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
+#kspcbeeuba .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
-#ehahvqtxvf .gt_title {
+#kspcbeeuba .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -711,25 +759,37 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   border-bottom-width: 0;
 }
 
-#ehahvqtxvf .gt_subtitle {
+#kspcbeeuba .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
+  padding-top: 3px;
+  padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#ehahvqtxvf .gt_bottom_border {
+#kspcbeeuba .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#kspcbeeuba .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ehahvqtxvf .gt_col_headings {
+#kspcbeeuba .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -744,7 +804,7 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   border-right-color: #D3D3D3;
 }
 
-#ehahvqtxvf .gt_col_heading {
+#kspcbeeuba .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -764,7 +824,7 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   overflow-x: hidden;
 }
 
-#ehahvqtxvf .gt_column_spanner_outer {
+#kspcbeeuba .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -776,15 +836,15 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   padding-right: 4px;
 }
 
-#ehahvqtxvf .gt_column_spanner_outer:first-child {
+#kspcbeeuba .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ehahvqtxvf .gt_column_spanner_outer:last-child {
+#kspcbeeuba .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ehahvqtxvf .gt_column_spanner {
+#kspcbeeuba .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -796,7 +856,11 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   width: 100%;
 }
 
-#ehahvqtxvf .gt_group_heading {
+#kspcbeeuba .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#kspcbeeuba .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -819,9 +883,10 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   border-right-width: 1px;
   border-right-color: #D3D3D3;
   vertical-align: middle;
+  text-align: left;
 }
 
-#ehahvqtxvf .gt_empty_group_heading {
+#kspcbeeuba .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -836,15 +901,15 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   vertical-align: middle;
 }
 
-#ehahvqtxvf .gt_from_md > :first-child {
+#kspcbeeuba .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ehahvqtxvf .gt_from_md > :last-child {
+#kspcbeeuba .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ehahvqtxvf .gt_row {
+#kspcbeeuba .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -863,7 +928,7 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   overflow-x: hidden;
 }
 
-#ehahvqtxvf .gt_stub {
+#kspcbeeuba .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -876,7 +941,7 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   padding-right: 5px;
 }
 
-#ehahvqtxvf .gt_stub_row_group {
+#kspcbeeuba .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -890,11 +955,15 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   vertical-align: top;
 }
 
-#ehahvqtxvf .gt_row_group_first td {
+#kspcbeeuba .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ehahvqtxvf .gt_summary_row {
+#kspcbeeuba .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#kspcbeeuba .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -904,16 +973,16 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   padding-right: 5px;
 }
 
-#ehahvqtxvf .gt_first_summary_row {
+#kspcbeeuba .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ehahvqtxvf .gt_first_summary_row.thick {
+#kspcbeeuba .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ehahvqtxvf .gt_last_summary_row {
+#kspcbeeuba .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -923,7 +992,7 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   border-bottom-color: #D3D3D3;
 }
 
-#ehahvqtxvf .gt_grand_summary_row {
+#kspcbeeuba .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -933,7 +1002,7 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   padding-right: 5px;
 }
 
-#ehahvqtxvf .gt_first_grand_summary_row {
+#kspcbeeuba .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -943,11 +1012,21 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   border-top-color: #D3D3D3;
 }
 
-#ehahvqtxvf .gt_striped {
+#kspcbeeuba .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kspcbeeuba .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ehahvqtxvf .gt_table_body {
+#kspcbeeuba .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -956,7 +1035,7 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   border-bottom-color: #D3D3D3;
 }
 
-#ehahvqtxvf .gt_footnotes {
+#kspcbeeuba .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -970,30 +1049,8 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   border-right-color: #D3D3D3;
 }
 
-#ehahvqtxvf .gt_footnote {
+#kspcbeeuba .gt_footnote {
   margin: 0px;
-  font-size: 90%;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#ehahvqtxvf .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#ehahvqtxvf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1001,92 +1058,113 @@ University of Northern BC (<small>Prince George, BC</small>)</p>
   padding-right: 5px;
 }
 
-#ehahvqtxvf .gt_left {
+#kspcbeeuba .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#kspcbeeuba .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kspcbeeuba .gt_left {
   text-align: left;
 }
 
-#ehahvqtxvf .gt_center {
+#kspcbeeuba .gt_center {
   text-align: center;
 }
 
-#ehahvqtxvf .gt_right {
+#kspcbeeuba .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ehahvqtxvf .gt_font_normal {
+#kspcbeeuba .gt_font_normal {
   font-weight: normal;
 }
 
-#ehahvqtxvf .gt_font_bold {
+#kspcbeeuba .gt_font_bold {
   font-weight: bold;
 }
 
-#ehahvqtxvf .gt_font_italic {
+#kspcbeeuba .gt_font_italic {
   font-style: italic;
 }
 
-#ehahvqtxvf .gt_super {
+#kspcbeeuba .gt_super {
   font-size: 65%;
 }
 
-#ehahvqtxvf .gt_two_val_uncert {
-  display: inline-block;
-  line-height: 1em;
-  text-align: right;
-  font-size: 60%;
-  vertical-align: -0.25em;
-  margin-left: 0.1em;
-}
-
-#ehahvqtxvf .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
+#kspcbeeuba .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
+  position: initial;
 }
 
-#ehahvqtxvf .gt_asterisk {
+#kspcbeeuba .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ehahvqtxvf .gt_slash_mark {
-  font-size: 0.7em;
-  line-height: 0.7em;
-  vertical-align: 0.15em;
+#kspcbeeuba .gt_indent_1 {
+  text-indent: 5px;
 }
 
-#ehahvqtxvf .gt_fraction_numerator {
-  font-size: 0.6em;
-  line-height: 0.6em;
-  vertical-align: 0.45em;
+#kspcbeeuba .gt_indent_2 {
+  text-indent: 10px;
 }
 
-#ehahvqtxvf .gt_fraction_denominator {
-  font-size: 0.6em;
-  line-height: 0.6em;
-  vertical-align: -0.05em;
+#kspcbeeuba .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#kspcbeeuba .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#kspcbeeuba .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
-<table class="gt_table">
-  
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   
   <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left">2019, 2020, 2021</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Two-day Introduction to R</strong> (<small>Instructor</small>)
-Brandon University (<small>Brandon, MB</small>)</p>
+    <tr><td headers="date" class="gt_row gt_left">2019, 2020, 2023</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Intro to R through Figures</strong> (<small>Instructor</small>)
+The Wildlife Society (<small>Online, Winnipeg, MB</small>)</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2021</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Intro to R through Figures</strong> (<small>Instructor</small>)
-University of Northern BC (<small>Prince George, BC</small>)</p>
+    <tr><td headers="date" class="gt_row gt_left">2019-2023</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Two-day Introduction to R</strong> (<small>Instructor</small>)
+Brandon University (<small>Online, Brandon, MB</small>)</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2019, 2020</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Intro to R through Figures</strong> (<small>Instructor</small>)
-The Wildlife Society (<small>Winnipeg, MB</small>)</p>
+    <tr><td headers="date" class="gt_row gt_left">2023</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Introduction to Rmarkdown/Quarto for Reproducibility</strong> (<small>Instructor</small>)
+Birds Canada (<small>Online</small>)</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2020</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Two-day Introduction to R</strong> (<small>Instructor</small>)
+    <tr><td headers="date" class="gt_row gt_left">2022</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Introduction to Rmarkdown/Quarto for Reproducibility</strong> (<small>Instructor</small>)
+Society of Canadian Ornithologists / Société des ornithologistes du Canada (<small>Online</small>)</p>
+</div></td></tr>
+    <tr><td headers="date" class="gt_row gt_left">2021</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Intro to R through Figures</strong> (<small>Instructor</small>)
+University of Northern BC (<small>Online</small>)</p>
+</div></td></tr>
+    <tr><td headers="date" class="gt_row gt_left">2020</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Two-day Introduction to R</strong> (<small>Instructor</small>)
 University of Manitoba (<small>Winnipeg, MB</small>)</p>
 </div></td></tr>
   </tbody>
@@ -1102,14 +1180,26 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="ognkyxhkwq" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+<div id="azkzzfydfj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#azkzzfydfj table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-#ognkyxhkwq .gt_table {
+#azkzzfydfj thead, #azkzzfydfj tbody, #azkzzfydfj tfoot, #azkzzfydfj tr, #azkzzfydfj td, #azkzzfydfj th {
+  border-style: none;
+}
+
+#azkzzfydfj p {
+  margin: 0;
+  padding: 0;
+}
+
+#azkzzfydfj .gt_table {
   display: table;
   border-collapse: collapse;
+  line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
@@ -1132,19 +1222,12 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-left-color: #D3D3D3;
 }
 
-#ognkyxhkwq .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
+#azkzzfydfj .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
-#ognkyxhkwq .gt_title {
+#azkzzfydfj .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1156,25 +1239,37 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-bottom-width: 0;
 }
 
-#ognkyxhkwq .gt_subtitle {
+#azkzzfydfj .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
+  padding-top: 3px;
+  padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#ognkyxhkwq .gt_bottom_border {
+#azkzzfydfj .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#azkzzfydfj .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ognkyxhkwq .gt_col_headings {
+#azkzzfydfj .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1189,7 +1284,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-right-color: #D3D3D3;
 }
 
-#ognkyxhkwq .gt_col_heading {
+#azkzzfydfj .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1209,7 +1304,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   overflow-x: hidden;
 }
 
-#ognkyxhkwq .gt_column_spanner_outer {
+#azkzzfydfj .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1221,15 +1316,15 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   padding-right: 4px;
 }
 
-#ognkyxhkwq .gt_column_spanner_outer:first-child {
+#azkzzfydfj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ognkyxhkwq .gt_column_spanner_outer:last-child {
+#azkzzfydfj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ognkyxhkwq .gt_column_spanner {
+#azkzzfydfj .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1241,7 +1336,11 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   width: 100%;
 }
 
-#ognkyxhkwq .gt_group_heading {
+#azkzzfydfj .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#azkzzfydfj .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1264,9 +1363,10 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-right-width: 1px;
   border-right-color: #D3D3D3;
   vertical-align: middle;
+  text-align: left;
 }
 
-#ognkyxhkwq .gt_empty_group_heading {
+#azkzzfydfj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1281,15 +1381,15 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   vertical-align: middle;
 }
 
-#ognkyxhkwq .gt_from_md > :first-child {
+#azkzzfydfj .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ognkyxhkwq .gt_from_md > :last-child {
+#azkzzfydfj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ognkyxhkwq .gt_row {
+#azkzzfydfj .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1308,7 +1408,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   overflow-x: hidden;
 }
 
-#ognkyxhkwq .gt_stub {
+#azkzzfydfj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1321,7 +1421,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   padding-right: 5px;
 }
 
-#ognkyxhkwq .gt_stub_row_group {
+#azkzzfydfj .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1335,11 +1435,15 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   vertical-align: top;
 }
 
-#ognkyxhkwq .gt_row_group_first td {
+#azkzzfydfj .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ognkyxhkwq .gt_summary_row {
+#azkzzfydfj .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#azkzzfydfj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1349,16 +1453,16 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   padding-right: 5px;
 }
 
-#ognkyxhkwq .gt_first_summary_row {
+#azkzzfydfj .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ognkyxhkwq .gt_first_summary_row.thick {
+#azkzzfydfj .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ognkyxhkwq .gt_last_summary_row {
+#azkzzfydfj .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1368,7 +1472,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-bottom-color: #D3D3D3;
 }
 
-#ognkyxhkwq .gt_grand_summary_row {
+#azkzzfydfj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1378,7 +1482,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   padding-right: 5px;
 }
 
-#ognkyxhkwq .gt_first_grand_summary_row {
+#azkzzfydfj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1388,11 +1492,21 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-top-color: #D3D3D3;
 }
 
-#ognkyxhkwq .gt_striped {
+#azkzzfydfj .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#azkzzfydfj .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ognkyxhkwq .gt_table_body {
+#azkzzfydfj .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1401,7 +1515,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-bottom-color: #D3D3D3;
 }
 
-#ognkyxhkwq .gt_footnotes {
+#azkzzfydfj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1415,30 +1529,8 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-right-color: #D3D3D3;
 }
 
-#ognkyxhkwq .gt_footnote {
+#azkzzfydfj .gt_footnote {
   margin: 0px;
-  font-size: 90%;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#ognkyxhkwq .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#ognkyxhkwq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1446,81 +1538,94 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   padding-right: 5px;
 }
 
-#ognkyxhkwq .gt_left {
+#azkzzfydfj .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#azkzzfydfj .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#azkzzfydfj .gt_left {
   text-align: left;
 }
 
-#ognkyxhkwq .gt_center {
+#azkzzfydfj .gt_center {
   text-align: center;
 }
 
-#ognkyxhkwq .gt_right {
+#azkzzfydfj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ognkyxhkwq .gt_font_normal {
+#azkzzfydfj .gt_font_normal {
   font-weight: normal;
 }
 
-#ognkyxhkwq .gt_font_bold {
+#azkzzfydfj .gt_font_bold {
   font-weight: bold;
 }
 
-#ognkyxhkwq .gt_font_italic {
+#azkzzfydfj .gt_font_italic {
   font-style: italic;
 }
 
-#ognkyxhkwq .gt_super {
+#azkzzfydfj .gt_super {
   font-size: 65%;
 }
 
-#ognkyxhkwq .gt_two_val_uncert {
-  display: inline-block;
-  line-height: 1em;
-  text-align: right;
-  font-size: 60%;
-  vertical-align: -0.25em;
-  margin-left: 0.1em;
-}
-
-#ognkyxhkwq .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
+#azkzzfydfj .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
+  position: initial;
 }
 
-#ognkyxhkwq .gt_asterisk {
+#azkzzfydfj .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ognkyxhkwq .gt_slash_mark {
-  font-size: 0.7em;
-  line-height: 0.7em;
-  vertical-align: 0.15em;
+#azkzzfydfj .gt_indent_1 {
+  text-indent: 5px;
 }
 
-#ognkyxhkwq .gt_fraction_numerator {
-  font-size: 0.6em;
-  line-height: 0.6em;
-  vertical-align: 0.45em;
+#azkzzfydfj .gt_indent_2 {
+  text-indent: 10px;
 }
 
-#ognkyxhkwq .gt_fraction_denominator {
-  font-size: 0.6em;
-  line-height: 0.6em;
-  vertical-align: -0.05em;
+#azkzzfydfj .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#azkzzfydfj .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#azkzzfydfj .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
-<table class="gt_table">
-  
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   
   <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left">2012</td>
-<td class="gt_row gt_left">Present</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>One-on-one assistance</strong></p>
+    <tr><td headers="start" class="gt_row gt_left">2012</td>
+<td headers="end" class="gt_row gt_left">Present</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>One-on-one assistance</strong></p>
 <ul>
 <li>University of Manitoba, Winnipeg, MB</li>
 <li>Brandon University, Brandon, MB</li>
@@ -1529,9 +1634,9 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
 <li>University of Northern BC, Prince George, BC</li>
 </ul>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2012</td>
-<td class="gt_row gt_left">2017</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Organized R Help Groups</strong></p>
+    <tr><td headers="start" class="gt_row gt_left">2012</td>
+<td headers="end" class="gt_row gt_left">2017</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Organized R Help Groups</strong></p>
 <ul>
 <li>R Group (2016-2017) <small>University of New Brunswick, Fredericton, NB</small></li>
 <li>R Coffee Hour (2012-2016) <small>University of Northern BC, Prince George, BC</small></li>
@@ -1550,14 +1655,26 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="edrddecacv" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+<div id="tsucoexkll" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#tsucoexkll table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-#edrddecacv .gt_table {
+#tsucoexkll thead, #tsucoexkll tbody, #tsucoexkll tfoot, #tsucoexkll tr, #tsucoexkll td, #tsucoexkll th {
+  border-style: none;
+}
+
+#tsucoexkll p {
+  margin: 0;
+  padding: 0;
+}
+
+#tsucoexkll .gt_table {
   display: table;
   border-collapse: collapse;
+  line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
@@ -1580,19 +1697,12 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-left-color: #D3D3D3;
 }
 
-#edrddecacv .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
+#tsucoexkll .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
-#edrddecacv .gt_title {
+#tsucoexkll .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1604,25 +1714,37 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-bottom-width: 0;
 }
 
-#edrddecacv .gt_subtitle {
+#tsucoexkll .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
+  padding-top: 3px;
+  padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#edrddecacv .gt_bottom_border {
+#tsucoexkll .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tsucoexkll .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#edrddecacv .gt_col_headings {
+#tsucoexkll .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1637,7 +1759,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-right-color: #D3D3D3;
 }
 
-#edrddecacv .gt_col_heading {
+#tsucoexkll .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1657,7 +1779,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   overflow-x: hidden;
 }
 
-#edrddecacv .gt_column_spanner_outer {
+#tsucoexkll .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1669,15 +1791,15 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   padding-right: 4px;
 }
 
-#edrddecacv .gt_column_spanner_outer:first-child {
+#tsucoexkll .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#edrddecacv .gt_column_spanner_outer:last-child {
+#tsucoexkll .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#edrddecacv .gt_column_spanner {
+#tsucoexkll .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1689,7 +1811,11 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   width: 100%;
 }
 
-#edrddecacv .gt_group_heading {
+#tsucoexkll .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#tsucoexkll .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1712,9 +1838,10 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-right-width: 1px;
   border-right-color: #D3D3D3;
   vertical-align: middle;
+  text-align: left;
 }
 
-#edrddecacv .gt_empty_group_heading {
+#tsucoexkll .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1729,15 +1856,15 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   vertical-align: middle;
 }
 
-#edrddecacv .gt_from_md > :first-child {
+#tsucoexkll .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#edrddecacv .gt_from_md > :last-child {
+#tsucoexkll .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#edrddecacv .gt_row {
+#tsucoexkll .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1756,7 +1883,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   overflow-x: hidden;
 }
 
-#edrddecacv .gt_stub {
+#tsucoexkll .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1769,7 +1896,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   padding-right: 5px;
 }
 
-#edrddecacv .gt_stub_row_group {
+#tsucoexkll .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1783,11 +1910,15 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   vertical-align: top;
 }
 
-#edrddecacv .gt_row_group_first td {
+#tsucoexkll .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#edrddecacv .gt_summary_row {
+#tsucoexkll .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#tsucoexkll .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1797,16 +1928,16 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   padding-right: 5px;
 }
 
-#edrddecacv .gt_first_summary_row {
+#tsucoexkll .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#edrddecacv .gt_first_summary_row.thick {
+#tsucoexkll .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#edrddecacv .gt_last_summary_row {
+#tsucoexkll .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1816,7 +1947,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-bottom-color: #D3D3D3;
 }
 
-#edrddecacv .gt_grand_summary_row {
+#tsucoexkll .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1826,7 +1957,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   padding-right: 5px;
 }
 
-#edrddecacv .gt_first_grand_summary_row {
+#tsucoexkll .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1836,11 +1967,21 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-top-color: #D3D3D3;
 }
 
-#edrddecacv .gt_striped {
+#tsucoexkll .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tsucoexkll .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#edrddecacv .gt_table_body {
+#tsucoexkll .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1849,7 +1990,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-bottom-color: #D3D3D3;
 }
 
-#edrddecacv .gt_footnotes {
+#tsucoexkll .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1863,30 +2004,8 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-right-color: #D3D3D3;
 }
 
-#edrddecacv .gt_footnote {
+#tsucoexkll .gt_footnote {
   margin: 0px;
-  font-size: 90%;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#edrddecacv .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#edrddecacv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1894,124 +2013,137 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   padding-right: 5px;
 }
 
-#edrddecacv .gt_left {
+#tsucoexkll .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tsucoexkll .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tsucoexkll .gt_left {
   text-align: left;
 }
 
-#edrddecacv .gt_center {
+#tsucoexkll .gt_center {
   text-align: center;
 }
 
-#edrddecacv .gt_right {
+#tsucoexkll .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#edrddecacv .gt_font_normal {
+#tsucoexkll .gt_font_normal {
   font-weight: normal;
 }
 
-#edrddecacv .gt_font_bold {
+#tsucoexkll .gt_font_bold {
   font-weight: bold;
 }
 
-#edrddecacv .gt_font_italic {
+#tsucoexkll .gt_font_italic {
   font-style: italic;
 }
 
-#edrddecacv .gt_super {
+#tsucoexkll .gt_super {
   font-size: 65%;
 }
 
-#edrddecacv .gt_two_val_uncert {
-  display: inline-block;
-  line-height: 1em;
-  text-align: right;
-  font-size: 60%;
-  vertical-align: -0.25em;
-  margin-left: 0.1em;
-}
-
-#edrddecacv .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
+#tsucoexkll .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
+  position: initial;
 }
 
-#edrddecacv .gt_asterisk {
+#tsucoexkll .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#edrddecacv .gt_slash_mark {
-  font-size: 0.7em;
-  line-height: 0.7em;
-  vertical-align: 0.15em;
+#tsucoexkll .gt_indent_1 {
+  text-indent: 5px;
 }
 
-#edrddecacv .gt_fraction_numerator {
-  font-size: 0.6em;
-  line-height: 0.6em;
-  vertical-align: 0.45em;
+#tsucoexkll .gt_indent_2 {
+  text-indent: 10px;
 }
 
-#edrddecacv .gt_fraction_denominator {
-  font-size: 0.6em;
-  line-height: 0.6em;
-  vertical-align: -0.05em;
+#tsucoexkll .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#tsucoexkll .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#tsucoexkll .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
-<table class="gt_table">
-  
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   
   <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left">2018</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Animal Behaviour 15:375</strong> (<small>Guest Lecture</small>)
+    <tr><td headers="date" class="gt_row gt_left">2018</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Animal Behaviour 15:375</strong> (<small>Guest Lecture</small>)
 Brandon University (<small>Brandon, MB</small>)</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2018</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Evolution 15:350</strong> (<small>Guest Lecture</small>)
+    <tr><td headers="date" class="gt_row gt_left">2018</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Evolution 15:350</strong> (<small>Guest Lecture</small>)
 Brandon University (<small>Brandon, MB</small>)</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2017</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Global Environmental Change 38:290</strong> (<small>Guest Lecture</small>)
+    <tr><td headers="date" class="gt_row gt_left">2017</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Global Environmental Change 38:290</strong> (<small>Guest Lecture</small>)
 Brandon University (<small>Brandon, MB</small>)</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2014, 2015, 2016</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Animal Behaviour BIOL 420</strong> (<small>Guest Lecture</small>)
+    <tr><td headers="date" class="gt_row gt_left">2014, 2016</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Drainage Basin Geomorphology GEOG 311</strong> (<small>Guest Lecture</small>)
 University of Northern BC (<small>Prince George, BC</small>)</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2014, 2016</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Drainage Basin Geomorphology GEOG 311</strong> (<small>Guest Lecture</small>)
+    <tr><td headers="date" class="gt_row gt_left">2014-2016</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Animal Behaviour BIOL 420</strong> (<small>Guest Lecture</small>)
 University of Northern BC (<small>Prince George, BC</small>)</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2015</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Animal Behaviour BIOL 3101</strong> (<small>Guest Lecture</small>)
+    <tr><td headers="date" class="gt_row gt_left">2015</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Animal Behaviour BIOL 3101</strong> (<small>Guest Lecture</small>)
 Thompson Rivers University (<small>Kamloops, BC</small>)</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2015</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>BIOL 323 Evolutionary Biology</strong> (<small>Sessional Instructor</small>)
+    <tr><td headers="date" class="gt_row gt_left">2015</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>BIOL 323 Evolutionary Biology</strong> (<small>Sessional Instructor</small>)
 University of Northern BC (<small>Prince George, BC</small>)</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2014</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Stat 240 Basic Statistics</strong> (<small>Teaching Assistant</small>)
+    <tr><td headers="date" class="gt_row gt_left">2014</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Stat 240 Basic Statistics</strong> (<small>Teaching Assistant</small>)
 University of Northern BC (<small>Prince George, BC</small>)</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2011</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Biol 102 Introductory Biology II</strong> (<small>Teaching Assistant</small>)
+    <tr><td headers="date" class="gt_row gt_left">2011</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Biol 102 Introductory Biology II</strong> (<small>Teaching Assistant</small>)
 University of Northern BC (<small>Prince George, BC</small>)</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2010</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Biol 308 Ornithology and Mammalogy</strong> (<small>Teaching Assistant</small>)
+    <tr><td headers="date" class="gt_row gt_left">2010</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Biol 308 Ornithology and Mammalogy</strong> (<small>Teaching Assistant</small>)
 University of Northern BC (<small>Prince George, BC</small>)</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2009</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Biol 111 Principles: Organismal Biology</strong> (<small>Teaching Assistant</small>)
+    <tr><td headers="date" class="gt_row gt_left">2009</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Biol 111 Principles: Organismal Biology</strong> (<small>Teaching Assistant</small>)
 McGill University (<small>Montreal, QC</small>)</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2008</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Biol 205 Biology of Organisms</strong> (<small>Teaching Assistant</small>)
+    <tr><td headers="date" class="gt_row gt_left">2008</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Biol 205 Biology of Organisms</strong> (<small>Teaching Assistant</small>)
 McGill University (<small>Montreal, QC</small>)</p>
 </div></td></tr>
   </tbody>
@@ -2025,7 +2157,7 @@ McGill University (<small>Montreal, QC</small>)</p>
 <h4 class="anchored" data-anchor-id="large-events">Large events</h4>
 <ul>
 <li>2015 <strong>UNBC Discovery Centre</strong><br>
-This centre was a 3-day event held in November 2015. I was one of three coordinators and organized events, volunteers and panellists, and supervised on all event days.</li>
+This centre was a 3-day event held in November 2015. I was one of three coordinators and organized events, volunteers and panelists, and supervised on all event days.</li>
 </ul>
 </section>
 <section id="attendance-at-teaching-conferences-and-workshops" class="level4">
@@ -2033,14 +2165,26 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="prtcrflcgh" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+<div id="bfqmtgkava" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bfqmtgkava table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-#prtcrflcgh .gt_table {
+#bfqmtgkava thead, #bfqmtgkava tbody, #bfqmtgkava tfoot, #bfqmtgkava tr, #bfqmtgkava td, #bfqmtgkava th {
+  border-style: none;
+}
+
+#bfqmtgkava p {
+  margin: 0;
+  padding: 0;
+}
+
+#bfqmtgkava .gt_table {
   display: table;
   border-collapse: collapse;
+  line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
@@ -2063,19 +2207,12 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   border-left-color: #D3D3D3;
 }
 
-#prtcrflcgh .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
+#bfqmtgkava .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
-#prtcrflcgh .gt_title {
+#bfqmtgkava .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2087,25 +2224,37 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   border-bottom-width: 0;
 }
 
-#prtcrflcgh .gt_subtitle {
+#bfqmtgkava .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
+  padding-top: 3px;
+  padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#prtcrflcgh .gt_bottom_border {
+#bfqmtgkava .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#bfqmtgkava .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#prtcrflcgh .gt_col_headings {
+#bfqmtgkava .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2120,7 +2269,7 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   border-right-color: #D3D3D3;
 }
 
-#prtcrflcgh .gt_col_heading {
+#bfqmtgkava .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2140,7 +2289,7 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   overflow-x: hidden;
 }
 
-#prtcrflcgh .gt_column_spanner_outer {
+#bfqmtgkava .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2152,15 +2301,15 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   padding-right: 4px;
 }
 
-#prtcrflcgh .gt_column_spanner_outer:first-child {
+#bfqmtgkava .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#prtcrflcgh .gt_column_spanner_outer:last-child {
+#bfqmtgkava .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#prtcrflcgh .gt_column_spanner {
+#bfqmtgkava .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2172,7 +2321,11 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   width: 100%;
 }
 
-#prtcrflcgh .gt_group_heading {
+#bfqmtgkava .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#bfqmtgkava .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2195,9 +2348,10 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   border-right-width: 1px;
   border-right-color: #D3D3D3;
   vertical-align: middle;
+  text-align: left;
 }
 
-#prtcrflcgh .gt_empty_group_heading {
+#bfqmtgkava .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2212,15 +2366,15 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   vertical-align: middle;
 }
 
-#prtcrflcgh .gt_from_md > :first-child {
+#bfqmtgkava .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#prtcrflcgh .gt_from_md > :last-child {
+#bfqmtgkava .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#prtcrflcgh .gt_row {
+#bfqmtgkava .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2239,7 +2393,7 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   overflow-x: hidden;
 }
 
-#prtcrflcgh .gt_stub {
+#bfqmtgkava .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2252,7 +2406,7 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   padding-right: 5px;
 }
 
-#prtcrflcgh .gt_stub_row_group {
+#bfqmtgkava .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2266,11 +2420,15 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   vertical-align: top;
 }
 
-#prtcrflcgh .gt_row_group_first td {
+#bfqmtgkava .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#prtcrflcgh .gt_summary_row {
+#bfqmtgkava .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#bfqmtgkava .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2280,16 +2438,16 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   padding-right: 5px;
 }
 
-#prtcrflcgh .gt_first_summary_row {
+#bfqmtgkava .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#prtcrflcgh .gt_first_summary_row.thick {
+#bfqmtgkava .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#prtcrflcgh .gt_last_summary_row {
+#bfqmtgkava .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2299,7 +2457,7 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   border-bottom-color: #D3D3D3;
 }
 
-#prtcrflcgh .gt_grand_summary_row {
+#bfqmtgkava .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2309,7 +2467,7 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   padding-right: 5px;
 }
 
-#prtcrflcgh .gt_first_grand_summary_row {
+#bfqmtgkava .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2319,11 +2477,21 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   border-top-color: #D3D3D3;
 }
 
-#prtcrflcgh .gt_striped {
+#bfqmtgkava .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#bfqmtgkava .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#prtcrflcgh .gt_table_body {
+#bfqmtgkava .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2332,7 +2500,7 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   border-bottom-color: #D3D3D3;
 }
 
-#prtcrflcgh .gt_footnotes {
+#bfqmtgkava .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2346,30 +2514,8 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   border-right-color: #D3D3D3;
 }
 
-#prtcrflcgh .gt_footnote {
+#bfqmtgkava .gt_footnote {
   margin: 0px;
-  font-size: 90%;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#prtcrflcgh .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#prtcrflcgh .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2377,104 +2523,117 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   padding-right: 5px;
 }
 
-#prtcrflcgh .gt_left {
+#bfqmtgkava .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#bfqmtgkava .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bfqmtgkava .gt_left {
   text-align: left;
 }
 
-#prtcrflcgh .gt_center {
+#bfqmtgkava .gt_center {
   text-align: center;
 }
 
-#prtcrflcgh .gt_right {
+#bfqmtgkava .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#prtcrflcgh .gt_font_normal {
+#bfqmtgkava .gt_font_normal {
   font-weight: normal;
 }
 
-#prtcrflcgh .gt_font_bold {
+#bfqmtgkava .gt_font_bold {
   font-weight: bold;
 }
 
-#prtcrflcgh .gt_font_italic {
+#bfqmtgkava .gt_font_italic {
   font-style: italic;
 }
 
-#prtcrflcgh .gt_super {
+#bfqmtgkava .gt_super {
   font-size: 65%;
 }
 
-#prtcrflcgh .gt_two_val_uncert {
-  display: inline-block;
-  line-height: 1em;
-  text-align: right;
-  font-size: 60%;
-  vertical-align: -0.25em;
-  margin-left: 0.1em;
-}
-
-#prtcrflcgh .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
+#bfqmtgkava .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
+  position: initial;
 }
 
-#prtcrflcgh .gt_asterisk {
+#bfqmtgkava .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#prtcrflcgh .gt_slash_mark {
-  font-size: 0.7em;
-  line-height: 0.7em;
-  vertical-align: 0.15em;
+#bfqmtgkava .gt_indent_1 {
+  text-indent: 5px;
 }
 
-#prtcrflcgh .gt_fraction_numerator {
-  font-size: 0.6em;
-  line-height: 0.6em;
-  vertical-align: 0.45em;
+#bfqmtgkava .gt_indent_2 {
+  text-indent: 10px;
 }
 
-#prtcrflcgh .gt_fraction_denominator {
-  font-size: 0.6em;
-  line-height: 0.6em;
-  vertical-align: -0.05em;
+#bfqmtgkava .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#bfqmtgkava .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#bfqmtgkava .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
-<table class="gt_table">
-  
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   
   <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left">2018-08</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Brandon University Teaching Excellence Conference</strong>
+    <tr><td headers="start" class="gt_row gt_left">2018-08</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Brandon University Teaching Excellence Conference</strong>
 <small>(Brandon, MB)</small></p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2011–2016</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>UNBC and CNC Annual Teaching and Learning Conference</strong>
+    <tr><td headers="start" class="gt_row gt_left">2011–2016</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>UNBC and CNC Annual Teaching and Learning Conference</strong>
 <small>(Prince George, BC)</small></p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2014-09</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Teaching Dossier Workshop</strong>
+    <tr><td headers="start" class="gt_row gt_left">2014-09</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Teaching Dossier Workshop</strong>
 <small>(Prince George, BC)</small></p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2011-08</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Instructional Skills Workshop</strong>
+    <tr><td headers="start" class="gt_row gt_left">2011-08</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Instructional Skills Workshop</strong>
 <small>(Prince George, BC)</small></p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2011-01</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>UNBC Teaching Assistant Workshop</strong>
+    <tr><td headers="start" class="gt_row gt_left">2011-01</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>UNBC Teaching Assistant Workshop</strong>
 <small>(Prince George, BC)</small></p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2008-03</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>McGill Professional development workshop: Learning to Teach</strong>
+    <tr><td headers="start" class="gt_row gt_left">2008-03</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>McGill Professional development workshop: Learning to Teach</strong>
 <small>(Montreal, QC)</small></p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2008-01</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Teaching Workshop – McGill Tomlinson Project in University-Level Science Education</strong>
+    <tr><td headers="start" class="gt_row gt_left">2008-01</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Teaching Workshop – McGill Tomlinson Project in University-Level Science Education</strong>
 <small>(Montreal, QC)</small></p>
 </div></td></tr>
   </tbody>
@@ -2490,14 +2649,26 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="viihjwqlcu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+<div id="ehxmvwskrc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ehxmvwskrc table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-#viihjwqlcu .gt_table {
+#ehxmvwskrc thead, #ehxmvwskrc tbody, #ehxmvwskrc tfoot, #ehxmvwskrc tr, #ehxmvwskrc td, #ehxmvwskrc th {
+  border-style: none;
+}
+
+#ehxmvwskrc p {
+  margin: 0;
+  padding: 0;
+}
+
+#ehxmvwskrc .gt_table {
   display: table;
   border-collapse: collapse;
+  line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
@@ -2520,19 +2691,12 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   border-left-color: #D3D3D3;
 }
 
-#viihjwqlcu .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
+#ehxmvwskrc .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
-#viihjwqlcu .gt_title {
+#ehxmvwskrc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2544,25 +2708,37 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   border-bottom-width: 0;
 }
 
-#viihjwqlcu .gt_subtitle {
+#ehxmvwskrc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
+  padding-top: 3px;
+  padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#viihjwqlcu .gt_bottom_border {
+#ehxmvwskrc .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ehxmvwskrc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#viihjwqlcu .gt_col_headings {
+#ehxmvwskrc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2577,7 +2753,7 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   border-right-color: #D3D3D3;
 }
 
-#viihjwqlcu .gt_col_heading {
+#ehxmvwskrc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2597,7 +2773,7 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   overflow-x: hidden;
 }
 
-#viihjwqlcu .gt_column_spanner_outer {
+#ehxmvwskrc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2609,15 +2785,15 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   padding-right: 4px;
 }
 
-#viihjwqlcu .gt_column_spanner_outer:first-child {
+#ehxmvwskrc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#viihjwqlcu .gt_column_spanner_outer:last-child {
+#ehxmvwskrc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#viihjwqlcu .gt_column_spanner {
+#ehxmvwskrc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2629,7 +2805,11 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   width: 100%;
 }
 
-#viihjwqlcu .gt_group_heading {
+#ehxmvwskrc .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#ehxmvwskrc .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2652,9 +2832,10 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   border-right-width: 1px;
   border-right-color: #D3D3D3;
   vertical-align: middle;
+  text-align: left;
 }
 
-#viihjwqlcu .gt_empty_group_heading {
+#ehxmvwskrc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2669,15 +2850,15 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   vertical-align: middle;
 }
 
-#viihjwqlcu .gt_from_md > :first-child {
+#ehxmvwskrc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#viihjwqlcu .gt_from_md > :last-child {
+#ehxmvwskrc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#viihjwqlcu .gt_row {
+#ehxmvwskrc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2696,7 +2877,7 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   overflow-x: hidden;
 }
 
-#viihjwqlcu .gt_stub {
+#ehxmvwskrc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2709,7 +2890,7 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   padding-right: 5px;
 }
 
-#viihjwqlcu .gt_stub_row_group {
+#ehxmvwskrc .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2723,11 +2904,15 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   vertical-align: top;
 }
 
-#viihjwqlcu .gt_row_group_first td {
+#ehxmvwskrc .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#viihjwqlcu .gt_summary_row {
+#ehxmvwskrc .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#ehxmvwskrc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2737,16 +2922,16 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   padding-right: 5px;
 }
 
-#viihjwqlcu .gt_first_summary_row {
+#ehxmvwskrc .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#viihjwqlcu .gt_first_summary_row.thick {
+#ehxmvwskrc .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#viihjwqlcu .gt_last_summary_row {
+#ehxmvwskrc .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2756,7 +2941,7 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   border-bottom-color: #D3D3D3;
 }
 
-#viihjwqlcu .gt_grand_summary_row {
+#ehxmvwskrc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2766,7 +2951,7 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   padding-right: 5px;
 }
 
-#viihjwqlcu .gt_first_grand_summary_row {
+#ehxmvwskrc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2776,11 +2961,21 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   border-top-color: #D3D3D3;
 }
 
-#viihjwqlcu .gt_striped {
+#ehxmvwskrc .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ehxmvwskrc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#viihjwqlcu .gt_table_body {
+#ehxmvwskrc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2789,7 +2984,7 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   border-bottom-color: #D3D3D3;
 }
 
-#viihjwqlcu .gt_footnotes {
+#ehxmvwskrc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2803,30 +2998,8 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   border-right-color: #D3D3D3;
 }
 
-#viihjwqlcu .gt_footnote {
+#ehxmvwskrc .gt_footnote {
   margin: 0px;
-  font-size: 90%;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#viihjwqlcu .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#viihjwqlcu .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2834,114 +3007,127 @@ This centre was a 3-day event held in November 2015. I was one of three coordina
   padding-right: 5px;
 }
 
-#viihjwqlcu .gt_left {
+#ehxmvwskrc .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ehxmvwskrc .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ehxmvwskrc .gt_left {
   text-align: left;
 }
 
-#viihjwqlcu .gt_center {
+#ehxmvwskrc .gt_center {
   text-align: center;
 }
 
-#viihjwqlcu .gt_right {
+#ehxmvwskrc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#viihjwqlcu .gt_font_normal {
+#ehxmvwskrc .gt_font_normal {
   font-weight: normal;
 }
 
-#viihjwqlcu .gt_font_bold {
+#ehxmvwskrc .gt_font_bold {
   font-weight: bold;
 }
 
-#viihjwqlcu .gt_font_italic {
+#ehxmvwskrc .gt_font_italic {
   font-style: italic;
 }
 
-#viihjwqlcu .gt_super {
+#ehxmvwskrc .gt_super {
   font-size: 65%;
 }
 
-#viihjwqlcu .gt_two_val_uncert {
-  display: inline-block;
-  line-height: 1em;
-  text-align: right;
-  font-size: 60%;
-  vertical-align: -0.25em;
-  margin-left: 0.1em;
-}
-
-#viihjwqlcu .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
+#ehxmvwskrc .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
+  position: initial;
 }
 
-#viihjwqlcu .gt_asterisk {
+#ehxmvwskrc .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#viihjwqlcu .gt_slash_mark {
-  font-size: 0.7em;
-  line-height: 0.7em;
-  vertical-align: 0.15em;
+#ehxmvwskrc .gt_indent_1 {
+  text-indent: 5px;
 }
 
-#viihjwqlcu .gt_fraction_numerator {
-  font-size: 0.6em;
-  line-height: 0.6em;
-  vertical-align: 0.45em;
+#ehxmvwskrc .gt_indent_2 {
+  text-indent: 10px;
 }
 
-#viihjwqlcu .gt_fraction_denominator {
-  font-size: 0.6em;
-  line-height: 0.6em;
-  vertical-align: -0.05em;
+#ehxmvwskrc .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#ehxmvwskrc .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#ehxmvwskrc .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
-<table class="gt_table">
-  
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   
   <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left">2015-01</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Prince George Naturalists Club</strong> <small>Guest speaker</small>
+    <tr><td headers="date" class="gt_row gt_left">2015-01</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Prince George Naturalists Club</strong> <small>Guest speaker</small>
 <small>(Prince George, BC)</small>
 Singing through the noise: How birds compensate for effects urbanization on communication</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2013-11</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Williams Lake Naturalists Club</strong> <small>Guest speaker</small>
+    <tr><td headers="date" class="gt_row gt_left">2013-11</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Williams Lake Naturalists Club</strong> <small>Guest speaker</small>
 <small>(Williams Lake, BC)</small>
 Singing through the noise: How birds compensate for effects urbanization on communication</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2014-05</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Prince George Young Naturalists Club</strong> <small>Guest speaker</small>
+    <tr><td headers="date" class="gt_row gt_left">2014-05</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Prince George Young Naturalists Club</strong> <small>Guest speaker</small>
 <small>(Prince George, BC)</small>
 Come learn all about Chickadees!</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2014-03</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Immaculate Conception School Science Fair</strong> <small>Judge</small>
+    <tr><td headers="date" class="gt_row gt_left">2014-03</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Immaculate Conception School Science Fair</strong> <small>Judge</small>
 <small>(Prince George, BC)</small></p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2013-11</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Lake City Secondary School Science 8 and 9</strong> <small>Guest Educator</small>
+    <tr><td headers="date" class="gt_row gt_left">2013-11</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Lake City Secondary School Science 8 and 9</strong> <small>Guest Educator</small>
 <small>(Williams Lake, BC)</small>
 Early bird gets the worm!</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2013-10</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>UNBC Northern Research Group Trail Talks</strong> <small>Guest Guide</small>
+    <tr><td headers="date" class="gt_row gt_left">2013-10</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>UNBC Northern Research Group Trail Talks</strong> <small>Guest Guide</small>
 <small>(Prince George, BC)</small>
 Birds and Glacial Lakes</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2013-09</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Quesnel River Research Centre High School Salmon Day</strong> <small>Guest Scientist</small>
+    <tr><td headers="date" class="gt_row gt_left">2013-09</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Quesnel River Research Centre High School Salmon Day</strong> <small>Guest Scientist</small>
 <small>(Likely, BC)</small>
 Chickadee communication and sound transmission activities</p>
 </div></td></tr>
-    <tr><td class="gt_row gt_left">2012/09 &amp; 2013/09</td>
-<td class="gt_row gt_left"><div class="gt_from_md"><p><strong>Kelowna Kokanee Salmon Festival</strong> <small>Exhibitor</small>
+    <tr><td headers="date" class="gt_row gt_left">2012/09 &amp; 2013/09</td>
+<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Kelowna Kokanee Salmon Festival</strong> <small>Exhibitor</small>
 <small>(Kelowna, BC)</small></p>
 </div></td></tr>
   </tbody>
@@ -2974,7 +3160,7 @@ Chickadee communication and sound transmission activities</p>
 <li><p><strong>2016/07</strong> Media attention surrounding publication of “Learning to cope: Vocal adjustment to urban noise is correlated with prior experience in black-capped chickadees”</p>
 <ul>
 <li>TV: <a href="http://www.ckpg.com/2016/07/11/unbc-scientist-makes-new-discovery/">CKPG (watch)</a></li>
-<li>Radio: <a href="images/2016-07-12%20-%20CBC%20Daybreak.mp3">CBC Daybreak North (listen)</a></li>
+<li>Radio: <a href="images/2016-07-12 - CBC Daybreak.mp3">CBC Daybreak North (listen)</a></li>
 <li>Newspaper: <a href="http://www.princegeorgecitizen.com/news/local-news/unbc-researcher-shows-chickadees-adapt-song-to-city-1.2299671">Prince George Citizen (read)</a></li>
 <li>Newsite: <a href="https://www.250news.com/2016/07/11/study-shows-urban-rural-chickadees-chirp-to-a-different-tune/">250news.org (read)</a></li>
 </ul></li>
@@ -2996,6 +3182,24 @@ Chickadee communication and sound transmission activities</p>
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -3017,7 +3221,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -3045,31 +3266,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

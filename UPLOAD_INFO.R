@@ -1,4 +1,6 @@
-# Starting from scratch: 
+# Starting from scratch:
+# Posts have freeze: auto
+quarto::quarto_render()
 
-rmarkdown::render_site()
-
+quarto::quarto_preview()
+quarto::quarto_preview_stop()
