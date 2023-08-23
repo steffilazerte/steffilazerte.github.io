@@ -1,0 +1,154 @@
+---
+title: "Making a Website with GitHub/Quarto"
+date: "2023-08-23"
+toc: true
+categories: [github, website, profiles]
+---
+
+There are many instructions for making Quarto websites or hosting on GitHub, but
+here is a list of instructions with links to other more detailed references as
+a roadmap to get started. 
+
+This isn't comprehensive, but hopefully shares enough resources to get you started while clarifying some of the more confusing steps. 
+
+It can be a bit weird starting out and remember that you may be learning Quarto, git *and* GitHub (and possibly YAML, CSS and/or SCSS) all at once which is a lot!
+
+So if you find it tricky, that's normal :)
+
+
+> **Note**: These instructions assume you want to create a personal/organizational website,
+> not a website for a project or repository (although that can be similar in many steps)
+
+
+## Websites in General
+
+It helps to have a brief overview of what it takes to get a website on the Internet.
+Generally there are three steps
+
+### 1. Create the files
+
+This step is where you create (by hand or with software), the actual html files
+which are the website. You can create these files and not put them on the Internet.
+Which means you have a website on your computer (local), which only you can see.
+This is great for previewing your website before putting it or any changes onto the Internet.
+
+### 2. Serve the files
+
+This is when you put (serve or host) your html files on the Internet. 
+You need a server to *serve* or *host* the files and generally[^1] you go through 
+an external company to do this for you (i.e. a Hosting service, or GitHub). 
+
+[^1]: You can have your computer do this for you, but then your computer needs
+be on and running (and serving) files 24/7 and requires a more complex setup.
+
+### 3. Link a domain name
+
+This step is often optional, depending how you are serving your website.
+If you use GitHub to serve your website, you will have a website address of `https://yourgithubusername.github.io`.
+If you want to buy (or really, rent) a domain name and point it to the website,
+then you can have a website address of something like `https://your-domain-name.com`
+(mine is `https://steffilazerte.ca`). 
+
+### Quarto and GitHub
+
+So if you want to make a website with Quarto and GitHub you will be 
+creating the website files with Quarto (step 1) and serving the files with GitHub (step 2).
+You can optionally also decide to buy a domain name and link it to your website (step 3). 
+
+
+## Step 1. Creating your Website with Quarto
+
+##### Quarto vs. RMarkdown
+
+You can create a website with [RMarkdown](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html)
+or [Quarto](https://quarto.org/docs/websites/). 
+
+Quarto is essentially rMarkdown v2. If you love RMarkdown and don't want to switch, 
+use that, otherwise it's worth using Quarto as it has many features not available in RMarkdown.
+
+##### Basic Steps
+
+- To get started, follow the basic steps for [Quarto Websites](https://quarto.org/docs/websites/)
+- Check out the various [Website themes](https://quarto.org/docs/output-formats/html-themes.html) you can use
+- Make sure you're working with a folder (project or repository) called `yourgithubusername.github.io`
+
+##### Fiddly bits
+
+There are [several different ways](https://quarto.org/docs/publishing/github-pages.html)
+of hosting your site on GitHub, but the
+most straightforward way is to 'render' your site into a `docs` folder and then
+tell GitHub to serve that folder (next step).
+
+By default your website is created in the `_site` folder, but you can change this by changing the
+`output-dir` option in the `_quarto.yml` (this is the file that defines your site options). 
+
+For example, [I use](https://github.com/steffilazerte/steffilazerte.github.io/blob/33a70ef82c522d834d42ab8041452dbd89f8fcd8/_quarto.yml#L3) `output-dir: docs` which tells R to create the website in a `docs` folder.
+
+To [preview your website](https://quarto.org/docs/websites/#website-preview), 
+use `quarto preview` in the terminal, or, [render your website](https://quarto.org/docs/websites/#website-render) and then open the `index.html` file inside the `docs` folder 
+(in this case you will to re-render and refresh the page to see new changes).
+
+## Step 2. Serving your Website with GitHub
+
+Once you have and like your website, you'll need to push it to GitHub and then tell
+GitHub that it should *serve* your website (it won't unless you tell it to). 
+
+- Push your website[^2] to GitHub. For learning how to push/pull to GitHub, I recommend
+  - [Happy Git with R](https://happygitwithr.com/)
+  - [Birds Canada's "GitHub: A Beginner's Guide"](https://birdscanada.github.io/BirdsCanada_GitHubGuide/)
+- Once it's on GitHub, you can tell GitHub to 'serve' your `docs` folder, 
+  I recommend
+  - Quarto's instructions for [Render to `docs`](https://quarto.org/docs/publishing/github-pages.html#render-to-docs)
+  - [GitHub Pages Documentation](https://docs.github.com/en/pages/getting-started-with-github-pages)
+
+[^2]: You have to push the `docs` folder, but generally I recommend pushing all files except anything sensitive you need to keep private. This way you can share the love of how to create your own Quarto Website on GitHub!
+
+## 3. Link a Domain Name (optional)
+
+Now you'll have a lovely website hosted at `https://yourusername.github.io`. 
+There is nothing wrong with leaving it at this stage, if nothing else, you're making it really
+clear that you are badass enough to be able to create a website and serve it on GitHub.
+
+However, if you would like to use your own domain name, you can also do that. 
+
+First you will need to buy (rent) a domain name. 
+
+I buy mine (`steffilazerte.ca`) from [Webnames](https://webnames.ca), 
+a Canadian Domain Registrar, but there are many others. 
+If you have one bundled with a webhosting service, you can always transfer it to another Domain Registrar if that works better for you.
+
+Next, you will need to configure GitHub to work with this domain.
+
+- Simplest[^3] is to follow GitHub's instructions for [Configuring an apex domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain)
+
+[^3]: In the sense that there are other, more complex things you can do, not in the sense that this is particularly straightforward
+
+In short, you will tell GitHub about your Domain and then tell your Domain Registrar to point to GitHub.
+
+
+## Examples
+
+Here are examples of several websites I've made and host on GitHub.
+In particular, take a look at the `_quarto.yml` files as this is how the pages, 
+navigation and themes are set.
+
+- **Steffi's website** 
+  - served from the `docs` folder
+  - **Code**: <https://github.com/steffilazerte/steffilazerte.github.io>
+  - **Site**: <https://westman-naturalists.github.io>
+
+- **Westman Naturalists' website** 
+  - Quarto, no `docs` folder, uses GitHub Actions to publish
+  - **Code**: <https://github.com/westman-naturalists/westman-naturalists.github.io>
+  - **Site**: <https://westman-naturalists.github.io>
+
+## Resources
+
+- [Quarto documentation](https://quarto.org/)
+  - [Quarto Websites](https://quarto.org/docs/websites/)
+  - [HTML Themes in Quarto](https://quarto.org/docs/output-formats/html-themes.html)
+  - [Publishing Quarto Websites with GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
+- [GitHub Pages documentation](https://docs.github.com/en/pages)
+  - [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+  - [Custom Domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
+  
