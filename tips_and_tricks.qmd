@@ -1,5 +1,5 @@
 ---
-title: "Tips and Tricks"
+title: "Tips & Tricks"
 listing:
   contents: posts
   sort: "date desc"

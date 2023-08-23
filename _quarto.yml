@@ -15,14 +15,10 @@ website:
     right:
       - text: "Home"
         file: index.qmd
-      - text: "R Projects"
-        file: R.qmd
-      - text: "Academic Activities and CV"
-        file: cv.qmd
-      - text: "Presentations"
-        file: presentations.qmd
-      - text: "Tips & Tricks"
-        file: tips_and_tricks.qmd
+      - R.qmd
+      - cv.qmd
+      - presentations.qmd
+      - tips_and_tricks.qmd
       - text: "About"
         file: about.qmd
       - icon: github
