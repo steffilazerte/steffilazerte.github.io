@@ -8,6 +8,8 @@ project:
 
 website:
   title: "Dr. Steffi LaZerte"
+  site-url: https://steffilazerte.ca
+  description: "Tips & Tricks"
   favicon: "images/logo_gear.png"
   navbar:
     pinned: true

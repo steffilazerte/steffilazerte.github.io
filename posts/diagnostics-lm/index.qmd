@@ -1,7 +1,7 @@
 ---
 title: "Diagnostics for Simple Linear Models"
 date: "2022-11-15"
-categories: [stats, lm, vif, normality, diagnostics, residuals, cooks-d]
+categories: [stats, lm, vif, normality, diagnostics, residuals, cooks-d, R]
 execute:
   message: false
   warning: false

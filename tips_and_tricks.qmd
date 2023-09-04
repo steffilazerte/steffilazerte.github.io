@@ -5,6 +5,8 @@ listing:
   sort: "date desc"
   type: default
   categories: unnumbered
+  feed: 
+    categories: [R]
 ---
 
 This is a collection statistical notes, general tips and tricks, and useful citations which 

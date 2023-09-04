@@ -2,7 +2,7 @@
 title: "Making a Website with GitHub/Quarto"
 date: "2023-08-23"
 toc: true
-categories: [github, website, profiles]
+categories: [github, website, profiles, R]
 ---
 
 There are many instructions for making Quarto websites or hosting on GitHub, but

@@ -3,7 +3,7 @@ title: "Useful R Packages & Resources"
 date: "2023-09-04"
 date-modified: last-modified
 toc: true
-categories: [packages]
+categories: [packages, resources, R]
 ---
 
 A list of cool R packages & resources, updated when I think about it
