@@ -1,0 +1,71 @@
+---
+title: "Useful R Packages & Resources"
+date: "2023-09-04"
+date-modified: last-modified
+toc: true
+categories: [packages]
+---
+
+A list of cool R packages & resources, updated when I think about it
+
+## Stats
+Packages useful for statistical analyses
+
+- [DHARMa](http://florianhartig.github.io/DHARMa/) - Model diagnostics
+- [glmmTMB](https://glmmtmb.github.io/glmmTMB/) - Generalized linear mixed models and extensions
+
+## Visualizations
+Packages useful for visualizing data
+
+- [patchwork](https://patchwork.data-imaginist.com/) - Joining figures together
+
+## Data 
+For working with data or specific data types
+
+#### Packages
+
+- [tidyverse](https://tidyverse.org) - General collection of packages for managing, summarizing, transforming data
+- [lubridate](https://lubridate.tidyverse.org/) - Dealing with dates and datetimes
+- [stringr](https://stringr.tidyverse.org/) - Pattern match strings (text)
+  - Amazing [article](https://stringr.tidyverse.org/articles/regular-expressions.html) on how to use regex 
+- [assertr](https://docs.ropensci.org/assertr/) - Test that your data is as it should be
+
+#### Resources
+
+- [R for Data Science](https://r4ds.hadley.nz/) [book] by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund
+- [R4DS Online Learning Community](https://www.rfordatasci.com/) - Community for learning R, generally with the tidyverse, originally developed as an "R for Data Science" (R4DS) book club
+
+## Spatial Data
+
+#### Packages
+
+- [sf](https://r-spatial.github.io/sf/) - GIS work with spatial data
+- [ggspatial](https://paleolimbot.github.io/ggspatial/) - Adding more options for plotting spatial data in ggplot2
+- [mapview](https://r-spatial.github.io/mapview/) - Quick interactive maps
+- [rnaturalearth](https://docs.ropensci.org/rnaturalearth/) - Get spatial map files from [NaturalEarth](https://www.naturalearthdata.com/)
+
+#### Resources
+- [Spatial Data Science](https://r-spatial.org/book/) [book] by Edzer Pebesma and Roger Bivand
+
+## Workflows
+Packages useful for workflows
+
+- [pak](https://pak.r-lib.org) - For installing packages from any locations
+  - I find pak more informative, quicker, and just simpler than `install.packages()`
+  - e.g., `pak::pkg_install("packageName")`
+- [quarto](https://quarto.org/) - A package but also a standalone program for creating reports from your R scripts
+- [gt](https://gt.rstudio.com/) - Creates pretty tables for reports
+
+## Package Development[^1]
+
+[^1]: Making packages
+
+#### Packages
+
+- [usethis](https://usethis.r-lib.org/) - Automates a lot of setup to make things quicker
+  - e.g., `usethis::use_testthat()` to quickly set up testthat infrastructure
+- [pkgdown](https://pkgdown.r-lib.org/) - Create package documentation website from your docs and vignettes
+- [testthat](https://testthat.r-lib.org/) - Tests for your package
+
+#### Resources
+- [R packages](https://r-pkgs.org/) [book] by Hadley Wickham and Jennifer Bryan
