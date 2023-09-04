@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Dr. Steffi LaZerte</title>
+<link>https://steffilazerte.ca/tips_and_tricks.html#category=R</link>
+<atom:link href="https://steffilazerte.ca/tips_and_tricks-r.xml" rel="self" type="application/rss+xml"/>
+<description>Tips &amp; Tricks</description>
+<generator>quarto-1.2.335</generator>
+<lastBuildDate>Mon, 04 Sep 2023 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Useful R Packages &amp; Resources</title>
+  <link>https://steffilazerte.ca/posts/useful-packages/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>A list of cool R packages &amp; resources, updated when I think about it</p>
+<section id="stats" class="level2">
+<h2 class="anchored" data-anchor-id="stats">Stats</h2>
+<p>Packages useful for statistical analyses</p>
+<ul>
+<li><a href="http://florianhartig.github.io/DHARMa/">DHARMa</a> - Model diagnostics</li>
+<li><a href="https://glmmtmb.github.io/glmmTMB/">glmmTMB</a> - Generalized linear mixed models and extensions</li>
+</ul>
+</section>
+<section id="visualizations" class="level2">
+<h2 class="anchored" data-anchor-id="visualizations">Visualizations</h2>
+<p>Packages useful for visualizing data</p>
+<ul>
+<li><a href="https://patchwork.data-imaginist.com/">patchwork</a> - Joining figures together</li>
+</ul>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>For working with data or specific data types</p>
+<section id="packages" class="level4">
+<h4 class="anchored" data-anchor-id="packages">Packages</h4>
+<ul>
+<li><a href="https://tidyverse.org">tidyverse</a> - General collection of packages for managing, summarizing, transforming data</li>
+<li><a href="https://lubridate.tidyverse.org/">lubridate</a> - Dealing with dates and datetimes</li>
+<li><a href="https://stringr.tidyverse.org/">stringr</a> - Pattern match strings (text)
+<ul>
+<li>Amazing <a href="https://stringr.tidyverse.org/articles/regular-expressions.html">article</a> on how to use regex</li>
+</ul></li>
+<li><a href="https://docs.ropensci.org/assertr/">assertr</a> - Test that your data is as it should be</li>
+</ul>
+</section>
+<section id="resources" class="level4">
+<h4 class="anchored" data-anchor-id="resources">Resources</h4>
+<ul>
+<li><a href="https://r4ds.hadley.nz/">R for Data Science</a> [book] by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund</li>
+<li><a href="https://www.rfordatasci.com/">R4DS Online Learning Community</a> - Community for learning R, generally with the tidyverse, originally developed as an “R for Data Science” (R4DS) book club</li>
+</ul>
+</section>
+</section>
+<section id="spatial-data" class="level2">
+<h2 class="anchored" data-anchor-id="spatial-data">Spatial Data</h2>
+<section id="packages-1" class="level4">
+<h4 class="anchored" data-anchor-id="packages-1">Packages</h4>
+<ul>
+<li><a href="https://r-spatial.github.io/sf/">sf</a> - GIS work with spatial data</li>
+<li><a href="https://paleolimbot.github.io/ggspatial/">ggspatial</a> - Adding more options for plotting spatial data in ggplot2</li>
+<li><a href="https://r-spatial.github.io/mapview/">mapview</a> - Quick interactive maps</li>
+<li><a href="https://docs.ropensci.org/rnaturalearth/">rnaturalearth</a> - Get spatial map files from <a href="https://www.naturalearthdata.com/">NaturalEarth</a></li>
+</ul>
+</section>
+<section id="resources-1" class="level4">
+<h4 class="anchored" data-anchor-id="resources-1">Resources</h4>
+<ul>
+<li><a href="https://r-spatial.org/book/">Spatial Data Science</a> [book] by Edzer Pebesma and Roger Bivand</li>
+</ul>
+</section>
+</section>
+<section id="workflows" class="level2">
+<h2 class="anchored" data-anchor-id="workflows">Workflows</h2>
+<p>Packages useful for workflows</p>
+<ul>
+<li><a href="https://pak.r-lib.org">pak</a> - For installing packages from any locations
+<ul>
+<li>I find pak more informative, quicker, and just simpler than <code>install.packages()</code></li>
+<li>e.g., <code>pak::pkg_install("packageName")</code></li>
+</ul></li>
+<li><a href="https://quarto.org/">quarto</a> - A package but also a standalone program for creating reports from your R scripts</li>
+<li><a href="https://gt.rstudio.com/">gt</a> - Creates pretty tables for reports</li>
+</ul>
+</section>
+<section id="package-development1" class="level2">
+<h2 class="anchored" data-anchor-id="package-development1">Package Development<sup>1</sup></h2>
+<section id="packages-2" class="level4">
+<h4 class="anchored" data-anchor-id="packages-2">Packages</h4>
+<ul>
+<li><a href="https://usethis.r-lib.org/">usethis</a> - Automates a lot of setup to make things quicker
+<ul>
+<li>e.g., <code>usethis::use_testthat()</code> to quickly set up testthat infrastructure</li>
+</ul></li>
+<li><a href="https://pkgdown.r-lib.org/">pkgdown</a> - Create package documentation website from your docs and vignettes</li>
+<li><a href="https://testthat.r-lib.org/">testthat</a> - Tests for your package</li>
+</ul>
+</section>
+<section id="resources-2" class="level4">
+<h4 class="anchored" data-anchor-id="resources-2">Resources</h4>
+<ul>
+<li><a href="https://r-pkgs.org/">R packages</a> [book] by Hadley Wickham and Jennifer Bryan</li>
+</ul>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Making packages↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>packages</category>
+  <category>resources</category>
+  <category>R</category>
+  <guid>https://steffilazerte.ca/posts/useful-packages/index.html</guid>
+  <pubDate>Mon, 04 Sep 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Making a Website with GitHub/Quarto</title>
+  <link>https://steffilazerte.ca/posts/github-website/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>There are many instructions for making Quarto websites or hosting on GitHub, but here is a list of instructions with links to other more detailed references as a roadmap to get started.</p>
+<p>This isn’t comprehensive, but hopefully shares enough resources to get you started while clarifying some of the more confusing steps.</p>
+<p>It can be a bit weird starting out and remember that you may be learning Quarto, git <em>and</em> GitHub (and possibly YAML, CSS and/or SCSS) all at once which is a lot!</p>
+<p>So if you find it tricky, that’s normal :)</p>
+<blockquote class="blockquote">
+<p><strong>Note</strong>: These instructions assume you want to create a personal/organizational website, not a website for a project or repository (although that can be similar in many steps)</p>
+</blockquote>
+<section id="websites-in-general" class="level2">
+<h2 class="anchored" data-anchor-id="websites-in-general">Websites in General</h2>
+<p>It helps to have a brief overview of what it takes to get a website on the Internet. Generally there are three steps</p>
+<section id="create-the-files" class="level3">
+<h3 class="anchored" data-anchor-id="create-the-files">1. Create the files</h3>
+<p>This step is where you create (by hand or with software), the actual html files which are the website. You can create these files and not put them on the Internet. Which means you have a website on your computer (local), which only you can see. This is great for previewing your website before putting it or any changes onto the Internet.</p>
+</section>
+<section id="serve-the-files" class="level3">
+<h3 class="anchored" data-anchor-id="serve-the-files">2. Serve the files</h3>
+<p>This is when you put (serve or host) your html files on the Internet. You need a server to <em>serve</em> or <em>host</em> the files and generally<sup>1</sup> you go through an external company to do this for you (i.e.&nbsp;a Hosting service, or GitHub).</p>
+</section>
+<section id="link-a-domain-name" class="level3">
+<h3 class="anchored" data-anchor-id="link-a-domain-name">3. Link a domain name</h3>
+<p>This step is often optional, depending how you are serving your website. If you use GitHub to serve your website, you will have a website address of <code>https://yourgithubusername.github.io</code>. If you want to buy (or really, rent) a domain name and point it to the website, then you can have a website address of something like <code>https://your-domain-name.com</code> (mine is <code>https://steffilazerte.ca</code>).</p>
+</section>
+<section id="quarto-and-github" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-and-github">Quarto and GitHub</h3>
+<p>So if you want to make a website with Quarto and GitHub you will be creating the website files with Quarto (step 1) and serving the files with GitHub (step 2). You can optionally also decide to buy a domain name and link it to your website (step 3).</p>
+</section>
+</section>
+<section id="step-1.-creating-your-website-with-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="step-1.-creating-your-website-with-quarto">Step 1. Creating your Website with Quarto</h2>
+<section id="quarto-vs.-rmarkdown" class="level5">
+<h5 class="anchored" data-anchor-id="quarto-vs.-rmarkdown">Quarto vs.&nbsp;RMarkdown</h5>
+<p>You can create a website with <a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html">RMarkdown</a> or <a href="https://quarto.org/docs/websites/">Quarto</a>.</p>
+<p>Quarto is essentially rMarkdown v2. If you love RMarkdown and don’t want to switch, use that, otherwise it’s worth using Quarto as it has many features not available in RMarkdown.</p>
+</section>
+<section id="basic-steps" class="level5">
+<h5 class="anchored" data-anchor-id="basic-steps">Basic Steps</h5>
+<ul>
+<li>To get started, follow the basic steps for <a href="https://quarto.org/docs/websites/">Quarto Websites</a></li>
+<li>Check out the various <a href="https://quarto.org/docs/output-formats/html-themes.html">Website themes</a> you can use</li>
+<li>Make sure you’re working with a folder (project or repository) called <code>yourgithubusername.github.io</code></li>
+</ul>
+</section>
+<section id="fiddly-bits" class="level5">
+<h5 class="anchored" data-anchor-id="fiddly-bits">Fiddly bits</h5>
+<p>There are <a href="https://quarto.org/docs/publishing/github-pages.html">several different ways</a> of hosting your site on GitHub, but the most straightforward way is to ‘render’ your site into a <code>docs</code> folder and then tell GitHub to serve that folder (next step).</p>
+<p>By default your website is created in the <code>_site</code> folder, but you can change this by changing the <code>output-dir</code> option in the <code>_quarto.yml</code> (this is the file that defines your site options).</p>
+<p>For example, <a href="https://github.com/steffilazerte/steffilazerte.github.io/blob/33a70ef82c522d834d42ab8041452dbd89f8fcd8/_quarto.yml#L3">I use</a> <code>output-dir: docs</code> which tells R to create the website in a <code>docs</code> folder.</p>
+<p>To <a href="https://quarto.org/docs/websites/#website-preview">preview your website</a>, use <code>quarto preview</code> in the terminal, or, <a href="https://quarto.org/docs/websites/#website-render">render your website</a> and then open the <code>index.html</code> file inside the <code>docs</code> folder (in this case you will to re-render and refresh the page to see new changes).</p>
+</section>
+</section>
+<section id="step-2.-serving-your-website-with-github" class="level2">
+<h2 class="anchored" data-anchor-id="step-2.-serving-your-website-with-github">Step 2. Serving your Website with GitHub</h2>
+<p>Once you have and like your website, you’ll need to push it to GitHub and then tell GitHub that it should <em>serve</em> your website (it won’t unless you tell it to).</p>
+<ul>
+<li>Push your website<sup>2</sup> to GitHub. For learning how to push/pull to GitHub, I recommend
+<ul>
+<li><a href="https://happygitwithr.com/">Happy Git with R</a></li>
+<li><a href="https://birdscanada.github.io/BirdsCanada_GitHubGuide/">Birds Canada’s “GitHub: A Beginner’s Guide”</a></li>
+</ul></li>
+<li>Once it’s on GitHub, you can tell GitHub to ‘serve’ your <code>docs</code> folder, I recommend
+<ul>
+<li>Quarto’s instructions for <a href="https://quarto.org/docs/publishing/github-pages.html#render-to-docs">Render to <code>docs</code></a></li>
+<li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages">GitHub Pages Documentation</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="link-a-domain-name-optional" class="level2">
+<h2 class="anchored" data-anchor-id="link-a-domain-name-optional">3. Link a Domain Name (optional)</h2>
+<p>Now you’ll have a lovely website hosted at <code>https://yourusername.github.io</code>. There is nothing wrong with leaving it at this stage, if nothing else, you’re making it really clear that you are badass enough to be able to create a website and serve it on GitHub.</p>
+<p>However, if you would like to use your own domain name, you can also do that.</p>
+<p>First you will need to buy (rent) a domain name.</p>
+<p>I buy mine (<code>steffilazerte.ca</code>) from <a href="https://webnames.ca">Webnames</a>, a Canadian Domain Registrar, but there are many others. If you have one bundled with a webhosting service, you can always transfer it to another Domain Registrar if that works better for you.</p>
+<p>Next, you will need to configure GitHub to work with this domain.</p>
+<ul>
+<li>Simplest<sup>3</sup> is to follow GitHub’s instructions for <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain">Configuring an apex domain</a></li>
+</ul>
+<p>In short, you will tell GitHub about your Domain and then tell your Domain Registrar to point to GitHub.</p>
+</section>
+<section id="examples" class="level2">
+<h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<p>Here are examples of several websites I’ve made and host on GitHub. In particular, take a look at the <code>_quarto.yml</code> files as this is how the pages, navigation and themes are set.</p>
+<ul>
+<li><strong>Steffi’s website</strong>
+<ul>
+<li>served from the <code>docs</code> folder</li>
+<li><strong>Code</strong>: <a href="https://github.com/steffilazerte/steffilazerte.github.io" class="uri">https://github.com/steffilazerte/steffilazerte.github.io</a></li>
+<li><strong>Site</strong>: <a href="https://westman-naturalists.github.io" class="uri">https://westman-naturalists.github.io</a></li>
+</ul></li>
+<li><strong>Westman Naturalists’ website</strong>
+<ul>
+<li>Quarto, no <code>docs</code> folder, uses GitHub Actions to publish</li>
+<li><strong>Code</strong>: <a href="https://github.com/westman-naturalists/westman-naturalists.github.io" class="uri">https://github.com/westman-naturalists/westman-naturalists.github.io</a></li>
+<li><strong>Site</strong>: <a href="https://westman-naturalists.github.io" class="uri">https://westman-naturalists.github.io</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="https://quarto.org/">Quarto documentation</a>
+<ul>
+<li><a href="https://quarto.org/docs/websites/">Quarto Websites</a></li>
+<li><a href="https://quarto.org/docs/output-formats/html-themes.html">HTML Themes in Quarto</a></li>
+<li><a href="https://quarto.org/docs/publishing/github-pages.html">Publishing Quarto Websites with GitHub Pages</a></li>
+</ul></li>
+<li><a href="https://docs.github.com/en/pages">GitHub Pages documentation</a>
+<ul>
+<li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">Creating a GitHub Pages site</a></li>
+<li><a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages">Custom Domains</a></li>
+</ul></li>
+</ul>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>You can have your computer do this for you, but then your computer needs be on and running (and serving) files 24/7 and requires a more complex setup.↩︎</p></li>
+<li id="fn2"><p>You have to push the <code>docs</code> folder, but generally I recommend pushing all files except anything sensitive you need to keep private. This way you can share the love of how to create your own Quarto Website on GitHub!↩︎</p></li>
+<li id="fn3"><p>In the sense that there are other, more complex things you can do, not in the sense that this is particularly straightforward↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>github</category>
+  <category>website</category>
+  <category>profiles</category>
+  <category>R</category>
+  <guid>https://steffilazerte.ca/posts/github-website/index.html</guid>
+  <pubDate>Wed, 23 Aug 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Interpreting interactions</title>
+  <link>https://steffilazerte.ca/posts/interactions/index.html</link>
+  <description><![CDATA[ <p><a href="../basic-models">Creating</a> models and <a href="../dharma">checking</a> their <a href="../diagnostics-lm">assumptions</a> are the first steps to running an analysis, but once you have a beautiful, valid model, what next?</p>
+<p>Interpreting models can be tricky as some results aren’t intuitive (i.e.&nbsp;often interactions, or non-Gaussian models), and to get the most out of your model, you’ll want to understand both what parameters are important (or significant), as well as <em>how</em> they are important (effects size and direction).</p>
+<p>You may also want to run a post-hoc analysis to dive deeper into the effects of categorical predictors.</p>
+<p>Here we’ll take a quick look at interactions.</p>
+<div class="cell">
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a></span><span class="op" style="color: #5E5E5E;">)</span>  <span class="co" style="color: #5E5E5E;"># penguins data</span></span>
+<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://r-forge.r-project.org/projects/car/">car</a></span><span class="op" style="color: #5E5E5E;">)</span>             <span class="co" style="color: #5E5E5E;"># Type 3 anova</span></span>
+<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://vincentarelbundock.github.io/marginaleffects/">marginaleffects</a></span><span class="op" style="color: #5E5E5E;">)</span> <span class="co" style="color: #5E5E5E;"># Exploring interactions</span></span>
+<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+<section id="interpreting-interactions" class="level3"><h3 class="anchored" data-anchor-id="interpreting-interactions">Interpreting Interactions</h3>
+<p>Let’s see if there is an interaction between flipper length and bill depth on bill length. This may not be a terribly sensible example (and note that we’re skipping the all important step of checking our model!), but it should hopefully illustrate these tools.</p>
+<p>First let’s create a linear model.</p>
+<div class="cell">
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">m</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">bill_length_mm</span> <span class="op" style="color: #5E5E5E;">~</span> <span class="va" style="color: #111111;">flipper_length_mm</span> <span class="op" style="color: #5E5E5E;">*</span> <span class="va" style="color: #111111;">bill_depth_mm</span>, data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">penguins</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+<p>We can explore the results by looking at the <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> table</p>
+<div class="cell">
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">m</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = bill_length_mm ~ flipper_length_mm * bill_depth_mm, 
+    data = penguins)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-10.6952  -2.5439  -0.2036   2.4788  19.9132 
+
+Coefficients:
+                                Estimate Std. Error t value Pr(&gt;|t|)  
+(Intercept)                     72.14404   49.77162   1.450   0.1481  
+flipper_length_mm               -0.18476    0.24265  -0.761   0.4469  
+bill_depth_mm                   -5.31449    2.93076  -1.813   0.0707 .
+flipper_length_mm:bill_depth_mm  0.02917    0.01439   2.027   0.0434 *
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 3.991 on 338 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.4703,    Adjusted R-squared:  0.4656 
+F-statistic:   100 on 3 and 338 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>Or with an <code><a href="https://rdrr.io/pkg/car/man/Anova.html">Anova()</a></code> table (here, from the car package, so we can get type III)</p>
+<div class="cell">
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/pkg/car/man/Anova.html">Anova</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">m</span>, type <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"III"</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Anova Table (Type III tests)
+
+Response: bill_length_mm
+                                Sum Sq  Df F value  Pr(&gt;F)  
+(Intercept)                       33.5   1  2.1011 0.14812  
+flipper_length_mm                  9.2   1  0.5798 0.44694  
+bill_depth_mm                     52.4   1  3.2882 0.07067 .
+flipper_length_mm:bill_depth_mm   65.5   1  4.1103 0.04341 *
+Residuals                       5384.2 338                  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>Okay, in our standard interpretation, we would say that yes, there is an interaction (p = 0.043).</p>
+<p>With continuous variables, the summary table is often a bit more informative, as we can interpret the estimates. In this case, we can interpret the interaction as: for every 1 mm increase in flipper length, the effect of a 1 mm increase on bill depth increases by 0.029.</p>
+<p>Hmm, not incredibly intuitive!</p>
+<p>The marginalmeans package can be used to explore models with interactions via “conditional marginal effects” and predictions</p>
+<section id="conditional-marginal-effects" class="level4"><h4 class="anchored" data-anchor-id="conditional-marginal-effects">Conditional marginal effects</h4>
+<p>These are really nice way of visualizing the verbal interpretation we made above.</p>
+<p>We’ll use the <code><a href="https://rdrr.io/pkg/marginaleffects/man/plot_slopes.html">plot_slopes()</a></code> function to plot the effect of one variable on the slope of the other (i.e.&nbsp;an interaction!).</p>
+<p>Here, we look at the effect of bill depth on the slope of flipper length (i.e. the effect of flipper length on our response, bill length).</p>
+<p>The Y-axis represents the slope of the effect of flipper length on bill depth.</p>
+<div class="cell">
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/pkg/marginaleffects/man/plot_slopes.html">plot_slopes</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">m</span>, variables <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"flipper_length_mm"</span>, condition <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"bill_depth_mm"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op" style="color: #5E5E5E;">(</span>y <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Slope of flipper length"</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://steffilazerte.ca/posts/interactions/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="960"></p>
+</div>
+</div>
+<p>This figure is a visualization of our interaction parameter, but also puts things into the proper context and includes confidence intervals!</p>
+<p>Here we see that a) the slope is always positive, b) becomes stronger for increasing bill depth.</p>
+</section></section><section id="plotting-predictions" class="level3"><h3 class="anchored" data-anchor-id="plotting-predictions">Plotting predictions</h3>
+<p>We can plot the predictions to get a visual of this interaction.</p>
+<div class="cell">
+<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/pkg/marginaleffects/man/plot_predictions.html">plot_predictions</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">m</span>, condition <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"flipper_length_mm"</span>, <span class="st" style="color: #20794D;">"bill_depth_mm"</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>                 point <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.5</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://steffilazerte.ca/posts/interactions/index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="960"></p>
+</div>
+</div>
+<p>Here we can see the various lines (slopes) representing the effect of flipper length on bill length across different bill depths. We see that the effect (slope) increases as bill depth increases (compare the line with bill depth at 21.5 to the one with bill depth at 13.1). This is another visual representation of what we stated above, with additional context. In addition to seeing that all the slopes are positive, and the changes make them stronger, we see this in relation to the original data.</p>
+<p>I find this kind of plot useful for sharing your results as it shows the raw data along with the model results and a clear explanation of what that interaction really means.</p>
+</section><section id="conclusions" class="level3"><h3 class="anchored" data-anchor-id="conclusions">Conclusions</h3>
+<p>Interpreting interactions can be much simpler with visual aids, and it’s a good idea to use these figures not only for your benefit but for the benefit of anyone you’re sharing your work with.</p>
+<p>You can make these figures by hand, but using marginalmeans will make it much easier (if slightly less customizable).</p>
+</section><section id="further-reading" class="level3"><h3 class="anchored" data-anchor-id="further-reading">Further Reading</h3>
+<ul>
+<li>https://vincentarelbundock.github.io/marginaleffects/</li>
+<li>https://www.andrewheiss.com/blog/2022/05/20/marginalia/#tldr-overall-summary-of-all-these-marginal-effects-approaches</li>
+</ul></section><section id="session-info" class="level3"><h3 class="anchored" data-anchor-id="session-info">Session Info</h3>
+<div class="cell">
+<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;">devtools</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://r-lib.github.io/sessioninfo/reference/session_info.html">session_info</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.3.1 (2023-06-16)
+ os       Ubuntu 22.04.3 LTS
+ system   x86_64, linux-gnu
+ ui       X11
+ language en_CA:en
+ collate  en_CA.UTF-8
+ ctype    en_CA.UTF-8
+ tz       America/Winnipeg
+ date     2023-09-04
+ pandoc   3.1.1 @ /usr/lib/rstudio/resources/app/bin/quarto/bin/tools/ (via rmarkdown)
+
+─ Packages ───────────────────────────────────────────────────────────────────
+ package         * version date (UTC) lib source
+ abind             1.4-5   2016-07-21 [1] CRAN (R 4.3.0)
+ backports         1.4.1   2021-12-13 [1] CRAN (R 4.3.0)
+ cachem            1.0.8   2023-05-01 [1] CRAN (R 4.3.0)
+ callr             3.7.3   2022-11-02 [1] CRAN (R 4.3.0)
+ car             * 3.1-2   2023-03-30 [1] CRAN (R 4.3.0)
+ carData         * 3.0-5   2022-01-06 [1] CRAN (R 4.3.0)
+ checkmate         2.2.0   2023-04-27 [1] CRAN (R 4.3.0)
+ cli               3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
+ colorspace        2.1-0   2023-01-23 [1] CRAN (R 4.3.0)
+ crayon            1.5.2   2022-09-29 [1] CRAN (R 4.3.0)
+ data.table        1.14.8  2023-02-17 [1] CRAN (R 4.3.0)
+ devtools          2.4.5   2022-10-11 [1] CRAN (R 4.3.0)
+ digest            0.6.31  2022-12-11 [1] CRAN (R 4.3.0)
+ dplyr             1.1.2   2023-04-20 [1] CRAN (R 4.3.0)
+ ellipsis          0.3.2   2021-04-29 [1] CRAN (R 4.3.0)
+ evaluate          0.20    2023-01-17 [1] CRAN (R 4.3.0)
+ fansi             1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
+ farver            2.1.1   2022-07-06 [1] CRAN (R 4.3.0)
+ fastmap           1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
+ fs                1.6.2   2023-04-25 [1] CRAN (R 4.3.0)
+ generics          0.1.3   2022-07-05 [1] CRAN (R 4.3.0)
+ ggplot2         * 3.4.2   2023-04-03 [1] CRAN (R 4.3.0)
+ glue              1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
+ gtable            0.3.3   2023-03-21 [1] CRAN (R 4.3.0)
+ htmltools         0.5.5   2023-03-23 [1] CRAN (R 4.3.0)
+ htmlwidgets       1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
+ httpuv            1.6.9   2023-02-14 [1] CRAN (R 4.3.0)
+ insight           0.19.2  2023-05-23 [1] CRAN (R 4.3.0)
+ jsonlite          1.8.4   2022-12-06 [1] CRAN (R 4.3.0)
+ knitr             1.42    2023-01-25 [1] CRAN (R 4.3.0)
+ labeling          0.4.2   2020-10-20 [1] CRAN (R 4.3.0)
+ later             1.3.0   2021-08-18 [1] CRAN (R 4.3.0)
+ lifecycle         1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
+ magrittr          2.0.3   2022-03-30 [1] CRAN (R 4.3.0)
+ marginaleffects * 0.12.0  2023-05-20 [1] CRAN (R 4.3.0)
+ memoise           2.0.1   2021-11-26 [1] CRAN (R 4.3.0)
+ mime              0.12    2021-09-28 [1] CRAN (R 4.3.0)
+ miniUI            0.1.1.1 2018-05-18 [1] CRAN (R 4.3.0)
+ munsell           0.5.0   2018-06-12 [1] CRAN (R 4.3.0)
+ palmerpenguins  * 0.1.1   2022-08-15 [1] CRAN (R 4.3.0)
+ pillar            1.9.0   2023-03-22 [1] CRAN (R 4.3.0)
+ pkgbuild          1.4.0   2022-11-27 [1] CRAN (R 4.3.0)
+ pkgconfig         2.0.3   2019-09-22 [1] CRAN (R 4.3.0)
+ pkgload           1.3.2   2022-11-16 [1] CRAN (R 4.3.0)
+ prettyunits       1.1.1   2020-01-24 [1] CRAN (R 4.3.0)
+ processx          3.8.1   2023-04-18 [1] CRAN (R 4.3.0)
+ profvis           0.3.7   2020-11-02 [1] CRAN (R 4.3.0)
+ promises          1.2.0.1 2021-02-11 [1] CRAN (R 4.3.0)
+ ps                1.7.5   2023-04-18 [1] CRAN (R 4.3.0)
+ purrr             1.0.1   2023-01-10 [1] CRAN (R 4.3.0)
+ R6                2.5.1   2021-08-19 [1] CRAN (R 4.3.0)
+ Rcpp              1.0.10  2023-01-22 [1] CRAN (R 4.3.0)
+ remotes           2.4.2   2021-11-30 [1] CRAN (R 4.3.0)
+ rlang             1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
+ rmarkdown         2.21    2023-03-26 [1] CRAN (R 4.3.0)
+ rstudioapi        0.14    2022-08-22 [1] CRAN (R 4.3.0)
+ scales            1.2.1   2022-08-20 [1] CRAN (R 4.3.0)
+ sessioninfo       1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
+ shiny             1.7.4   2022-12-15 [1] CRAN (R 4.3.0)
+ stringi           1.7.12  2023-01-11 [1] CRAN (R 4.3.0)
+ stringr           1.5.0   2022-12-02 [1] CRAN (R 4.3.0)
+ tibble            3.2.1   2023-03-20 [1] CRAN (R 4.3.0)
+ tidyselect        1.2.0   2022-10-10 [1] CRAN (R 4.3.0)
+ urlchecker        1.0.1   2021-11-30 [1] CRAN (R 4.3.0)
+ usethis           2.2.0   2023-06-06 [1] CRAN (R 4.3.0)
+ utf8              1.2.3   2023-01-31 [1] CRAN (R 4.3.0)
+ vctrs             0.6.2   2023-04-19 [1] CRAN (R 4.3.0)
+ withr             2.5.0   2022-03-03 [1] CRAN (R 4.3.0)
+ xfun              0.39    2023-04-20 [1] CRAN (R 4.3.0)
+ xtable            1.8-4   2019-04-21 [1] CRAN (R 4.3.0)
+ yaml              2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+
+ [1] /home/steffi/R/x86_64-pc-linux-gnu-library/4.3
+ [2] /usr/local/lib/R/site-library
+ [3] /usr/lib/R/site-library
+ [4] /usr/lib/R/library
+
+──────────────────────────────────────────────────────────────────────────────</code></pre>
+</div>
+</div>
+
+
+</section> ]]></description>
+  <category>stats</category>
+  <category>models</category>
+  <category>interactions</category>
+  <category>predictions</category>
+  <category>R</category>
+  <guid>https://steffilazerte.ca/posts/interactions/index.html</guid>
+  <pubDate>Tue, 06 Jun 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>DHARMa - Diagnostics for General Linear Models</title>
+  <link>https://steffilazerte.ca/posts/dharma/index.html</link>
+  <description><![CDATA[ <p><a href="https://github.com/florianhartig/DHARMa">DHARMa</a> is a great R package for checking model diagnostics, especially for models that are typically hard to evaluate (e.g., glms etc.).</p>
+<section id="simulated-residuals" class="level3"><h3 class="anchored" data-anchor-id="simulated-residuals">Simulated Residuals</h3>
+<p>DHARMa works by <em>simulating</em> residuals.</p>
+<p>This figure (from the <a href="https://cran.r-project.org/web/packages/DHARMa/vignettes/DHARMa.html">DHARMa tutorial</a>) is an illustration of how the residuals are calculated…</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://steffilazerte.ca/posts/dharma/ECDFmotivation.png" class="img-fluid figure-img" style="width:60.0%" alt="Pink histogram showing simulated values for data point1 on the x-axis and cumulative density on the y"></p>
+</figure>
+</div>
+<ul>
+<li>
+<strong>If</strong> your data perfectly matched your model, what would the values look like?
+<ul>
+<li>Pink histogram values show repeatedly <em>simulated</em> values expected</li>
+</ul>
+</li>
+<li>How do your <em>actual</em> values compare?
+<ul>
+<li>Black arrow on x-axis shows <em>actual</em> value</li>
+<li>Black arrow on y-axis shows residual calculated</li>
+<li>Residuals calculated by where observation lies on cumulative density of simulated values</li>
+</ul>
+</li>
+<li>Residuals are scaled (0 to 1)
+<ul>
+<li>If data fits model perfectly, expect all residuals ~ 0.5</li>
+<li>Therefore, a good fit is <em>always</em> = flat/uniform distribution</li>
+</ul>
+</li>
+</ul></section><section id="interpreting-residuals" class="level3"><h3 class="anchored" data-anchor-id="interpreting-residuals">Interpreting Residuals</h3>
+<p><strong>If</strong> your data fits the model</p>
+<ul>
+<li>Residuals follow a flat (uniform) distribution (no matter what model!)<br>
+</li>
+<li>Expect: Straight line on QQ plot of <strong>uniform</strong> distribution <span class="small"><strong>(similar to <a href="../diagnostics-lm/#normality">QQ Normal plot</a>)</strong></span>
+</li>
+<li>Expect: No patterns between residuals and model predictions <span class="small"><strong>(similar to <a href="../diagnostics-lm/#constant-variance">heteroscedasticity plot</a>, resid vs.&nbsp;fitted)</strong></span>
+</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://steffilazerte.ca/posts/dharma/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Note:</strong><br>
+These aren’t the same residual plots that one would usually use to assess model fit, <em>but</em> you can interpret them in a similar manner, when looking for problems</p>
+</blockquote>
+<p><strong>Closer Look at QQ Plots</strong></p>
+<ul>
+<li>Visual check of <strong>uniform distribution</strong> (expect points to match line)</li>
+<li>Tests <strong>Uniformity</strong> with Kolmogorov-Smirnov (KS) test (Uniform distribution)</li>
+<li>Tests for <strong>Over/Underdispersion</strong> with Dispersion Test</li>
+<li>Tests for more <strong>Outliers</strong> than expected with Outlier test</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://steffilazerte.ca/posts/dharma/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Closer Look at Residuals vs.&nbsp;Predicted Plots</strong></p>
+<ul>
+<li>Check distribution of residuals <span class="small">(visually and with quantile tests)</span>
+</li>
+<li>Dotted lines show expected quantiles</li>
+<li>Black lines show simulated quantiles <span class="small">(want straight lines)</span>
+</li>
+<li>Outliers would show up as red stars</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://steffilazerte.ca/posts/dharma/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="usage" class="level3"><h3 class="anchored" data-anchor-id="usage">Usage</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="http://florianhartig.github.io/DHARMa/">DHARMa</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="va" style="color: #111111;">m</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">body_mass_g</span> <span class="op" style="color: #5E5E5E;">~</span> <span class="va" style="color: #111111;">flipper_length_mm</span>, data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">penguins</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="va" style="color: #111111;">r</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/pkg/DHARMa/man/simulateResiduals.html">simulateResiduals</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">m</span>, n <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1000</span>, plot <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">TRUE</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+<ul>
+<li>
+<code><a href="https://rdrr.io/pkg/DHARMa/man/simulateResiduals.html">simulateResiduals()</a></code> function from</li>
+<li>Use <code>plot = TRUE</code> to produce diagnostic plots to see if simulated match expectation</li>
+<li>
+<code>n = 1000</code> isn’t strictly necessary but runs more simulations to produce more stable results</li>
+</ul></section><section id="applicable-to-most-linear-models" class="level3"><h3 class="anchored" data-anchor-id="applicable-to-most-linear-models">Applicable to Most Linear Models</h3>
+<ul>
+<li>REMEMBER! Not assessing residuals in the <a href="../diagnostics-lm">traditional</a> way…</li>
+<li>Assessing whether residuals fit expected pattern given this model</li>
+<li>This <em>includes</em> assumptions, but <em>also</em> includes general fit, etc.</li>
+<li>So, we can use this to see if our model could be improved…</li>
+<li>And we can use DHARMa to test various different types of models</li>
+</ul>
+<p>For example, binomial models</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">penguins</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;">mutate</span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">penguins</span>, </span>
+<span>                   size <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">flipper_length_mm</span> <span class="op" style="color: #5E5E5E;">&gt;</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">flipper_length_mm</span>, na.rm <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">TRUE</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="va" style="color: #111111;">m</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">size</span> <span class="op" style="color: #5E5E5E;">~</span> <span class="va" style="color: #111111;">species</span>, family <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"binomial"</span>, data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">penguins</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="va" style="color: #111111;">r</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/pkg/DHARMa/man/simulateResiduals.html">simulateResiduals</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">m</span>, plot <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">TRUE</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://steffilazerte.ca/posts/dharma/index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="other-tests" class="level3"><h3 class="anchored" data-anchor-id="other-tests">Other Tests</h3>
+<p>In addition to testing for outliers, over/underdispersion, etc., DHARMa also has tests for zero-inflation.</p>
+<p>But important to remember that…</p>
+<ul>
+<li>zero-inflation may also appear as iffy residuals</li>
+<li>overdispersion can lead to false positives (so address overdispersion first)</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/pkg/DHARMa/man/testZeroInflation.html">testZeroInflation</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">m</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://steffilazerte.ca/posts/dharma/index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    DHARMa zero-inflation test via comparison to expected zeros with
+    simulation under H0 = fitted model
+
+data:  simulationOutput
+ratioObsSim = 0.99699, p-value = 1
+alternative hypothesis: two.sided</code></pre>
+</div>
+</div>
+</section><section id="resources" class="level3"><h3 class="anchored" data-anchor-id="resources">Resources</h3>
+<ul>
+<li>
+<a href="https://cran.r-project.org/web/packages/DHARMa/vignettes/DHARMa.html">DHARMa Tutorial</a> <span class="small">(Many great examples of model checking)</span>
+</li>
+</ul></section><section id="session-info" class="level3"><h3 class="anchored" data-anchor-id="session-info">Session Info</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;">devtools</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://r-lib.github.io/sessioninfo/reference/session_info.html">session_info</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.3.1 (2023-06-16)
+ os       Ubuntu 22.04.3 LTS
+ system   x86_64, linux-gnu
+ ui       X11
+ language en_CA:en
+ collate  en_CA.UTF-8
+ ctype    en_CA.UTF-8
+ tz       America/Winnipeg
+ date     2023-09-04
+ pandoc   3.1.1 @ /usr/lib/rstudio/resources/app/bin/quarto/bin/tools/ (via rmarkdown)
+
+─ Packages ───────────────────────────────────────────────────────────────────
+ package        * version date (UTC) lib source
+ bit              4.0.5   2022-11-15 [1] CRAN (R 4.3.0)
+ bit64            4.0.5   2020-08-30 [1] CRAN (R 4.3.0)
+ boot             1.3-28  2021-05-03 [4] CRAN (R 4.2.0)
+ cachem           1.0.8   2023-05-01 [1] CRAN (R 4.3.0)
+ callr            3.7.3   2022-11-02 [1] CRAN (R 4.3.0)
+ cli              3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
+ codetools        0.2-19  2023-02-01 [4] CRAN (R 4.2.2)
+ crayon           1.5.2   2022-09-29 [1] CRAN (R 4.3.0)
+ curl             5.0.0   2023-01-12 [1] CRAN (R 4.3.0)
+ devtools         2.4.5   2022-10-11 [1] CRAN (R 4.3.0)
+ DHARMa         * 0.4.6   2022-09-08 [1] CRAN (R 4.3.1)
+ digest           0.6.31  2022-12-11 [1] CRAN (R 4.3.0)
+ doParallel       1.0.17  2022-02-07 [1] CRAN (R 4.3.1)
+ dplyr          * 1.1.2   2023-04-20 [1] CRAN (R 4.3.0)
+ ellipsis         0.3.2   2021-04-29 [1] CRAN (R 4.3.0)
+ evaluate         0.20    2023-01-17 [1] CRAN (R 4.3.0)
+ fansi            1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
+ fastmap          1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
+ foreach          1.5.2   2022-02-02 [1] CRAN (R 4.3.0)
+ fs               1.6.2   2023-04-25 [1] CRAN (R 4.3.0)
+ gap              1.5-3   2023-08-26 [1] CRAN (R 4.3.1)
+ gap.datasets     0.0.6   2023-08-25 [1] CRAN (R 4.3.1)
+ generics         0.1.3   2022-07-05 [1] CRAN (R 4.3.0)
+ glue             1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
+ hms              1.1.3   2023-03-21 [1] CRAN (R 4.3.0)
+ htmltools        0.5.5   2023-03-23 [1] CRAN (R 4.3.0)
+ htmlwidgets      1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
+ httpuv           1.6.9   2023-02-14 [1] CRAN (R 4.3.0)
+ iterators        1.0.14  2022-02-05 [1] CRAN (R 4.3.0)
+ jsonlite         1.8.4   2022-12-06 [1] CRAN (R 4.3.0)
+ knitr            1.42    2023-01-25 [1] CRAN (R 4.3.0)
+ later            1.3.0   2021-08-18 [1] CRAN (R 4.3.0)
+ lattice          0.21-8  2023-04-05 [4] CRAN (R 4.3.0)
+ lifecycle        1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
+ lme4             1.1-33  2023-04-25 [1] CRAN (R 4.3.0)
+ magrittr         2.0.3   2022-03-30 [1] CRAN (R 4.3.0)
+ MASS             7.3-60  2023-05-04 [4] CRAN (R 4.3.1)
+ Matrix           1.6-0   2023-07-08 [4] CRAN (R 4.3.1)
+ memoise          2.0.1   2021-11-26 [1] CRAN (R 4.3.0)
+ mgcv             1.9-0   2023-07-11 [4] CRAN (R 4.3.1)
+ mime             0.12    2021-09-28 [1] CRAN (R 4.3.0)
+ miniUI           0.1.1.1 2018-05-18 [1] CRAN (R 4.3.0)
+ minqa            1.2.5   2022-10-19 [1] CRAN (R 4.3.0)
+ nlme             3.1-162 2023-01-31 [4] CRAN (R 4.2.2)
+ nloptr           2.0.3   2022-05-26 [1] CRAN (R 4.3.0)
+ palmerpenguins * 0.1.1   2022-08-15 [1] CRAN (R 4.3.0)
+ pillar           1.9.0   2023-03-22 [1] CRAN (R 4.3.0)
+ pkgbuild         1.4.0   2022-11-27 [1] CRAN (R 4.3.0)
+ pkgconfig        2.0.3   2019-09-22 [1] CRAN (R 4.3.0)
+ pkgload          1.3.2   2022-11-16 [1] CRAN (R 4.3.0)
+ plyr             1.8.8   2022-11-11 [1] CRAN (R 4.3.0)
+ prettyunits      1.1.1   2020-01-24 [1] CRAN (R 4.3.0)
+ processx         3.8.1   2023-04-18 [1] CRAN (R 4.3.0)
+ profvis          0.3.7   2020-11-02 [1] CRAN (R 4.3.0)
+ promises         1.2.0.1 2021-02-11 [1] CRAN (R 4.3.0)
+ ps               1.7.5   2023-04-18 [1] CRAN (R 4.3.0)
+ purrr            1.0.1   2023-01-10 [1] CRAN (R 4.3.0)
+ qgam             1.3.4   2021-11-22 [1] CRAN (R 4.3.1)
+ R6               2.5.1   2021-08-19 [1] CRAN (R 4.3.0)
+ rbibutils        2.2.15  2023-08-21 [1] CRAN (R 4.3.1)
+ Rcpp             1.0.10  2023-01-22 [1] CRAN (R 4.3.0)
+ Rdpack           2.5     2023-08-21 [1] CRAN (R 4.3.1)
+ readr          * 2.1.4   2023-02-10 [1] CRAN (R 4.3.0)
+ remotes          2.4.2   2021-11-30 [1] CRAN (R 4.3.0)
+ rlang            1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
+ rmarkdown        2.21    2023-03-26 [1] CRAN (R 4.3.0)
+ rstudioapi       0.14    2022-08-22 [1] CRAN (R 4.3.0)
+ sessioninfo      1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
+ shiny            1.7.4   2022-12-15 [1] CRAN (R 4.3.0)
+ stringi          1.7.12  2023-01-11 [1] CRAN (R 4.3.0)
+ stringr          1.5.0   2022-12-02 [1] CRAN (R 4.3.0)
+ tibble           3.2.1   2023-03-20 [1] CRAN (R 4.3.0)
+ tidyselect       1.2.0   2022-10-10 [1] CRAN (R 4.3.0)
+ tzdb             0.3.0   2022-03-28 [1] CRAN (R 4.3.0)
+ urlchecker       1.0.1   2021-11-30 [1] CRAN (R 4.3.0)
+ usethis          2.2.0   2023-06-06 [1] CRAN (R 4.3.0)
+ utf8             1.2.3   2023-01-31 [1] CRAN (R 4.3.0)
+ vctrs            0.6.2   2023-04-19 [1] CRAN (R 4.3.0)
+ vroom            1.6.3   2023-04-28 [1] CRAN (R 4.3.0)
+ xfun             0.39    2023-04-20 [1] CRAN (R 4.3.0)
+ xtable           1.8-4   2019-04-21 [1] CRAN (R 4.3.0)
+ yaml             2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+
+ [1] /home/steffi/R/x86_64-pc-linux-gnu-library/4.3
+ [2] /usr/local/lib/R/site-library
+ [3] /usr/lib/R/site-library
+ [4] /usr/lib/R/library
+
+──────────────────────────────────────────────────────────────────────────────</code></pre>
+</div>
+</div>
+
+
+</section> ]]></description>
+  <category>stats</category>
+  <category>lm</category>
+  <category>diagnostics</category>
+  <category>glm</category>
+  <category>R</category>
+  <guid>https://steffilazerte.ca/posts/dharma/index.html</guid>
+  <pubDate>Thu, 01 Dec 2022 06:00:00 GMT</pubDate>
+  <media:content url="https://steffilazerte.ca/posts/dharma/ECDFmotivation.png" medium="image" type="image/png" height="146" width="144"/>
+</item>
+<item>
+  <title>Diagnostics for Simple Linear Models</title>
+  <link>https://steffilazerte.ca/posts/diagnostics-lm/index.html</link>
+  <description><![CDATA[ <p>All models have assumptions and cautions. Understanding whether you’ve satisfied these assumptions and checking for potential problems are some of the hardest things to do in statistics.</p>
+<p>For simple linear models (<code><a href="https://rdrr.io/r/stats/lm.html">lm()</a></code>) the <strong>main assumptions</strong> are</p>
+<ul>
+<li>
+<strong>Linear relationship</strong> between response (<code>y</code>) and predictors (<code>x</code>’s).</li>
+<li>
+<strong>Independence</strong> - Observations are independent
+<ul>
+<li>no hierarchical sampling, no nested designs, no variables are calculated from each other</li>
+</ul>
+</li>
+<li>
+<strong>Normality</strong> - Residuals are normally distributed</li>
+<li>
+<strong>Constant variance</strong> - There is constant variance in residuals (no heteroscedasticity)</li>
+</ul>
+<blockquote class="blockquote">
+<p>Note that it’s the normality of <strong>residuals</strong> and NOT the raw data that matters</p>
+</blockquote>
+<p>And the <strong>main cautions</strong> are</p>
+<ul>
+<li>
+<strong>Multicollinearity</strong> - You don’t want high levels of multicollinearity
+<ul>
+<li>When predictors are highly correlated they can to influence the parameters calculated</li>
+</ul>
+</li>
+<li>
+<strong>Influence</strong> - You don’t want one or two points have an undue influence on your model
+<ul>
+<li>Otherwise you should think about how relevant (and generalizable) that model really is</li>
+</ul>
+</li>
+</ul>
+<section id="diagnostics-in-r" class="level3"><h3 class="anchored" data-anchor-id="diagnostics-in-r">Diagnostics in R</h3>
+<p>Some assumptions/cautions are those of design (i.e.&nbsp;Independence), and some are assessed by evaluating your model fit in R. Some, like the expectation of a Linear Relationship, can be assessed in different ways, by plotting your relationship, or by looking at your residuals (as if there’s a problem, you’ll see problems in the Normality and Variance of your residuals).</p>
+<p>In R, we can extract the <em>residuals</em> (<code><a href="https://rdrr.io/r/stats/residuals.html">residuals()</a></code>) and <em>fitted</em> (<code><a href="https://rdrr.io/r/stats/fitted.values.html">fitted()</a></code>) values to assess Normality and Constant variance. We can also use functions like <code><a href="https://rdrr.io/pkg/car/man/vif.html">vif()</a></code> and <code><a href="https://rdrr.io/r/stats/influence.measures.html">cooks.distance()</a></code> to calculate metrics which will help us assess Multicollinearity and Influential observations.</p>
+<p>Let’s extract and calculate the observation-level values we’ll need for these assessments.</p>
+<div class="cell">
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a></span><span class="op" style="color: #5E5E5E;">)</span> <span class="co" style="color: #5E5E5E;"># For penguins data set</span></span>
+<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op" style="color: #5E5E5E;">)</span>          <span class="co" style="color: #5E5E5E;"># For data manipulation</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># We'll only use Adelie penguins for now</span></span>
+<span><span class="va" style="color: #111111;">p</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">penguins</span>, <span class="va" style="color: #111111;">species</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"Adelie"</span><span class="op" style="color: #5E5E5E;">)</span> </span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># Run model</span></span>
+<span><span class="va" style="color: #111111;">m</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">body_mass_g</span> <span class="op" style="color: #5E5E5E;">~</span> <span class="va" style="color: #111111;">bill_depth_mm</span>, data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">p</span>, na.action <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">na.exclude</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># Extract residuals and fitted values</span></span>
+<span><span class="va" style="color: #111111;">p</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">p</span>, </span>
+<span>            resid <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/residuals.html">residuals</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">m</span><span class="op" style="color: #5E5E5E;">)</span>,      <span class="co" style="color: #5E5E5E;"># Residuals</span></span>
+<span>            fitted <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/fitted.values.html">fitted</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">m</span><span class="op" style="color: #5E5E5E;">)</span>,        <span class="co" style="color: #5E5E5E;"># Fitted values</span></span>
+<span>            cooks <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/influence.measures.html">cooks.distance</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">m</span><span class="op" style="color: #5E5E5E;">)</span>, <span class="co" style="color: #5E5E5E;"># Cook's distance</span></span>
+<span>            obs <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1</span><span class="op" style="color: #5E5E5E;">:</span><span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span>               <span class="co" style="color: #5E5E5E;"># Observation ids</span></span></code></pre></div>
+</div>
+</section><section id="assessing-assumptions" class="level3"><h3 class="anchored" data-anchor-id="assessing-assumptions">Assessing Assumptions</h3>
+<p>We use <strong>residuals</strong> to look at this fit.</p>
+<section id="what-are-residuals" class="level4"><h4 class="anchored" data-anchor-id="what-are-residuals">What are residuals?</h4>
+<p>For a simple linear model, residuals are essentially the error between your observations and your model. Fitted values are the predicted value of your response given the model and your explanatory values.</p>
+<p>For example, in this linear model looking at the relationship between <code>body_mass_g</code> and <code>bill_depth_mm</code> in Adelie penguins, we can picture the residuals as the degree of difference between the model line and our data points.</p>
+<div class="cell" data-fig.asp="0.4">
+<details><summary>Code</summary><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://patchwork.data-imaginist.com">patchwork</a></span><span class="op" style="color: #5E5E5E;">)</span>      <span class="co" style="color: #5E5E5E;"># To combine plots</span></span>
+<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op" style="color: #5E5E5E;">)</span>        <span class="co" style="color: #5E5E5E;"># For plotting</span></span>
+<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://tidyr.tidyverse.org">tidyr</a></span><span class="op" style="color: #5E5E5E;">)</span>          <span class="co" style="color: #5E5E5E;"># For data manipulation</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># Model plot</span></span>
+<span><span class="va" style="color: #111111;">g1</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span>data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">p</span>, <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">bill_depth_mm</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">body_mass_g</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">stat_smooth</a></span><span class="op" style="color: #5E5E5E;">(</span>method <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"lm"</span>, se <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">FALSE</span>, colour <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"black"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op" style="color: #5E5E5E;">(</span>size <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">2</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># Add residuals</span></span>
+<span><span class="va" style="color: #111111;">g2</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">g1</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_segment.html">geom_segment</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>xend <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">bill_depth_mm</span>, yend <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">fitted</span>, colour <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">resid</span><span class="op" style="color: #5E5E5E;">)</span>, size <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html">scale_colour_viridis_c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="va" style="color: #111111;">g1</span> <span class="op" style="color: #5E5E5E;">+</span> <span class="va" style="color: #111111;">g2</span></span></code></pre></div>
+</details><div class="cell-output-display">
+<p><img src="https://steffilazerte.ca/posts/diagnostics-lm/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="960"></p>
+</div>
+</div>
+</section><section id="normality" class="level4"><h4 class="anchored" data-anchor-id="normality">Normality</h4>
+<p>We want our residuals from our model to be normally distributed. We can use a histogram or a QQ plot to assess this based on the residuals we extract from the model.</p>
+<div class="cell" data-fig.asp="0.4">
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;"># Histogram</span></span>
+<span><span class="va" style="color: #111111;">g1</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span>data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">p</span>, <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">resid</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># QQ Plot</span></span>
+<span><span class="va" style="color: #111111;">g2</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span>data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">p</span>, <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>sample <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">resid</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_qq.html">stat_qq</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_qq.html">stat_qq_line</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="va" style="color: #111111;">g1</span> <span class="op" style="color: #5E5E5E;">+</span> <span class="va" style="color: #111111;">g2</span></span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://steffilazerte.ca/posts/diagnostics-lm/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="960"></p>
+</div>
+</div>
+<p><strong>Looks good!</strong></p>
+</section><section id="constant-variance" class="level4"><h4 class="anchored" data-anchor-id="constant-variance">Constant variance</h4>
+<p>We want the variability in our model residuals to be relatively constant (or at least to not show any definied patterns). It shouldn’t increase or decrease with the fitted values, and should be relatively scattered throughout. We can plot the residuals by fitted values to make sure we don’t see any patterns.</p>
+<p>We’re checking for <em>heteroscedasticity</em></p>
+<div class="cell" data-layout-align="center" data-fig.asp="0.8">
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span>data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">p</span>, <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">fitted</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">resid</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_hline</a></span><span class="op" style="color: #5E5E5E;">(</span>yintercept <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://steffilazerte.ca/posts/diagnostics-lm/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Looks good!</strong></p>
+</section></section><section id="check-for-problems" class="level3"><h3 class="anchored" data-anchor-id="check-for-problems">Check for problems</h3>
+<section id="multicollinearity" class="level4"><h4 class="anchored" data-anchor-id="multicollinearity">Multicollinearity</h4>
+<p>Multicollinearity assess whether your <em>explanatory</em> variables are overly correlated. This means it only applies if you have a <em>multiple</em> regression (i.e.. where you have more than one explanatory variable).</p>
+<p>Let’s consider this model</p>
+<div class="cell">
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">m2</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">body_mass_g</span> <span class="op" style="color: #5E5E5E;">~</span> <span class="va" style="color: #111111;">bill_depth_mm</span> <span class="op" style="color: #5E5E5E;">+</span> <span class="va" style="color: #111111;">flipper_length_mm</span>, data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">p</span>, na.action <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">na.exclude</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+<p>Look at our two explanatory variables</p>
+<div class="cell" data-fig.asp="0.7">
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span>data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">p</span>, <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">flipper_length_mm</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">bill_length_mm</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">stat_smooth</a></span><span class="op" style="color: #5E5E5E;">(</span>method <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"lm"</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://steffilazerte.ca/posts/diagnostics-lm/index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+<p>They are definitely correlated, but that doesn’t mean we have a problem. We need to investigate if it interferes with the model.</p>
+<p>There are several ways to assess multicollinearity. Here we’ll use <code><a href="https://rdrr.io/pkg/car/man/vif.html">vif()</a></code><sup>1</sup> function from <code>car</code> package.</p>
+<div class="cell">
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://r-forge.r-project.org/projects/car/">car</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/pkg/car/man/vif.html">vif</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">m2</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    bill_depth_mm flipper_length_mm 
+         1.104521          1.104521 </code></pre>
+</div>
+</div>
+<p>Although with all statistical measures, there is no magic number, generally a VIF &gt; 10 is considered a problem, and VIF &gt; 5 is concerning.</p>
+<p>So in this case we can assume that while there <em>is</em> a correlation, it’s not haveing an undue effect on how we interpret the model.</p>
+</section><section id="influence" class="level4"><h4 class="anchored" data-anchor-id="influence">Influence</h4>
+<p>You’ll want to check if your model results are highly influenced by any specific observations. For example, if you remove one observation and the entire model changes, you’ll have to think about how generalizable that model really is.</p>
+<p>One way of checking whether any observations have an unusually high influence on your model is to look at the Cook’s distance (D).</p>
+<p>There are several ways of considering what D is too high. One is that D below 1 is good, the other is that you should aim for a D below 4 / no. observations.</p>
+<div class="cell" data-layout-align="center" data-fig.asp="0.8">
+<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">g</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">p</span>, <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">obs</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">cooks</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="va" style="color: #111111;">g</span> <span class="op" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_hline</a></span><span class="op" style="color: #5E5E5E;">(</span>yintercept <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1</span>, linetype <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"dotted"</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://steffilazerte.ca/posts/diagnostics-lm/index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">g</span> <span class="op" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_hline</a></span><span class="op" style="color: #5E5E5E;">(</span>yintercept <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">4</span><span class="op" style="color: #5E5E5E;">/</span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">p</span><span class="op" style="color: #5E5E5E;">)</span>, </span>
+<span>                linetype <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"dashed"</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://steffilazerte.ca/posts/diagnostics-lm/index_files/figure-html/unnamed-chunk-8-2.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>All in all, having a high D doesn’t mean you automatically remove the observation, it means you think about what influence that observation is having on your model. Try omitting it and see how your model changes!</strong></p>
+</section></section><section id="session-info" class="level3"><h3 class="anchored" data-anchor-id="session-info">Session Info</h3>
+<div class="cell">
+<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;">devtools</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://r-lib.github.io/sessioninfo/reference/session_info.html">session_info</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.3.1 (2023-06-16)
+ os       Ubuntu 22.04.3 LTS
+ system   x86_64, linux-gnu
+ ui       X11
+ language en_CA:en
+ collate  en_CA.UTF-8
+ ctype    en_CA.UTF-8
+ tz       America/Winnipeg
+ date     2023-09-04
+ pandoc   3.1.1 @ /usr/lib/rstudio/resources/app/bin/quarto/bin/tools/ (via rmarkdown)
+
+─ Packages ───────────────────────────────────────────────────────────────────
+ package        * version date (UTC) lib source
+ abind            1.4-5   2016-07-21 [1] CRAN (R 4.3.0)
+ cachem           1.0.8   2023-05-01 [1] CRAN (R 4.3.0)
+ callr            3.7.3   2022-11-02 [1] CRAN (R 4.3.0)
+ car            * 3.1-2   2023-03-30 [1] CRAN (R 4.3.0)
+ carData        * 3.0-5   2022-01-06 [1] CRAN (R 4.3.0)
+ cli              3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
+ colorspace       2.1-0   2023-01-23 [1] CRAN (R 4.3.0)
+ crayon           1.5.2   2022-09-29 [1] CRAN (R 4.3.0)
+ devtools         2.4.5   2022-10-11 [1] CRAN (R 4.3.0)
+ digest           0.6.31  2022-12-11 [1] CRAN (R 4.3.0)
+ dplyr          * 1.1.2   2023-04-20 [1] CRAN (R 4.3.0)
+ ellipsis         0.3.2   2021-04-29 [1] CRAN (R 4.3.0)
+ evaluate         0.20    2023-01-17 [1] CRAN (R 4.3.0)
+ fansi            1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
+ farver           2.1.1   2022-07-06 [1] CRAN (R 4.3.0)
+ fastmap          1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
+ fs               1.6.2   2023-04-25 [1] CRAN (R 4.3.0)
+ generics         0.1.3   2022-07-05 [1] CRAN (R 4.3.0)
+ ggplot2        * 3.4.2   2023-04-03 [1] CRAN (R 4.3.0)
+ glue             1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
+ gtable           0.3.3   2023-03-21 [1] CRAN (R 4.3.0)
+ htmltools        0.5.5   2023-03-23 [1] CRAN (R 4.3.0)
+ htmlwidgets      1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
+ httpuv           1.6.9   2023-02-14 [1] CRAN (R 4.3.0)
+ jsonlite         1.8.4   2022-12-06 [1] CRAN (R 4.3.0)
+ knitr            1.42    2023-01-25 [1] CRAN (R 4.3.0)
+ labeling         0.4.2   2020-10-20 [1] CRAN (R 4.3.0)
+ later            1.3.0   2021-08-18 [1] CRAN (R 4.3.0)
+ lattice          0.21-8  2023-04-05 [4] CRAN (R 4.3.0)
+ lifecycle        1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
+ magrittr         2.0.3   2022-03-30 [1] CRAN (R 4.3.0)
+ Matrix           1.6-0   2023-07-08 [4] CRAN (R 4.3.1)
+ memoise          2.0.1   2021-11-26 [1] CRAN (R 4.3.0)
+ mgcv             1.9-0   2023-07-11 [4] CRAN (R 4.3.1)
+ mime             0.12    2021-09-28 [1] CRAN (R 4.3.0)
+ miniUI           0.1.1.1 2018-05-18 [1] CRAN (R 4.3.0)
+ munsell          0.5.0   2018-06-12 [1] CRAN (R 4.3.0)
+ nlme             3.1-162 2023-01-31 [4] CRAN (R 4.2.2)
+ palmerpenguins * 0.1.1   2022-08-15 [1] CRAN (R 4.3.0)
+ patchwork      * 1.1.2   2022-08-19 [1] CRAN (R 4.3.0)
+ pillar           1.9.0   2023-03-22 [1] CRAN (R 4.3.0)
+ pkgbuild         1.4.0   2022-11-27 [1] CRAN (R 4.3.0)
+ pkgconfig        2.0.3   2019-09-22 [1] CRAN (R 4.3.0)
+ pkgload          1.3.2   2022-11-16 [1] CRAN (R 4.3.0)
+ prettyunits      1.1.1   2020-01-24 [1] CRAN (R 4.3.0)
+ processx         3.8.1   2023-04-18 [1] CRAN (R 4.3.0)
+ profvis          0.3.7   2020-11-02 [1] CRAN (R 4.3.0)
+ promises         1.2.0.1 2021-02-11 [1] CRAN (R 4.3.0)
+ ps               1.7.5   2023-04-18 [1] CRAN (R 4.3.0)
+ purrr            1.0.1   2023-01-10 [1] CRAN (R 4.3.0)
+ R6               2.5.1   2021-08-19 [1] CRAN (R 4.3.0)
+ Rcpp             1.0.10  2023-01-22 [1] CRAN (R 4.3.0)
+ remotes          2.4.2   2021-11-30 [1] CRAN (R 4.3.0)
+ rlang            1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
+ rmarkdown        2.21    2023-03-26 [1] CRAN (R 4.3.0)
+ rstudioapi       0.14    2022-08-22 [1] CRAN (R 4.3.0)
+ scales           1.2.1   2022-08-20 [1] CRAN (R 4.3.0)
+ sessioninfo      1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
+ shiny            1.7.4   2022-12-15 [1] CRAN (R 4.3.0)
+ stringi          1.7.12  2023-01-11 [1] CRAN (R 4.3.0)
+ stringr          1.5.0   2022-12-02 [1] CRAN (R 4.3.0)
+ tibble           3.2.1   2023-03-20 [1] CRAN (R 4.3.0)
+ tidyr          * 1.3.0   2023-01-24 [1] CRAN (R 4.3.0)
+ tidyselect       1.2.0   2022-10-10 [1] CRAN (R 4.3.0)
+ urlchecker       1.0.1   2021-11-30 [1] CRAN (R 4.3.0)
+ usethis          2.2.0   2023-06-06 [1] CRAN (R 4.3.0)
+ utf8             1.2.3   2023-01-31 [1] CRAN (R 4.3.0)
+ vctrs            0.6.2   2023-04-19 [1] CRAN (R 4.3.0)
+ viridisLite      0.4.1   2022-08-22 [1] CRAN (R 4.3.0)
+ withr            2.5.0   2022-03-03 [1] CRAN (R 4.3.0)
+ xfun             0.39    2023-04-20 [1] CRAN (R 4.3.0)
+ xtable           1.8-4   2019-04-21 [1] CRAN (R 4.3.0)
+ yaml             2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+
+ [1] /home/steffi/R/x86_64-pc-linux-gnu-library/4.3
+ [2] /usr/local/lib/R/site-library
+ [3] /usr/lib/R/site-library
+ [4] /usr/lib/R/library
+
+──────────────────────────────────────────────────────────────────────────────</code></pre>
+</div>
+</div>
+
+
+</section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<ol>
+<li id="fn1"><p>VIF: variance inflation factor; Can be interpreted as how much influence the variable has on the model↩︎</p></li>
+</ol></section></div> ]]></description>
+  <category>stats</category>
+  <category>lm</category>
+  <category>vif</category>
+  <category>normality</category>
+  <category>diagnostics</category>
+  <category>residuals</category>
+  <category>cooks-d</category>
+  <category>R</category>
+  <guid>https://steffilazerte.ca/posts/diagnostics-lm/index.html</guid>
+  <pubDate>Tue, 15 Nov 2022 06:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Running Basic Linear Models</title>
+  <link>https://steffilazerte.ca/posts/basic-models/index.html</link>
+  <description><![CDATA[ <p>In R, basic linear models are run with the <code><a href="https://rdrr.io/r/stats/lm.html">lm()</a></code> function.</p>
+<div class="cell">
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">y</span> <span class="op" style="color: #5E5E5E;">~</span> <span class="va" style="color: #111111;">x1</span> <span class="op" style="color: #5E5E5E;">+</span> <span class="va" style="color: #111111;">x2</span>, data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">data</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+<p>R will choose which type of linear model to do depending on the type of values in <code>x1</code> and <code>x2</code>.</p>
+<ul>
+<li>
+<strong>Regression</strong> - One continuous predictor (<code>x1</code> only and is continuous)</li>
+<li>
+<strong>Multiple regression</strong> - More than one continuous predictor (both <code>x1</code> and <code>x2</code> are continuous)</li>
+<li>
+<strong>ANOVA</strong> - Categorical predictor(s) (both <code>x1</code> and <code>x2</code> are categorical - factors)</li>
+<li>
+<strong>ANCOVA</strong> - Mix of categorical and continuous predictors (<code>x1</code> is continuous and <code>x2</code> is categorical)</li>
+</ul>
+<p>In all cases, <code>y</code> is continuous.</p>
+<p>No count data, no binary (binomial) data, no proprotions.</p>
+<p><span class="small">(Although technically sometimes count data is close enough to continuous and proportions can be transformed)</span></p>
+<section id="quick-example" class="level3"><h3 class="anchored" data-anchor-id="quick-example">Quick example</h3>
+<div class="cell">
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a></span><span class="op" style="color: #5E5E5E;">)</span> <span class="co" style="color: #5E5E5E;"># To access the penguins data set</span></span>
+<span><span class="va" style="color: #111111;">m</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">body_mass_g</span> <span class="op" style="color: #5E5E5E;">~</span> <span class="va" style="color: #111111;">bill_depth_mm</span>, data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">penguins</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="va" style="color: #111111;">m</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = body_mass_g ~ bill_depth_mm, data = penguins)
+
+Coefficients:
+  (Intercept)  bill_depth_mm  
+       7488.7         -191.6  </code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>But wait! How do I interpret that?</p>
+</blockquote>
+<p>All the details are stored in the model object <code>m</code>. We can use many other R functions to check our assumptions, summarize the results, or create ANOVA tables.</p>
+<p>But first, you really should check your <a href="../diagnostics-lm">Diagnostics</a>!</p>
+</section><section id="side-note-on-nas" class="level3"><h3 class="anchored" data-anchor-id="side-note-on-nas">Side note on <code>NA</code>’s</h3>
+<p>By default missing values (<code>NA</code>’s) are dropped from the analysis and from the data contained by the model. However, even better is to use <code>na.exclude</code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">m</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">body_mass_g</span> <span class="op" style="color: #5E5E5E;">~</span> <span class="va" style="color: #111111;">bill_depth_mm</span>, data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">penguins</span>, na.action <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">na.exclude</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+<p>This also excludes missing values (<code>NA</code>’s) from the analysis, but <em>not</em> from the data you extract from the model (which makes it much easier to combine back with your raw data set when performing <a href="../diagnostics-lm">Diagnostics</a>).</p>
+</section><section id="session-info" class="level3"><h3 class="anchored" data-anchor-id="session-info">Session Info</h3>
+<div class="cell">
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;">devtools</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://r-lib.github.io/sessioninfo/reference/session_info.html">session_info</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.3.1 (2023-06-16)
+ os       Ubuntu 22.04.3 LTS
+ system   x86_64, linux-gnu
+ ui       X11
+ language en_CA:en
+ collate  en_CA.UTF-8
+ ctype    en_CA.UTF-8
+ tz       America/Winnipeg
+ date     2023-09-04
+ pandoc   3.1.1 @ /usr/lib/rstudio/resources/app/bin/quarto/bin/tools/ (via rmarkdown)
+
+─ Packages ───────────────────────────────────────────────────────────────────
+ package        * version date (UTC) lib source
+ cachem           1.0.8   2023-05-01 [1] CRAN (R 4.3.0)
+ callr            3.7.3   2022-11-02 [1] CRAN (R 4.3.0)
+ cli              3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
+ crayon           1.5.2   2022-09-29 [1] CRAN (R 4.3.0)
+ devtools         2.4.5   2022-10-11 [1] CRAN (R 4.3.0)
+ digest           0.6.31  2022-12-11 [1] CRAN (R 4.3.0)
+ ellipsis         0.3.2   2021-04-29 [1] CRAN (R 4.3.0)
+ evaluate         0.20    2023-01-17 [1] CRAN (R 4.3.0)
+ fansi            1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
+ fastmap          1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
+ fs               1.6.2   2023-04-25 [1] CRAN (R 4.3.0)
+ glue             1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
+ htmltools        0.5.5   2023-03-23 [1] CRAN (R 4.3.0)
+ htmlwidgets      1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
+ httpuv           1.6.9   2023-02-14 [1] CRAN (R 4.3.0)
+ jsonlite         1.8.4   2022-12-06 [1] CRAN (R 4.3.0)
+ knitr            1.42    2023-01-25 [1] CRAN (R 4.3.0)
+ later            1.3.0   2021-08-18 [1] CRAN (R 4.3.0)
+ lifecycle        1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
+ magrittr         2.0.3   2022-03-30 [1] CRAN (R 4.3.0)
+ memoise          2.0.1   2021-11-26 [1] CRAN (R 4.3.0)
+ mime             0.12    2021-09-28 [1] CRAN (R 4.3.0)
+ miniUI           0.1.1.1 2018-05-18 [1] CRAN (R 4.3.0)
+ palmerpenguins * 0.1.1   2022-08-15 [1] CRAN (R 4.3.0)
+ pillar           1.9.0   2023-03-22 [1] CRAN (R 4.3.0)
+ pkgbuild         1.4.0   2022-11-27 [1] CRAN (R 4.3.0)
+ pkgconfig        2.0.3   2019-09-22 [1] CRAN (R 4.3.0)
+ pkgload          1.3.2   2022-11-16 [1] CRAN (R 4.3.0)
+ prettyunits      1.1.1   2020-01-24 [1] CRAN (R 4.3.0)
+ processx         3.8.1   2023-04-18 [1] CRAN (R 4.3.0)
+ profvis          0.3.7   2020-11-02 [1] CRAN (R 4.3.0)
+ promises         1.2.0.1 2021-02-11 [1] CRAN (R 4.3.0)
+ ps               1.7.5   2023-04-18 [1] CRAN (R 4.3.0)
+ purrr            1.0.1   2023-01-10 [1] CRAN (R 4.3.0)
+ R6               2.5.1   2021-08-19 [1] CRAN (R 4.3.0)
+ Rcpp             1.0.10  2023-01-22 [1] CRAN (R 4.3.0)
+ remotes          2.4.2   2021-11-30 [1] CRAN (R 4.3.0)
+ rlang            1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
+ rmarkdown        2.21    2023-03-26 [1] CRAN (R 4.3.0)
+ rstudioapi       0.14    2022-08-22 [1] CRAN (R 4.3.0)
+ sessioninfo      1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
+ shiny            1.7.4   2022-12-15 [1] CRAN (R 4.3.0)
+ stringi          1.7.12  2023-01-11 [1] CRAN (R 4.3.0)
+ stringr          1.5.0   2022-12-02 [1] CRAN (R 4.3.0)
+ tibble           3.2.1   2023-03-20 [1] CRAN (R 4.3.0)
+ urlchecker       1.0.1   2021-11-30 [1] CRAN (R 4.3.0)
+ usethis          2.2.0   2023-06-06 [1] CRAN (R 4.3.0)
+ utf8             1.2.3   2023-01-31 [1] CRAN (R 4.3.0)
+ vctrs            0.6.2   2023-04-19 [1] CRAN (R 4.3.0)
+ xfun             0.39    2023-04-20 [1] CRAN (R 4.3.0)
+ xtable           1.8-4   2019-04-21 [1] CRAN (R 4.3.0)
+ yaml             2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+
+ [1] /home/steffi/R/x86_64-pc-linux-gnu-library/4.3
+ [2] /usr/local/lib/R/site-library
+ [3] /usr/lib/R/site-library
+ [4] /usr/lib/R/library
+
+──────────────────────────────────────────────────────────────────────────────</code></pre>
+</div>
+</div>
+
+
+</section> ]]></description>
+  <category>stats</category>
+  <category>lm</category>
+  <category>R</category>
+  <guid>https://steffilazerte.ca/posts/basic-models/index.html</guid>
+  <pubDate>Sun, 13 Nov 2022 06:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
