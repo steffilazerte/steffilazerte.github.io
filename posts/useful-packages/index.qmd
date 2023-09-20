@@ -19,7 +19,12 @@ Packages useful for visualizing data
 
 - [patchwork](https://patchwork.data-imaginist.com/) - Joining figures together
 
-## Data 
+## Acquiring Data
+For accessing data
+
+- [weathercan](https://docs.ropensci.org/weathercan) - Download historical ECCC (Canadian) data (my package!)
+
+## Working with Data 
 For working with data or specific data types
 
 #### Packages
