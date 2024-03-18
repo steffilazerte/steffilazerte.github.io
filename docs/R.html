@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -45,7 +45,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -54,8 +60,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -66,9 +74,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./images/logo_gear.png" alt="" class="navbar-logo">
     </a>
@@ -76,53 +84,55 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Dr.&nbsp;Steffi LaZerte</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./R.html" aria-current="page">
- <span class="menu-text">R Projects</span></a>
+    <a class="nav-link active" href="./R.html" aria-current="page"> 
+<span class="menu-text">R Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html">
- <span class="menu-text">Academic Activities &amp; CV</span></a>
+    <a class="nav-link" href="./cv.html"> 
+<span class="menu-text">Academic Activities &amp; CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./presentations.html">
- <span class="menu-text">Presentations</span></a>
+    <a class="nav-link" href="./presentations.html"> 
+<span class="menu-text">Presentations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./tips_and_tricks.html">
- <span class="menu-text">Tips &amp; Tricks</span></a>
+    <a class="nav-link" href="./tips_and_tricks.html"> 
+<span class="menu-text">Tips &amp; Tricks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/steffilazerte"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/steffilazerte"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/steffilazerte"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/steffilazerte"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://fosstodon.org/@steffilazerte"><i class="bi bi-mastodon" role="img">
+    <a class="nav-link" href="https://fosstodon.org/@steffilazerte"> <i class="bi bi-mastodon" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -160,30 +170,31 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <section id="package-developement" class="level2">
 <h2 class="anchored" data-anchor-id="package-developement">Package Developement</h2>
 <div class="cell">
 <div class="cell-output-display">
-
-<div id="ovknhagasa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ovknhagasa table {
+<div id="bzzntecxhh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bzzntecxhh table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ovknhagasa thead, #ovknhagasa tbody, #ovknhagasa tfoot, #ovknhagasa tr, #ovknhagasa td, #ovknhagasa th {
+#bzzntecxhh thead, #bzzntecxhh tbody, #bzzntecxhh tfoot, #bzzntecxhh tr, #bzzntecxhh td, #bzzntecxhh th {
   border-style: none;
 }
 
-#ovknhagasa p {
+#bzzntecxhh p {
   margin: 0;
   padding: 0;
 }
 
-#ovknhagasa .gt_table {
+#bzzntecxhh .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -209,12 +220,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#ovknhagasa .gt_caption {
+#bzzntecxhh .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ovknhagasa .gt_title {
+#bzzntecxhh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -226,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#ovknhagasa .gt_subtitle {
+#bzzntecxhh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -238,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#ovknhagasa .gt_heading {
+#bzzntecxhh .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -250,13 +261,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#ovknhagasa .gt_bottom_border {
+#bzzntecxhh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ovknhagasa .gt_col_headings {
+#bzzntecxhh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -271,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#ovknhagasa .gt_col_heading {
+#bzzntecxhh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -291,7 +302,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#ovknhagasa .gt_column_spanner_outer {
+#bzzntecxhh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -303,15 +314,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#ovknhagasa .gt_column_spanner_outer:first-child {
+#bzzntecxhh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ovknhagasa .gt_column_spanner_outer:last-child {
+#bzzntecxhh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ovknhagasa .gt_column_spanner {
+#bzzntecxhh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -323,11 +334,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#ovknhagasa .gt_spanner_row {
+#bzzntecxhh .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ovknhagasa .gt_group_heading {
+#bzzntecxhh .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -353,7 +364,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#ovknhagasa .gt_empty_group_heading {
+#bzzntecxhh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -368,15 +379,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#ovknhagasa .gt_from_md > :first-child {
+#bzzntecxhh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ovknhagasa .gt_from_md > :last-child {
+#bzzntecxhh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ovknhagasa .gt_row {
+#bzzntecxhh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -395,7 +406,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#ovknhagasa .gt_stub {
+#bzzntecxhh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -408,7 +419,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#ovknhagasa .gt_stub_row_group {
+#bzzntecxhh .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -422,15 +433,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#ovknhagasa .gt_row_group_first td {
+#bzzntecxhh .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ovknhagasa .gt_row_group_first th {
+#bzzntecxhh .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ovknhagasa .gt_summary_row {
+#bzzntecxhh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -440,16 +451,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#ovknhagasa .gt_first_summary_row {
+#bzzntecxhh .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ovknhagasa .gt_first_summary_row.thick {
+#bzzntecxhh .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ovknhagasa .gt_last_summary_row {
+#bzzntecxhh .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -459,7 +470,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#ovknhagasa .gt_grand_summary_row {
+#bzzntecxhh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -469,7 +480,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#ovknhagasa .gt_first_grand_summary_row {
+#bzzntecxhh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -479,7 +490,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#ovknhagasa .gt_last_grand_summary_row_top {
+#bzzntecxhh .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -489,11 +500,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#ovknhagasa .gt_striped {
+#bzzntecxhh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ovknhagasa .gt_table_body {
+#bzzntecxhh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -502,7 +513,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#ovknhagasa .gt_footnotes {
+#bzzntecxhh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -516,7 +527,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#ovknhagasa .gt_footnote {
+#bzzntecxhh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -525,7 +536,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#ovknhagasa .gt_sourcenotes {
+#bzzntecxhh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -539,7 +550,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#ovknhagasa .gt_sourcenote {
+#bzzntecxhh .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -547,125 +558,128 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#ovknhagasa .gt_left {
+#bzzntecxhh .gt_left {
   text-align: left;
 }
 
-#ovknhagasa .gt_center {
+#bzzntecxhh .gt_center {
   text-align: center;
 }
 
-#ovknhagasa .gt_right {
+#bzzntecxhh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ovknhagasa .gt_font_normal {
+#bzzntecxhh .gt_font_normal {
   font-weight: normal;
 }
 
-#ovknhagasa .gt_font_bold {
+#bzzntecxhh .gt_font_bold {
   font-weight: bold;
 }
 
-#ovknhagasa .gt_font_italic {
+#bzzntecxhh .gt_font_italic {
   font-style: italic;
 }
 
-#ovknhagasa .gt_super {
+#bzzntecxhh .gt_super {
   font-size: 65%;
 }
 
-#ovknhagasa .gt_footnote_marks {
+#bzzntecxhh .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ovknhagasa .gt_asterisk {
+#bzzntecxhh .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ovknhagasa .gt_indent_1 {
+#bzzntecxhh .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ovknhagasa .gt_indent_2 {
+#bzzntecxhh .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ovknhagasa .gt_indent_3 {
+#bzzntecxhh .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ovknhagasa .gt_indent_4 {
+#bzzntecxhh .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ovknhagasa .gt_indent_5 {
+#bzzntecxhh .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  
-  <tbody class="gt_table_body">
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><code><a href="https://github.com/dhope/ARUtools">ARUtools</a></code></strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Jan 2023 - Present</strong><br>R package<br><em>Contributor</em> for David Hope, Canadian Wildlife Service – Ontario Region <small>(Ottawa, ON)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><code><a href="https://github.com/dhope/BASSr">BASSr</a></code></strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Nov 2022 - Present</strong><br>R package<br><em>Contributor</em> for David Hope, Canadian Wildlife Service – Ontario Region <small>(Ottawa, ON)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><code><a href="https://github.com/bcgov/bcgwlreports">bcgwlreports</a></code></strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Mar 2021 - Present</strong><br>R package for automatically creating HTML groundwater level reports for assessing potential flood and drought conditions<br><em>Creator/Contributor</em> for Watershed Science &amp; Assessment, Water Protection &amp; Sustainability Branch, British Columbia Ministry of Land, Water and Resource Stewardship <small>(Victoria, BC)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><code><a href="https://github.com/MotusWTS/motus">motus</a></code></strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Jan 2019 - Present</strong><br>R package for accessing MOTUS data<br><em>Contributor</em> for Denis LePage, Birds Canada <small>(Port Rowan, ON)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><code><a href="https://github.com/birdstudiescanada/naturecounts">naturecounts</a></code></strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Jan 2019 - Present</strong><br>Access data from the NatureCounts platform by Birds Canada<br><em>Creator/Contributor</em> for Denis LePage, Birds Canada <small>(Port Rowan, ON)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><code><a href="http://github.com/steffilazerte/cavityuse">cavityuse</a></code></strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Aug 2018 - Present</strong><br>R package for detecting use of cavities (caves, burrows, etc.) from geolocator data in a variety of animal species.<br><em>Creator/Maintainer</em>, Independent Development  <small></small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><code><a href="https://github.com/steffilazerte/LITAP">LITAP</a></code></strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>May 2017 - Present</strong><br>R package for analysis of waterflow based on elevation data and pit removals<br><em>Creator/Maintainer</em> for Sheng Li, Agriculture and Agri-Food Canada <small>(Fredericton, NB)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><code><a href="https://github.com/ropensci/weathercan">weathercan</a></code></strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Jun 2016 - Present</strong><br>Peer-reviewed R package for downloading Canadian weather data from Environment and Climate Change Canada. Part of <a href="http://ropensci.org">rOpenSci</a><br><em>Creator/Maintainer</em>, Independent Development  <small></small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><code><a href="https://github.com/animalnexus/feedr">feedr</a></code></strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Jan 2016 - Present</strong><br>R package for loading, transforming and visualizing RFID data created when pit-tagged animals are detected by RFID loggers<br><em>Creator/Maintainer; Post-doctoral work</em> for David Hill, Thompson Rivers University <small>(Kamloops, BC)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><code><a href="https://github.com/bbsBayes/bbsBayes">bbsBayes</a> / <a href="https://github.com/bbsBayes/bbsBayes2">bbsBayes2</a></code></strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Aug 2022 - Jan 2023</strong><br>R package for conducting Bayesian modelling of Breeding Bird Survey Data<br><em>Contributor</em> for Adam Smith, Environment and Climate Change Canada <small>(Ottawa, ON)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><code><a href="https://github.com/psolymos/moosecounter/">moosecounter</a></code></strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Sep 2021 - Oct 2021</strong><br>R package for conducting adaptive moose surveys<br><em>Contributor (Shiny App)</em> for Péter Sólymos  <small>(Edmonton, AB)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><code><a href="https://github.com/bcgov/rcaaqs">rcaaqs</a></code></strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Nov 2017 - Feb 2018</strong><br>R package to facilitate the calculation of air quality metrics according to the Canadian Ambient Air Quality Standards (CAAQS)<br><em>Contributor</em> for Stephanie Hazlitt, British Columbia Ministry of Environment and Climate Change Strategy <small>(Victoria, BC)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><code><a href="https://github.com/bcgov/bcgroundwater">bcgroundwater</a></code></strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Nov 2017 - Feb 2018</strong><br>R package to facilitate analysis and visualisation of groundwater data from the British Columbia Provincial Groundwater Observation Well Network.<br><em>Contributor</em> for Stephanie Hazlitt, British Columbia Ministry of Environment and Climate Change Strategy <small>(Victoria, BC)</small></p>
-</div></td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong><code><a href="https://github.com/dhope/ARUtools">ARUtools</a></code></strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Jan 2023 - Present</strong><br>R package<br><em>Contributor</em> for David Hope, Canadian Wildlife Service – Ontario Region <small>(Ottawa, ON)</small></p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title"><p><strong><code><a href="https://github.com/dhope/BASSr">BASSr</a></code></strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Nov 2022 - Present</strong><br>R package<br><em>Contributor</em> for David Hope, Canadian Wildlife Service – Ontario Region <small>(Ottawa, ON)</small></p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong><code><a href="https://github.com/bcgov/bcgwlreports">bcgwlreports</a></code></strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Mar 2021 - Present</strong><br>R package for automatically creating HTML groundwater level reports for assessing potential flood and drought conditions<br><em>Creator/Contributor</em> for Watershed Science &amp; Assessment, Water Protection &amp; Sustainability Branch, British Columbia Ministry of Land, Water and Resource Stewardship <small>(Victoria, BC)</small></p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title"><p><strong><code><a href="https://github.com/MotusWTS/motus">motus</a></code></strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Jan 2019 - Present</strong><br>R package for accessing MOTUS data<br><em>Contributor</em> for Denis LePage, Birds Canada <small>(Port Rowan, ON)</small></p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong><code><a href="https://github.com/birdstudiescanada/naturecounts">naturecounts</a></code></strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Jan 2019 - Present</strong><br>Access data from the NatureCounts platform by Birds Canada<br><em>Creator/Contributor</em> for Denis LePage, Birds Canada <small>(Port Rowan, ON)</small></p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title"><p><strong><code><a href="http://github.com/steffilazerte/cavityuse">cavityuse</a></code></strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Aug 2018 - Present</strong><br>R package for detecting use of cavities (caves, burrows, etc.) from geolocator data in a variety of animal species.<br><em>Creator/Maintainer</em>, Independent Development <small></small></p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong><code><a href="https://github.com/steffilazerte/LITAP">LITAP</a></code></strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>May 2017 - Present</strong><br>R package for analysis of waterflow based on elevation data and pit removals<br><em>Creator/Maintainer</em> for Sheng Li, Agriculture and Agri-Food Canada <small>(Fredericton, NB)</small></p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title"><p><strong><code><a href="https://github.com/ropensci/weathercan">weathercan</a></code></strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Jun 2016 - Present</strong><br>Peer-reviewed R package for downloading Canadian weather data from Environment and Climate Change Canada. Part of <a href="http://ropensci.org">rOpenSci</a><br><em>Creator/Maintainer</em>, Independent Development <small></small></p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong><code><a href="https://github.com/animalnexus/feedr">feedr</a></code></strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Jan 2016 - Present</strong><br>R package for loading, transforming and visualizing RFID data created when pit-tagged animals are detected by RFID loggers<br><em>Creator/Maintainer; Post-doctoral work</em> for David Hill, Thompson Rivers University <small>(Kamloops, BC)</small></p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title"><p><strong><code><a href="https://github.com/bbsBayes/bbsBayes">bbsBayes</a> / <a href="https://github.com/bbsBayes/bbsBayes2">bbsBayes2</a></code></strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Aug 2022 - Jan 2023</strong><br>R package for conducting Bayesian modelling of Breeding Bird Survey Data<br><em>Contributor</em> for Adam Smith, Environment and Climate Change Canada <small>(Ottawa, ON)</small></p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong><code><a href="https://github.com/psolymos/moosecounter/">moosecounter</a></code></strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Sep 2021 - Oct 2021</strong><br>R package for conducting adaptive moose surveys<br><em>Contributor (Shiny App)</em> for Péter Sólymos <small>(Edmonton, AB)</small></p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title"><p><strong><code><a href="https://github.com/bcgov/rcaaqs">rcaaqs</a></code></strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Nov 2017 - Feb 2018</strong><br>R package to facilitate the calculation of air quality metrics according to the Canadian Ambient Air Quality Standards (CAAQS)<br><em>Contributor</em> for Stephanie Hazlitt, British Columbia Ministry of Environment and Climate Change Strategy <small>(Victoria, BC)</small></p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong><code><a href="https://github.com/bcgov/bcgroundwater">bcgroundwater</a></code></strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Nov 2017 - Feb 2018</strong><br>R package to facilitate analysis and visualisation of groundwater data from the British Columbia Provincial Groundwater Observation Well Network.<br><em>Contributor</em> for Stephanie Hazlitt, British Columbia Ministry of Environment and Climate Change Strategy <small>(Victoria, BC)</small></p></td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -674,24 +688,23 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="r-script-development-and-analysis">R Script Development and Analysis</h2>
 <div class="cell">
 <div class="cell-output-display">
-
-<div id="vhdolgwgka" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vhdolgwgka table {
+<div id="knxkxxiucq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#knxkxxiucq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vhdolgwgka thead, #vhdolgwgka tbody, #vhdolgwgka tfoot, #vhdolgwgka tr, #vhdolgwgka td, #vhdolgwgka th {
+#knxkxxiucq thead, #knxkxxiucq tbody, #knxkxxiucq tfoot, #knxkxxiucq tr, #knxkxxiucq td, #knxkxxiucq th {
   border-style: none;
 }
 
-#vhdolgwgka p {
+#knxkxxiucq p {
   margin: 0;
   padding: 0;
 }
 
-#vhdolgwgka .gt_table {
+#knxkxxiucq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -717,12 +730,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#vhdolgwgka .gt_caption {
+#knxkxxiucq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vhdolgwgka .gt_title {
+#knxkxxiucq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -734,7 +747,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#vhdolgwgka .gt_subtitle {
+#knxkxxiucq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -746,7 +759,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#vhdolgwgka .gt_heading {
+#knxkxxiucq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -758,13 +771,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#vhdolgwgka .gt_bottom_border {
+#knxkxxiucq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vhdolgwgka .gt_col_headings {
+#knxkxxiucq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -779,7 +792,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#vhdolgwgka .gt_col_heading {
+#knxkxxiucq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -799,7 +812,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#vhdolgwgka .gt_column_spanner_outer {
+#knxkxxiucq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -811,15 +824,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#vhdolgwgka .gt_column_spanner_outer:first-child {
+#knxkxxiucq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vhdolgwgka .gt_column_spanner_outer:last-child {
+#knxkxxiucq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vhdolgwgka .gt_column_spanner {
+#knxkxxiucq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -831,11 +844,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#vhdolgwgka .gt_spanner_row {
+#knxkxxiucq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vhdolgwgka .gt_group_heading {
+#knxkxxiucq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -861,7 +874,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#vhdolgwgka .gt_empty_group_heading {
+#knxkxxiucq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -876,15 +889,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#vhdolgwgka .gt_from_md > :first-child {
+#knxkxxiucq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vhdolgwgka .gt_from_md > :last-child {
+#knxkxxiucq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vhdolgwgka .gt_row {
+#knxkxxiucq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -903,7 +916,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#vhdolgwgka .gt_stub {
+#knxkxxiucq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -916,7 +929,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#vhdolgwgka .gt_stub_row_group {
+#knxkxxiucq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -930,15 +943,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#vhdolgwgka .gt_row_group_first td {
+#knxkxxiucq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vhdolgwgka .gt_row_group_first th {
+#knxkxxiucq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vhdolgwgka .gt_summary_row {
+#knxkxxiucq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -948,16 +961,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#vhdolgwgka .gt_first_summary_row {
+#knxkxxiucq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vhdolgwgka .gt_first_summary_row.thick {
+#knxkxxiucq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vhdolgwgka .gt_last_summary_row {
+#knxkxxiucq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -967,7 +980,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#vhdolgwgka .gt_grand_summary_row {
+#knxkxxiucq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -977,7 +990,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#vhdolgwgka .gt_first_grand_summary_row {
+#knxkxxiucq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -987,7 +1000,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#vhdolgwgka .gt_last_grand_summary_row_top {
+#knxkxxiucq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -997,11 +1010,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#vhdolgwgka .gt_striped {
+#knxkxxiucq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vhdolgwgka .gt_table_body {
+#knxkxxiucq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1010,7 +1023,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#vhdolgwgka .gt_footnotes {
+#knxkxxiucq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1024,7 +1037,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#vhdolgwgka .gt_footnote {
+#knxkxxiucq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1033,7 +1046,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#vhdolgwgka .gt_sourcenotes {
+#knxkxxiucq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1047,7 +1060,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#vhdolgwgka .gt_sourcenote {
+#knxkxxiucq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1055,145 +1068,144 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#vhdolgwgka .gt_left {
+#knxkxxiucq .gt_left {
   text-align: left;
 }
 
-#vhdolgwgka .gt_center {
+#knxkxxiucq .gt_center {
   text-align: center;
 }
 
-#vhdolgwgka .gt_right {
+#knxkxxiucq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vhdolgwgka .gt_font_normal {
+#knxkxxiucq .gt_font_normal {
   font-weight: normal;
 }
 
-#vhdolgwgka .gt_font_bold {
+#knxkxxiucq .gt_font_bold {
   font-weight: bold;
 }
 
-#vhdolgwgka .gt_font_italic {
+#knxkxxiucq .gt_font_italic {
   font-style: italic;
 }
 
-#vhdolgwgka .gt_super {
+#knxkxxiucq .gt_super {
   font-size: 65%;
 }
 
-#vhdolgwgka .gt_footnote_marks {
+#knxkxxiucq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vhdolgwgka .gt_asterisk {
+#knxkxxiucq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vhdolgwgka .gt_indent_1 {
+#knxkxxiucq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vhdolgwgka .gt_indent_2 {
+#knxkxxiucq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vhdolgwgka .gt_indent_3 {
+#knxkxxiucq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vhdolgwgka .gt_indent_4 {
+#knxkxxiucq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vhdolgwgka .gt_indent_5 {
+#knxkxxiucq .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" style="table-layout: fixed;; width: 100%" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <colgroup>
-    <col style="width:25%;">
-    <col>
-  </colgroup>
-  
-  <tbody class="gt_table_body">
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Migration in aerial insectivores</strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Dec 2019 - Present</strong><br> Matt Reudink, Thompson Rivers University <small>(Kamloops, BC)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><a href="https://github.com/bcgov/aquifer-factsheets">Aquifer fact sheets</a>: R programming, tutoring and workshops</strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Nov 2017 - Present</strong><br> Watershed Science &amp; Assessment, Water Protection &amp; Sustainability Branch, British Columbia Ministry of Land, Water and Resource Stewardship <small>(Victoria, BC)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Cavity use of red-headed woodpeckers</strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Jan 2021 - Aug 2022</strong><br> Elena West, Audubon Society <small>(Minneapolis, USA)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><a href="https://github.com/bcgov/so2-caaqs-indicator">SO2</a>, <a href="https://github.com/bcgov/so2-caaqs-indicator">NO2</a>, <a href="https://github.com/bcgov/ozone-caaqs-indicator">Ozone</a> and <a href="https://github.com/bcgov/pm25-caaqs-indicator">PM2.5</a> CAAQS indicators</strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Feb 2022 - Mar 2022</strong><br> Karly Harker, British Columbia Ministry of Environment and Climate Change Strategy <small>(Victoria, BC)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Rattlesnake hibernation</strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Dec 2020 - Oct 2021</strong><br> Karl Larsen, Thompson Rivers University <small>(Kamloops, BC)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Fungi communities on ant mounds</strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Mar 2021 - Sep 2021</strong><br> Wendy Untereiner, Brandon University <small>(Brandon, MB)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><a href="https://doi.org/10.1002/ps.6650">Wireworms and temperature</a></strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Dec 2020 - Jul 2021</strong><br> Bryan Cassone, Brandon University <small>(Brandon, MB)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><a href="https://github.com/bcgov/protected-lands-and-waters-indicator">BC Protected Areas Shiny App</a> interactive map development</strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Mar 2021 - Mar 2021</strong><br> Andy Teucher, British Columbia Ministry of Environment and Climate Change Strategy <small>(Victoria, BC)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Bird song playback and SNR extraction</strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Jul 2020 - Dec 2020</strong><br> Ken Otter, University of Northern BC <small>(Prince George, BC)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><a href="https://doi.org/10.1111/nph.16109">Physiological ecology of sedges</a></strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Sep 2017 - Jul 2020</strong><br> Martin J. Lechowicz, McGill University <small>(Montreal, QC)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Tutoring mixed models and power analysis</strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>May 2020 - Jun 2020</strong><br> Catherine Ortner, Thompson Rivers University <small>(Kamloops, BC)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><a href="https://github.com/bcgov/groundwater-levels-indicator/tree/update-2018">BC Groundwater levels indicator</a> interactive map development</strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Oct 2018 - Oct 2018</strong><br> Stephanie Hazlitt, British Columbia Ministry of Environment and Climate Change Strategy <small>(Victoria, BC)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><a href="https://github.com/bcgov/ozone-caaqs-indicator/tree/update-2018">Ozone</a> and <a href="https://github.com/bcgov/pm25-caaqs-indicator/tree/update-2018">PM2.5</a>  CAAQS indicators</strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Aug 2018 - Aug 2018</strong><br> Stephanie Hazlitt, British Columbia Ministry of Environment and Climate Change Strategy <small>(Victoria, BC)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Population decline of aerial insectivores</strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>May 2017 - Aug 2017</strong><br> Joe Nocera, University of New Brunswick <small>(Fredericton, NB)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Bull trout Telemetry: Data cleaning, preparation, R training</strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Jan 2017 - Jan 2017</strong><br> Ian Spendlow, BC Ministry of Forests, Lands and Natural Resource Operations <small>(Prince George, BC)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><a href="http://doi.org/10.1016/j.cub.2020.05.084">White-throated sparrow song variation</a> (<a href="http://whitethroatsong.ca">Citizen Science</a>)</strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Jan 2016 - Jan 2017</strong><br><em>Post-doctoral Researcher</em> for Ken Otter, University of Northern BC <small>(Prince George, BC)</small></p>
-</div></td></tr>
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Communication and noise in mountain chickadees</strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>May 2015 - Sep 2015</strong><br><em>Post-doctoral Researcher</em> for Ken Otter, University of Northern BC <small>(Prince George, BC)</small></p>
-</div></td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 25%">
+<col>
+</colgroup>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong>Migration in aerial insectivores</strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Dec 2019 - Present</strong><br> Matt Reudink, Thompson Rivers University <small>(Kamloops, BC)</small></p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title"><p><strong><a href="https://github.com/bcgov/aquifer-factsheets">Aquifer fact sheets</a>: R programming, tutoring and workshops</strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Nov 2017 - Present</strong><br> Watershed Science &amp; Assessment, Water Protection &amp; Sustainability Branch, British Columbia Ministry of Land, Water and Resource Stewardship <small>(Victoria, BC)</small></p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong>Cavity use of red-headed woodpeckers</strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Jan 2021 - Aug 2022</strong><br> Elena West, Audubon Society <small>(Minneapolis, USA)</small></p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title"><p><strong><a href="https://github.com/bcgov/so2-caaqs-indicator">SO2</a>, <a href="https://github.com/bcgov/so2-caaqs-indicator">NO2</a>, <a href="https://github.com/bcgov/ozone-caaqs-indicator">Ozone</a> and <a href="https://github.com/bcgov/pm25-caaqs-indicator">PM2.5</a> CAAQS indicators</strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Feb 2022 - Mar 2022</strong><br> Karly Harker, British Columbia Ministry of Environment and Climate Change Strategy <small>(Victoria, BC)</small></p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong>Rattlesnake hibernation</strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Dec 2020 - Oct 2021</strong><br> Karl Larsen, Thompson Rivers University <small>(Kamloops, BC)</small></p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title"><p><strong>Fungi communities on ant mounds</strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Mar 2021 - Sep 2021</strong><br> Wendy Untereiner, Brandon University <small>(Brandon, MB)</small></p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong><a href="https://doi.org/10.1002/ps.6650">Wireworms and temperature</a></strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Dec 2020 - Jul 2021</strong><br> Bryan Cassone, Brandon University <small>(Brandon, MB)</small></p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title"><p><strong><a href="https://github.com/bcgov/protected-lands-and-waters-indicator">BC Protected Areas Shiny App</a> interactive map development</strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Mar 2021 - Mar 2021</strong><br> Andy Teucher, British Columbia Ministry of Environment and Climate Change Strategy <small>(Victoria, BC)</small></p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong>Bird song playback and SNR extraction</strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Jul 2020 - Dec 2020</strong><br> Ken Otter, University of Northern BC <small>(Prince George, BC)</small></p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title"><p><strong><a href="https://doi.org/10.1111/nph.16109">Physiological ecology of sedges</a></strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Sep 2017 - Jul 2020</strong><br> Martin J. Lechowicz, McGill University <small>(Montreal, QC)</small></p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong>Tutoring mixed models and power analysis</strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>May 2020 - Jun 2020</strong><br> Catherine Ortner, Thompson Rivers University <small>(Kamloops, BC)</small></p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title"><p><strong><a href="https://github.com/bcgov/groundwater-levels-indicator/tree/update-2018">BC Groundwater levels indicator</a> interactive map development</strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Oct 2018 - Oct 2018</strong><br> Stephanie Hazlitt, British Columbia Ministry of Environment and Climate Change Strategy <small>(Victoria, BC)</small></p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong><a href="https://github.com/bcgov/ozone-caaqs-indicator/tree/update-2018">Ozone</a> and <a href="https://github.com/bcgov/pm25-caaqs-indicator/tree/update-2018">PM2.5</a> CAAQS indicators</strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Aug 2018 - Aug 2018</strong><br> Stephanie Hazlitt, British Columbia Ministry of Environment and Climate Change Strategy <small>(Victoria, BC)</small></p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title"><p><strong>Population decline of aerial insectivores</strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>May 2017 - Aug 2017</strong><br> Joe Nocera, University of New Brunswick <small>(Fredericton, NB)</small></p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong>Bull trout Telemetry: Data cleaning, preparation, R training</strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Jan 2017 - Jan 2017</strong><br> Ian Spendlow, BC Ministry of Forests, Lands and Natural Resource Operations <small>(Prince George, BC)</small></p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title"><p><strong><a href="http://doi.org/10.1016/j.cub.2020.05.084">White-throated sparrow song variation</a> (<a href="http://whitethroatsong.ca">Citizen Science</a>)</strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Jan 2016 - Jan 2017</strong><br><em>Post-doctoral Researcher</em> for Ken Otter, University of Northern BC <small>(Prince George, BC)</small></p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong>Communication and noise in mountain chickadees</strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>May 2015 - Sep 2015</strong><br><em>Post-doctoral Researcher</em> for Ken Otter, University of Northern BC <small>(Prince George, BC)</small></p></td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -1202,24 +1214,23 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="r-workshops">R Workshops</h2>
 <div class="cell">
 <div class="cell-output-display">
-
-<div id="rhmevmsohb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#rhmevmsohb table {
+<div id="olepykxzbu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#olepykxzbu table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#rhmevmsohb thead, #rhmevmsohb tbody, #rhmevmsohb tfoot, #rhmevmsohb tr, #rhmevmsohb td, #rhmevmsohb th {
+#olepykxzbu thead, #olepykxzbu tbody, #olepykxzbu tfoot, #olepykxzbu tr, #olepykxzbu td, #olepykxzbu th {
   border-style: none;
 }
 
-#rhmevmsohb p {
+#olepykxzbu p {
   margin: 0;
   padding: 0;
 }
 
-#rhmevmsohb .gt_table {
+#olepykxzbu .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1245,12 +1256,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#rhmevmsohb .gt_caption {
+#olepykxzbu .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#rhmevmsohb .gt_title {
+#olepykxzbu .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1262,7 +1273,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#rhmevmsohb .gt_subtitle {
+#olepykxzbu .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1274,7 +1285,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#rhmevmsohb .gt_heading {
+#olepykxzbu .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1286,13 +1297,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#rhmevmsohb .gt_bottom_border {
+#olepykxzbu .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rhmevmsohb .gt_col_headings {
+#olepykxzbu .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1307,7 +1318,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#rhmevmsohb .gt_col_heading {
+#olepykxzbu .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1327,7 +1338,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#rhmevmsohb .gt_column_spanner_outer {
+#olepykxzbu .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1339,15 +1350,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#rhmevmsohb .gt_column_spanner_outer:first-child {
+#olepykxzbu .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rhmevmsohb .gt_column_spanner_outer:last-child {
+#olepykxzbu .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rhmevmsohb .gt_column_spanner {
+#olepykxzbu .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1359,11 +1370,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#rhmevmsohb .gt_spanner_row {
+#olepykxzbu .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#rhmevmsohb .gt_group_heading {
+#olepykxzbu .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1389,7 +1400,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#rhmevmsohb .gt_empty_group_heading {
+#olepykxzbu .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1404,15 +1415,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#rhmevmsohb .gt_from_md > :first-child {
+#olepykxzbu .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rhmevmsohb .gt_from_md > :last-child {
+#olepykxzbu .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rhmevmsohb .gt_row {
+#olepykxzbu .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1431,7 +1442,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#rhmevmsohb .gt_stub {
+#olepykxzbu .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1444,7 +1455,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#rhmevmsohb .gt_stub_row_group {
+#olepykxzbu .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1458,15 +1469,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#rhmevmsohb .gt_row_group_first td {
+#olepykxzbu .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#rhmevmsohb .gt_row_group_first th {
+#olepykxzbu .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#rhmevmsohb .gt_summary_row {
+#olepykxzbu .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1476,16 +1487,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#rhmevmsohb .gt_first_summary_row {
+#olepykxzbu .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#rhmevmsohb .gt_first_summary_row.thick {
+#olepykxzbu .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#rhmevmsohb .gt_last_summary_row {
+#olepykxzbu .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1495,7 +1506,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#rhmevmsohb .gt_grand_summary_row {
+#olepykxzbu .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1505,7 +1516,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#rhmevmsohb .gt_first_grand_summary_row {
+#olepykxzbu .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1515,7 +1526,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#rhmevmsohb .gt_last_grand_summary_row_top {
+#olepykxzbu .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1525,11 +1536,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#rhmevmsohb .gt_striped {
+#olepykxzbu .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#rhmevmsohb .gt_table_body {
+#olepykxzbu .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1538,7 +1549,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#rhmevmsohb .gt_footnotes {
+#olepykxzbu .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1552,7 +1563,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#rhmevmsohb .gt_footnote {
+#olepykxzbu .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1561,7 +1572,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#rhmevmsohb .gt_sourcenotes {
+#olepykxzbu .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1575,7 +1586,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#rhmevmsohb .gt_sourcenote {
+#olepykxzbu .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1583,97 +1594,100 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#rhmevmsohb .gt_left {
+#olepykxzbu .gt_left {
   text-align: left;
 }
 
-#rhmevmsohb .gt_center {
+#olepykxzbu .gt_center {
   text-align: center;
 }
 
-#rhmevmsohb .gt_right {
+#olepykxzbu .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rhmevmsohb .gt_font_normal {
+#olepykxzbu .gt_font_normal {
   font-weight: normal;
 }
 
-#rhmevmsohb .gt_font_bold {
+#olepykxzbu .gt_font_bold {
   font-weight: bold;
 }
 
-#rhmevmsohb .gt_font_italic {
+#olepykxzbu .gt_font_italic {
   font-style: italic;
 }
 
-#rhmevmsohb .gt_super {
+#olepykxzbu .gt_super {
   font-size: 65%;
 }
 
-#rhmevmsohb .gt_footnote_marks {
+#olepykxzbu .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#rhmevmsohb .gt_asterisk {
+#olepykxzbu .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#rhmevmsohb .gt_indent_1 {
+#olepykxzbu .gt_indent_1 {
   text-indent: 5px;
 }
 
-#rhmevmsohb .gt_indent_2 {
+#olepykxzbu .gt_indent_2 {
   text-indent: 10px;
 }
 
-#rhmevmsohb .gt_indent_3 {
+#olepykxzbu .gt_indent_3 {
   text-indent: 15px;
 }
 
-#rhmevmsohb .gt_indent_4 {
+#olepykxzbu .gt_indent_4 {
   text-indent: 20px;
 }
 
-#rhmevmsohb .gt_indent_5 {
+#olepykxzbu .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  
-  <tbody class="gt_table_body">
-    <tr><td headers="date" class="gt_row gt_left">2019, 2020, 2023</td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Intro to R through Figures</strong> (<small>Instructor</small>)
-The Wildlife Society (<small>Online, Winnipeg, MB</small>)</p>
-</div></td></tr>
-    <tr><td headers="date" class="gt_row gt_left">2019-2023</td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Two-day Introduction to R</strong> (<small>Instructor</small>)
-Brandon University (<small>Online, Brandon, MB</small>)</p>
-</div></td></tr>
-    <tr><td headers="date" class="gt_row gt_left">2023</td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Introduction to Rmarkdown/Quarto for Reproducibility</strong> (<small>Instructor</small>)
-Birds Canada (<small>Online</small>)</p>
-</div></td></tr>
-    <tr><td headers="date" class="gt_row gt_left">2022</td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Introduction to Rmarkdown/Quarto for Reproducibility</strong> (<small>Instructor</small>)
-Society of Canadian Ornithologists / Société des ornithologistes du Canada (<small>Online</small>)</p>
-</div></td></tr>
-    <tr><td headers="date" class="gt_row gt_left">2021</td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Intro to R through Figures</strong> (<small>Instructor</small>)
-University of Northern BC (<small>Online</small>)</p>
-</div></td></tr>
-    <tr><td headers="date" class="gt_row gt_left">2020</td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Two-day Introduction to R</strong> (<small>Instructor</small>)
-University of Manitoba (<small>Winnipeg, MB</small>)</p>
-</div></td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="date">2019, 2020, 2023</td>
+<td class="gt_row gt_left" headers="content"><p><strong>Intro to R through Figures</strong> (<small>Instructor</small>) The Wildlife Society (<small>Online, Winnipeg, MB</small>)</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="date">2019-2023</td>
+<td class="gt_row gt_left" headers="content"><p><strong>Two-day Introduction to R</strong> (<small>Instructor</small>) Brandon University (<small>Online, Brandon, MB</small>)</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="date">2023</td>
+<td class="gt_row gt_left" headers="content"><p><strong>Introduction to Rmarkdown/Quarto for Reproducibility</strong> (<small>Instructor</small>) Birds Canada (<small>Online</small>)</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="date">2022</td>
+<td class="gt_row gt_left" headers="content"><p><strong>Introduction to Rmarkdown/Quarto for Reproducibility</strong> (<small>Instructor</small>) Society of Canadian Ornithologists / Société des ornithologistes du Canada (<small>Online</small>)</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="date">2021</td>
+<td class="gt_row gt_left" headers="content"><p><strong>Intro to R through Figures</strong> (<small>Instructor</small>) University of Northern BC (<small>Online</small>)</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="date">2020</td>
+<td class="gt_row gt_left" headers="content"><p><strong>Two-day Introduction to R</strong> (<small>Instructor</small>) University of Manitoba (<small>Winnipeg, MB</small>)</p></td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -1682,24 +1696,23 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
 <h2 class="anchored" data-anchor-id="other-r-related-work">Other R-related work</h2>
 <div class="cell">
 <div class="cell-output-display">
-
-<div id="chpnddyaru" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#chpnddyaru table {
+<div id="cfngduuryh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cfngduuryh table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#chpnddyaru thead, #chpnddyaru tbody, #chpnddyaru tfoot, #chpnddyaru tr, #chpnddyaru td, #chpnddyaru th {
+#cfngduuryh thead, #cfngduuryh tbody, #cfngduuryh tfoot, #cfngduuryh tr, #cfngduuryh td, #cfngduuryh th {
   border-style: none;
 }
 
-#chpnddyaru p {
+#cfngduuryh p {
   margin: 0;
   padding: 0;
 }
 
-#chpnddyaru .gt_table {
+#cfngduuryh .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1725,12 +1738,12 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-left-color: #D3D3D3;
 }
 
-#chpnddyaru .gt_caption {
+#cfngduuryh .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#chpnddyaru .gt_title {
+#cfngduuryh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1742,7 +1755,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-bottom-width: 0;
 }
 
-#chpnddyaru .gt_subtitle {
+#cfngduuryh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1754,7 +1767,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-top-width: 0;
 }
 
-#chpnddyaru .gt_heading {
+#cfngduuryh .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1766,13 +1779,13 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-right-color: #D3D3D3;
 }
 
-#chpnddyaru .gt_bottom_border {
+#cfngduuryh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#chpnddyaru .gt_col_headings {
+#cfngduuryh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1787,7 +1800,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-right-color: #D3D3D3;
 }
 
-#chpnddyaru .gt_col_heading {
+#cfngduuryh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1807,7 +1820,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   overflow-x: hidden;
 }
 
-#chpnddyaru .gt_column_spanner_outer {
+#cfngduuryh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1819,15 +1832,15 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   padding-right: 4px;
 }
 
-#chpnddyaru .gt_column_spanner_outer:first-child {
+#cfngduuryh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#chpnddyaru .gt_column_spanner_outer:last-child {
+#cfngduuryh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#chpnddyaru .gt_column_spanner {
+#cfngduuryh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1839,11 +1852,11 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   width: 100%;
 }
 
-#chpnddyaru .gt_spanner_row {
+#cfngduuryh .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#chpnddyaru .gt_group_heading {
+#cfngduuryh .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1869,7 +1882,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   text-align: left;
 }
 
-#chpnddyaru .gt_empty_group_heading {
+#cfngduuryh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1884,15 +1897,15 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   vertical-align: middle;
 }
 
-#chpnddyaru .gt_from_md > :first-child {
+#cfngduuryh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#chpnddyaru .gt_from_md > :last-child {
+#cfngduuryh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#chpnddyaru .gt_row {
+#cfngduuryh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1911,7 +1924,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   overflow-x: hidden;
 }
 
-#chpnddyaru .gt_stub {
+#cfngduuryh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1924,7 +1937,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   padding-right: 5px;
 }
 
-#chpnddyaru .gt_stub_row_group {
+#cfngduuryh .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1938,15 +1951,15 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   vertical-align: top;
 }
 
-#chpnddyaru .gt_row_group_first td {
+#cfngduuryh .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#chpnddyaru .gt_row_group_first th {
+#cfngduuryh .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#chpnddyaru .gt_summary_row {
+#cfngduuryh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1956,16 +1969,16 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   padding-right: 5px;
 }
 
-#chpnddyaru .gt_first_summary_row {
+#cfngduuryh .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#chpnddyaru .gt_first_summary_row.thick {
+#cfngduuryh .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#chpnddyaru .gt_last_summary_row {
+#cfngduuryh .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1975,7 +1988,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-bottom-color: #D3D3D3;
 }
 
-#chpnddyaru .gt_grand_summary_row {
+#cfngduuryh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1985,7 +1998,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   padding-right: 5px;
 }
 
-#chpnddyaru .gt_first_grand_summary_row {
+#cfngduuryh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1995,7 +2008,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-top-color: #D3D3D3;
 }
 
-#chpnddyaru .gt_last_grand_summary_row_top {
+#cfngduuryh .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2005,11 +2018,11 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-bottom-color: #D3D3D3;
 }
 
-#chpnddyaru .gt_striped {
+#cfngduuryh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#chpnddyaru .gt_table_body {
+#cfngduuryh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2018,7 +2031,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-bottom-color: #D3D3D3;
 }
 
-#chpnddyaru .gt_footnotes {
+#cfngduuryh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2032,7 +2045,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-right-color: #D3D3D3;
 }
 
-#chpnddyaru .gt_footnote {
+#cfngduuryh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2041,7 +2054,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   padding-right: 5px;
 }
 
-#chpnddyaru .gt_sourcenotes {
+#cfngduuryh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2055,7 +2068,7 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   border-right-color: #D3D3D3;
 }
 
-#chpnddyaru .gt_sourcenote {
+#cfngduuryh .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2063,77 +2076,80 @@ University of Manitoba (<small>Winnipeg, MB</small>)</p>
   padding-right: 5px;
 }
 
-#chpnddyaru .gt_left {
+#cfngduuryh .gt_left {
   text-align: left;
 }
 
-#chpnddyaru .gt_center {
+#cfngduuryh .gt_center {
   text-align: center;
 }
 
-#chpnddyaru .gt_right {
+#cfngduuryh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#chpnddyaru .gt_font_normal {
+#cfngduuryh .gt_font_normal {
   font-weight: normal;
 }
 
-#chpnddyaru .gt_font_bold {
+#cfngduuryh .gt_font_bold {
   font-weight: bold;
 }
 
-#chpnddyaru .gt_font_italic {
+#cfngduuryh .gt_font_italic {
   font-style: italic;
 }
 
-#chpnddyaru .gt_super {
+#cfngduuryh .gt_super {
   font-size: 65%;
 }
 
-#chpnddyaru .gt_footnote_marks {
+#cfngduuryh .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#chpnddyaru .gt_asterisk {
+#cfngduuryh .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#chpnddyaru .gt_indent_1 {
+#cfngduuryh .gt_indent_1 {
   text-indent: 5px;
 }
 
-#chpnddyaru .gt_indent_2 {
+#cfngduuryh .gt_indent_2 {
   text-indent: 10px;
 }
 
-#chpnddyaru .gt_indent_3 {
+#cfngduuryh .gt_indent_3 {
   text-indent: 15px;
 }
 
-#chpnddyaru .gt_indent_4 {
+#cfngduuryh .gt_indent_4 {
   text-indent: 20px;
 }
 
-#chpnddyaru .gt_indent_5 {
+#cfngduuryh .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  
-  <tbody class="gt_table_body">
-    <tr><td headers="title" class="gt_row gt_left"><div class="gt_from_md"><p><strong><a href="https://ropensci.org/about/index.html#team">rOpenSci Community Assistant</a></strong></p>
-</div></td>
-<td headers="content" class="gt_row gt_left"><div class="gt_from_md"><p><strong>Feb 2020 - Present</strong><br>Assisting in the maintenance and development of the rOpenSci community<br><em>Contracted</em> for  rOpenSci <small>(Online)</small></p>
-</div></td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="title"><p><strong><a href="https://ropensci.org/about/index.html#team">rOpenSci Community Assistant</a></strong></p></td>
+<td class="gt_row gt_left" headers="content"><p><strong>Feb 2020 - Present</strong><br>Assisting in the maintenance and development of the rOpenSci community<br><em>Contracted</em> for rOpenSci <small>(Online)</small></p></td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -2170,9 +2186,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -2208,10 +2238,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -2221,8 +2250,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -2237,6 +2275,238 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -2277,6 +2547,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

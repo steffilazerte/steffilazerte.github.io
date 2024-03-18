@@ -1,5 +1,5 @@
 ---
-title: "Interpreting interactions"
+title: "Interpreting Interactions"
 date: "2023-06-06"
 categories: [stats, models, interactions, predictions, R]
 execute:

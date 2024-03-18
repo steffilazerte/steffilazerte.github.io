@@ -1,5 +1,5 @@
 ---
-title: "Mapping weather data"
+title: "Mapping Weather Data"
 date: "2023-09-20"
 categories: [weathercan, sf, GIS, leaflet, R]
 image: "71.png"
