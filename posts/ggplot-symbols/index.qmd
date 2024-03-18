@@ -1,0 +1,319 @@
+---
+title: "Special symbols in ggplot2"
+date: "2024-03-15"
+categories: [ggplot2, visualizations, R]
+image: /posts/ggplot-symbols/index_files/figure-html/eg1-1.png
+---
+
+Creating ggplot2 figures with special characters such as superscripts (R<sup>2</sup>)
+math equations ($\sqrt{x}$) or greek letters ($\omega$, $\lambda$), can be a bit of a headache.
+
+I recently created some figures for my mom which required special characters in 
+the axes as well as in annotations, and it reminded me of how much of a pain it
+can be, especially because depending on what you want to do, you need to use a
+different process for it. 
+
+If you want to create your annotations programatically (e.g., in a column of your
+data frame), you need a different process than if you were going
+to create them directly in the ggplot function calls. 
+
+There are also different layers in ggplots which require different inputs. 
+Some can take an expression, and some only text, so you need to remember what
+to use for each of those.
+
+So I decided to create this note as a reference for my future self, if for no
+one else `r emo::ji("grin")`.
+
+First we'll go over when to use text vs. expressions and how to convert between
+the two for when you use them directly vs. programmatically. Then, because that's
+super confusing, we'll go through a bunch of examples of both.
+
+
+## Expression or text?
+
+We're going to be creating text with special symbols or characters by using
+`plotmath` and R expressions. For example, `R^2` gives you $R^2$.
+See `?plotmath` or the [Appendix table](#table) for how to code the symbols or
+expressions you want to use.
+
+Sometimes ggplot needs this as text, sometimes as an expression. 
+
+Further, if you're creating a label directly, it's generally easier to create it as
+an expression and convert it to text if you need to. 
+
+On the other hand, if you're creating labels programmatically, you'll generally 
+create them as text and will then have to convert to an expression as required.
+
+
+In a nutshell...
+
+### For labels
+- This includes `name` argument in `scale_XXX()` as well as `labs()`
+- **Direct Use**: `name = bquote(R^2)`
+- **Programmatic Use**: `name = parse(text = "R^2")`
+
+### For geoms
+- This includes `geom_text()`, `geom_label()`, `annotate(geom = "text")` etc.
+- **Direct Use**: `label = deparse(bquote(R^2)), parse = TRUE`[^1]
+- **Programmatic Use**: `label = "R^2", parse = TRUE`
+- `parse = TRUE` tells the function to turn the text into an expression
+
+[^1]: You could also use straight text "R^2" without `deparse(bquote())` if you 
+wanted to work with text.
+
+**To summarize**
+
+Layer | Direct Use<br>*Create with expression*              | Programmatic Use<br>*Create with text*
+----- | ----------------------- | -----------------------
+**label<br>*requires expression*** | Expression<br>`bquote()`    | Parse text to expression<br>`parse(text = "")`)
+**geom<br>*requires text***  | Deparse expression to text<br>`deparse(bquote())`<br>and use `parse = TRUE`     | Text (`""`)<br>and use `parse = TRUE`
+
+## Expresssions
+
+See `?plotmath` or the [Appendix table](#table) for how to code other symbols or
+expressions you want to use.
+
+Here are some suggestions...
+
+- Use "~" to create a space (or two!) between elements
+- Use "*" to combine different elements without a space (think of this like a ',' in R)
+- Use quotes "" to mark normal text which has spaces and punctuation
+- Use quotes, ~ and * around punctutation as needed (e.g., `alpha*","~beta`)
+- Use `==` for equals (see [Appendix table](#table) for more examples)
+- Use `''^137*Cs` when you need to put superscript *before* an element
+
+```{r}
+bquote(R^2)  # Expression 
+"R^2"        # Text
+```
+
+You can test if you have created a text expression correctly by using `parse(text = XXX)`
+
+```{r}
+parse(text = "R^2")
+```
+
+## Example: Non-dynamic text (non-programmatic)
+
+Here we create various non-dynamic text labels directly in the `ggplot()` code. 
+
+```{r eg1}
+library(ggplot2)
+
+ggplot() +
+  theme_bw() +
+  # Use `bquote()` in labels
+  scale_x_continuous(name = bquote("Measurement"~(mu*g/L))) +
+  scale_y_continuous(name = bquote(M/g)) +
+  labs(title = bquote("Use quotes to mark normal text"~(mu*g/L)~(over(mu*g, L))~sqrt(x)),
+       subtitle = bquote("Use ~ to link elements together with a space (or more!)"~~~~~alpha*","~beta*","~Gamma),
+       caption = bquote(sum(x[i], i==1, n))) +
+  # Use `deparse(bquote())` along with `parse = TRUE` in geoms
+  annotate(geom = "text", x = 0.5, y = 0.5, label = deparse(bquote(P==0.001*";"~R^2==0.45)), parse = TRUE, size = 5) +
+  geom_text(x = 0.5, y = 0.48, aes(label = deparse(bquote(''^137*Cs))), parse = TRUE, size = 5) +
+  geom_text(x = 0.5, y = 0.52, aes(label = deparse(bquote(R[adj]^2==0.41))), parse = TRUE, size = 5)
+```
+
+## Example: Dynamic text (programmatic)
+
+You'll want to use dynamic or programmatic labels in situations where your labels
+are created in a data frame (e.g., different annotations for different facets in a plot, such as $R^2$s for different models, or special characters in your facet labels). 
+Or perhaps you have a function which creates your plots.
+
+First we'll create some dynamic content to display. This will be text versions
+of `plotmath` expressions.
+
+```{r}
+#| message: false
+library(ggplot2)
+library(palmerpenguins) # data
+library(dplyr)  # manipulate the data
+
+p <- mutate(penguins, sp = paste0("'", species, "'[(italic(", island, "))]"))
+
+samples <- count(p, sp, species, island) |>
+  mutate(label = paste0("n['(", species, ", ", island, ")'] == ", n))
+samples
+
+labels <- list("x" = paste0("'Bill Length'~mm[(", paste0(range(p$year), collapse = "-"), ")]"),
+               "y" = paste0("'Flipper Length'~mm[(", paste0(range(p$year), collapse = "-"), ")]"))
+labels
+```
+
+Now let's add this content to our plot
+```{r eg2}
+ggplot(data = p, aes(x = bill_length_mm, y = flipper_length_mm)) +
+  geom_point() +
+  geom_text(data = samples, x = -Inf, y = +Inf, aes(label = label), parse = TRUE,
+            hjust = -0.1, vjust = 1.5) +
+  facet_wrap(~ sp, labeller = label_parsed)
+```
+
+
+## Example: Dynamic text - Advanced
+
+As before, let's start by creating some dynamic content to add to our plots. 
+We'll create this by creating text versions of the expressions we want to use.
+
+- Note the use of `{}` around `R^2` to ensure that the `[adj]` is actually subscript to the whole `R^2`, as opposed to just the the `2` (otherwise you'd get $R^{2_{adj}}$). Above, we just used a different order, `R[adj]^2` to avoid this.
+- Also note that the P-values are formatted to be either `<=0.001` or `format(nsmall = 3)` to ensure there are 
+always three digits after the decimal, *and* we then put the P-value in quotes ('')
+because it is now text, not a number.
+
+```{r}
+#| message: false
+library(ggplot2)
+library(palmerpenguins) # data
+library(dplyr)  # manipulate the data
+library(tidyr)  # unnest() to convert nested data back into a regular data frame
+library(purrr)  # map() to loop over models and leables
+library(broom)  # tidy() to extract model information
+
+p <- penguins |>
+  add_count(species) |>
+  mutate(sp = paste0("'", species, "'"),
+         sp = if_else(species == "Adelie", paste0(sp, "^{1}"), sp),
+         sp = paste0(sp, "~(n == frac(", n, ", ", n(), "))"))
+
+stats <- p |>
+  nest(data = -"sp") |>
+  mutate(model = map(data, \(x) lm(flipper_length_mm ~ bill_length_mm, data = x)),
+         labels = map(model, glance)) |>
+  unnest(cols = "labels") |>
+  mutate(p_val = round(p.value, 3),
+         p_val = if_else(p.value < 0.001, "<0.001", paste0("=='", format(p.value, nsmall = 3), "'")),
+         stats = paste0("P", p_val, "*';'~{R^2}[adj]==", round(adj.r.squared, 2)))
+select(stats, sp, stats)
+
+labels <- list("x" = paste0("'Bill Length'~mm[(", paste0(range(p$year), collapse = "-"), ")]"),
+               "y" = paste0("'Flipper Length'~mm[(", paste0(range(p$year), collapse = "-"), ")]"))
+labels
+```
+
+Now let's add this to our plot
+```{r eg3}
+ggplot(data = p, aes(x = bill_length_mm, y = flipper_length_mm)) +
+  geom_point() +
+  geom_text(data = stats, x = -Inf, y = +Inf, aes(label = stats), parse = TRUE,
+            hjust = -0.1, vjust = 1.5) +
+  labs(x = parse(text = labels$x),
+       y = parse(text = labels$y),
+       caption = parse(text = "''^1*'Sampled on all three islands'")) +
+  scale_y_continuous(limits = \(x) c(x[1], x[2]*1.04)) +
+  facet_wrap(~ sp, labeller = label_parsed)
+```
+
+## Troubleshooting
+
+### Errors
+To find errors, test your labels with `parse()`.
+```{r}
+parse(text = "R^2")
+parse(text = deparse(bquote(R^2)))
+parse(text = p$sp[1])
+parse(text = labels$x)
+parse(text = stats$stats[1])
+```
+
+You can also test them with `bquote()`
+```{r}
+bquote(R^2)
+```
+
+If you have an error in your label, `parse()` (or `bquote()`) will fail.
+```{r}
+#| error: true
+parse(text = "R^^2")
+bquote(R^^2)
+```
+
+### "unexpected string constant" OR "unexpected symbol"
+
+- Did you remember to use `*` or `~` between separate elements?
+- This is especially important between text elements
+
+```{r}
+#| error: true
+parse(text = "P==0.01';'R^2 == 0.45")
+parse(text = "P==0.01*';'~R^2==0.45")
+```
+
+
+## Appendix: Plot math demos {#table}
+
+If you run `demo("plotmath")`, you'll get a series of tables showing the outputs of the plotmath codes
+in plots. However I don't really like them, so here is my recreation using 
+gt and ggplot2 (and some hacking of the documentation).
+
+Note that there are some symbols that appear as white squares (especially lower in the table). 
+This means that the font I'm using doesn't support those symbols. 
+If you get the same on a symbol you want to use, see about switching up your fonts.
+Unfortunately that is non-trivial `r emo::ji("sad")`.
+
+```{r}
+#| cache: false
+#| code-fold: true
+#| message: false
+#| results: asis
+
+library(showtext)
+library(stringr)
+library(dplyr)
+library(tidyr)
+library(purrr)
+library(ggplot2)
+library(gt)
+
+# Get the table
+docs <- tools:::fetchRdDB(file.path(system.file("help", package = "grDevices"), "grDevices"))
+docs <- docs$plotmath
+docs <- capture.output(docs)
+docs <- docs[-seq(1, str_which(docs, "\\\\tabular\\{ll\\}(?s).*"), 1)]
+docs <- docs[-seq(str_which(docs, "^( )+\\}$")[1], length(docs), 1)]
+
+# Extract the code and descriptions
+labels <- docs |> 
+  str_remove("\\\\cr") |>
+  str_subset("Syntax", negate = TRUE) |>
+  str_replace_all("\"", "'") |>
+  str_squish() |>
+  tibble(txt = _) |>
+  filter(txt != "") |>
+  separate("txt", into = c("code", "meaning"), sep = " \\\\tab ") |>
+  mutate(code_raw = str_replace_all(code, "(\\\\code\\{)([^\\}]*)(\\})", "\\2"),
+         code = paste0("`", code_raw, "`"),
+         plot = 1:n(),
+         code_raw = if_else(code_raw == "theta1, phi1, sigma1, omega1",
+                            "theta1*phi1*sigma1*omega1", code_raw))
+
+# Create a temp image of each symbol - image to that we get the correct
+sysfonts::font_add(family = "dejavu", 
+                   regular = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+                   italic = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Oblique.ttf",
+                   bold = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+                   bolditalic = "/usr/share/fonts/truetype/dejavu/DejaVuSans-BoldOblique.ttf"
+                   )
+
+g <- map2(labels$code_raw, labels$plot, \(x, i) {
+  showtext_auto()
+  ggplot() +
+    theme_void() +
+    geom_text(x = 0.5, y = 0.5, aes(label = x), parse = TRUE, size = 40, family = "dejavu")
+})
+
+# Create table of code plus symbol images
+gt(labels) |>
+  text_transform(locations = cells_body(columns = plot),
+                 fn = function(x) ggplot_image(g[as.numeric(x)], height = px(50), aspect_ratio = 2)) |>
+  cols_label(plot = "Plotted Symbol",
+             code = "Code",
+             meaning = "Description") |>
+  cols_hide(code_raw) |>
+  fmt_markdown(code)
+  
+```
+
+## Resources
+
+- [`ggplot2::geom_text()`](https://ggplot2.tidyverse.org/reference/geom_text.html?q=text#ref-examples)
+- [Stackoverflow question](https://stackoverflow.com/questions/47946232/ggplot2-annotation-with-text-sub-superscript-and-calculated-values)
