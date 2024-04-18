@@ -23,6 +23,8 @@ website:
       - tips_and_tricks.qmd
       - text: "About"
         file: about.qmd
+      - icon: envelope
+        href: mailto:sel@steffilazerte.ca
       - icon: github
         href: https://github.com/steffilazerte
       - icon: twitter

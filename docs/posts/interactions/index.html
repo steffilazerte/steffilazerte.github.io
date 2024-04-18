@@ -139,6 +139,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
+    <a class="nav-link" href="mailto:sel@steffilazerte.ca"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/steffilazerte"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
@@ -273,11 +278,11 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <p>The marginalmeans package can be used to explore models with interactions via “conditional marginal effects” and predictions</p>
 <section id="conditional-marginal-effects" class="level4"><h4 class="anchored" data-anchor-id="conditional-marginal-effects">Conditional marginal effects</h4>
 <p>These are really nice way of visualizing the verbal interpretation we made above.</p>
-<p>We’ll use the <code><a href="https://rdrr.io/pkg/marginaleffects/man/plot_slopes.html">plot_slopes()</a></code> function to plot the effect of one variable on the slope of the other (i.e.&nbsp;an interaction!).</p>
+<p>We’ll use the <code><a href="https://marginaleffects.com/man/plot_slopes.html">plot_slopes()</a></code> function to plot the effect of one variable on the slope of the other (i.e.&nbsp;an interaction!).</p>
 <p>Here, we look at the effect of bill depth on the slope of flipper length (i.e. the effect of flipper length on our response, bill length).</p>
 <p>The Y-axis represents the slope of the effect of flipper length on bill depth.</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/marginaleffects/man/plot_slopes.html">plot_slopes</a></span><span class="op">(</span><span class="va">m</span>, variables <span class="op">=</span> <span class="st">"flipper_length_mm"</span>, condition <span class="op">=</span> <span class="st">"bill_depth_mm"</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://marginaleffects.com/man/plot_slopes.html">plot_slopes</a></span><span class="op">(</span><span class="va">m</span>, variables <span class="op">=</span> <span class="st">"flipper_length_mm"</span>, condition <span class="op">=</span> <span class="st">"bill_depth_mm"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Slope of flipper length"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -292,7 +297,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </section></section><section id="plotting-predictions" class="level3"><h3 class="anchored" data-anchor-id="plotting-predictions">Plotting predictions</h3>
 <p>We can plot the predictions to get a visual of this interaction.</p>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/marginaleffects/man/plot_predictions.html">plot_predictions</a></span><span class="op">(</span><span class="va">m</span>, condition <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="st">"flipper_length_mm"</span>, <span class="st">"bill_depth_mm"</span><span class="op">)</span>,</span>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://marginaleffects.com/man/plot_predictions.html">plot_predictions</a></span><span class="op">(</span><span class="va">m</span>, condition <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="st">"flipper_length_mm"</span>, <span class="st">"bill_depth_mm"</span><span class="op">)</span>,</span>
 <span>                 point <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>

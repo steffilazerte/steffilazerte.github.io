@@ -12,47 +12,43 @@ source("pre-render.R")
 ## Package Developement
 
 ```{r}
-jobs %>%
-  filter(type == "package") %>%
+packages |>
   mutate(pkg = str_extract(title, "\\w+"),
-         title = tt(title, type = "html"), 
-         end2 = if_else(is.na(end), "999999999", end),
-         ) %>%
-  arrange(!is.na(end), desc(end2), desc(start)) %>%
-  select(-skills) %>%
-  fmt_pkgs(type = "html") %>%
+         title = tt(title, type = "html")
+         ) |>
+  arrange(desc(start), !is.na(end), desc(end)) |>
+  fmt_pkgs(type = "html") |>
   fmt_gt()
 ```
 
 ## R Script Development and Analysis
 
 ```{r}
-jobs %>%
-  filter(type %in% c("analysis", "programming")) %>%
-  select(-skills) %>%
-  arrange(!is.na(end), desc(end), desc(start)) %>%
-  fmt_pkgs(type = "html", ignore_consultant = TRUE) %>%
-  fmt_gt() %>%
-  cols_width(title ~ "25%")
+workflows |>
+  filter(type != "r jobs") |>
+  arrange(desc(start), !is.na(end), desc(end)) |>
+  fmt_pkgs(type = "html", ignore_consultant = TRUE) |>
+  fmt_gt() |>
+  cols_width(1 ~ "40%")
 ```
 
 ## R Workshops
 
 ```{r}
-jobs %>%
-  filter(type == "r workshop") %>%
-  mutate(title = str_remove(title, " Workshop")) %>%
-  fmt_teaching(type = "html") %>%
+workshops |>
+  mutate(
+    title = str_remove(title, " Workshop"),
+    title = paste0("[", title, "](", url, ")")) |>
+  fmt_teaching(type = "html") |>
   fmt_gt()
 ```
 
 ## Other R-related work
 
 ```{r}
-jobs %>%
-  filter(type %in% c("r jobs")) %>%
-  select(-skills) %>%
-  fmt_pkgs(type = "html") %>%
+workflows |>
+  filter(type %in% c("r jobs")) |>
+  fmt_pkgs(type = "html") |>
   fmt_gt()
 ```
 

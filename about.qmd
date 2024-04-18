@@ -23,13 +23,13 @@ __GitHub:__ <https://github.com/steffilazerte>
 ![](images/vivi_canoe.jpg){width=140}
 :::
 
-Born and bred in Muskoka, Ontario I am a [consulting biologist and R programmer](R.html). I teach R, handle data management in R and develop R packages for a variety of disciplines in the Natural Sciences.
+Born and bred in Muskoka, Ontario I am a [consulting biologist and R programmer](R.html) and [rOpenSci Community Assistant](https://ropensci.org/about/#team). I develop R packages and create R workflows in a variety of disciplines in the Natural Sciences.
 
 Beyond R, I'm a [behavioural ecologist](cv.html#education) with an interest in how humans influence behaviour of animals and how citizen science projects can be used to do great science and engage the public.
 
 I enjoy [teaching](cv.html#teaching) and [outreach](cv.html#community-presentations-and-outreach) and try to spread the love of R and make science more accessible.
 
-Outside of research, I love travelling, be it camping locally (with my kitties!) or flying to visit more distant destinations. But I also enjoy stay-at-home activities such as reading, gardening and spinning wool into yarn.
+Outside of work, I love travelling, be it camping locally (with my kitties!) or flying to visit more distant destinations. But I also enjoy stay-at-home activities such as reading, gardening and spinning wool into yarn.
 
 > I was honoured to receive the Society of Canadian Ornithologists/Société des ornithologistes du Canada's inaugural **[Early Career Research Award](https://www.sco-soc.ca/copy-of-speirs-award)** for 2017
 
@@ -44,9 +44,10 @@ I appreciate that territorial acknowledgements can be complex and can sometimes
 be seen as insincere, a quick and easy way of appeasing [Truth and Reconciliation](https://nctr.ca/).
 
 However, to me, an acknowledgement is a part of reconciliation. 
-It isn't sufficient, but it's a first step. 
+It isn't the final step, it's a first step. 
  
 As such, I would like to acknowledge that I live and work in Treaty 2 
 territory which is the traditional territory of the Dakota, Anishanabek, 
 Oji-Cree, Cree, and Dene peoples as well as the homeland of the Métis Nation.
 
+I love this area and am privileged to live and work here!

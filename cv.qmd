@@ -71,7 +71,7 @@ Details: A follow up study to playback studies conducted during my PhD looking a
 ### R University Teaching
 
 ```{r}
-jobs %>%
+extra %>%
   filter(type == "r teaching") %>%
   fmt_teaching(type = "html") %>%
   fmt_gt()
@@ -79,8 +79,7 @@ jobs %>%
 
 ### R Workshops
 ```{r}
-jobs %>%
-  filter(type == "r workshop") %>%
+workshops %>%
   mutate(title = str_remove(title, " Workshop")) %>%
   fmt_teaching(type = "html") %>%
   fmt_gt()
@@ -100,12 +99,14 @@ tibble(start = c(2012, 2012),
          glue("**Organized R Help Groups**\n",
               "- R Group (2016-2017) {small('University of New Brunswick, Fredericton, NB', 'html')}\n",
               "- R Coffee Hour (2012-2016) {small('University of Northern BC, Prince George, BC', 'html')}"))) %>%
-  fmt_gt()
+  fmt_gt() |>
+    cols_width(1 ~ "10%", 
+               2 ~ "10%")
 ```
 
 ### Other University Teaching
 ```{r}
-jobs %>%
+extra %>%
   filter(type == "teaching") %>%
   fmt_teaching(type = "html") %>%
   fmt_gt()
