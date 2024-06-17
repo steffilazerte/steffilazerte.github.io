@@ -1,6 +1,7 @@
 ---
 title: "Making a Website with GitHub/Quarto"
 date: "2023-08-23"
+date-modified: "2024-06-17"
 toc: true
 categories: [github, website, profiles, R]
 ---
@@ -13,7 +14,7 @@ This isn't comprehensive, but hopefully shares enough resources to get you start
 
 It can be a bit weird starting out and remember that you may be learning Quarto, git *and* GitHub (and possibly YAML, CSS and/or SCSS) all at once which is a lot!
 
-So if you find it tricky, that's normal :)
+So if you find it tricky, that's normal, it's nothing you can't handle :)
 
 
 > **Note**: These instructions assume you want to create a personal/organizational website,
@@ -30,13 +31,13 @@ Generally there are three steps
 This step is where you create (by hand or with software), the actual html files
 which are the website. You can create these files and not put them on the Internet.
 Which means you have a website on your computer (local), which only you can see.
-This is great for previewing your website before putting it or any changes onto the Internet.
+This is great for previewing your website before putting it, or any changes, onto the Internet.
 
 ### 2. Serve the files
 
 This is when you put (serve or host) your html files on the Internet. 
-You need a server to *serve* or *host* the files and generally[^1] you go through 
-an external company to do this for you (i.e. a Hosting service, or GitHub). 
+You need a server to *serve* or *host* the files and generally you go through 
+an external company[^1] to do this for you (i.e. a Hosting service, or GitHub). 
 
 [^1]: You can have your computer do this for you, but then your computer needs
 be on and running (and serving) files 24/7 and requires a more complex setup.
@@ -70,13 +71,14 @@ use that, otherwise it's worth using Quarto as it has many features not availabl
 
 - To get started, follow the basic steps for [Quarto Websites](https://quarto.org/docs/websites/)
 - Check out the various [Website themes](https://quarto.org/docs/output-formats/html-themes.html) you can use
-- Make sure you're working with a folder (project or repository) called `yourgithubusername.github.io`
+- Make sure you're working in a folder (project or repository) called `yourgithubusername.github.io`
 
 ##### Fiddly bits
 
 There are [several different ways](https://quarto.org/docs/publishing/github-pages.html)
 of hosting your site on GitHub, but the
-most straightforward way is to 'render' your site into a `docs` folder and then
+most straightforward way is to '[render](https://quarto.org/docs/websites/#website-render)'
+your site into a `docs` folder and then
 tell GitHub to serve that folder (next step).
 
 By default your website is created in the `_site` folder, but you can change this by changing the
@@ -85,8 +87,8 @@ By default your website is created in the `_site` folder, but you can change thi
 For example, [I use](https://github.com/steffilazerte/steffilazerte.github.io/blob/33a70ef82c522d834d42ab8041452dbd89f8fcd8/_quarto.yml#L3) `output-dir: docs` which tells R to create the website in a `docs` folder.
 
 To [preview your website](https://quarto.org/docs/websites/#website-preview), 
-use `quarto preview` in the terminal, or, [render your website](https://quarto.org/docs/websites/#website-render) and then open the `index.html` file inside the `docs` folder 
-(in this case you will to re-render and refresh the page to see new changes).
+use `quarto preview` in the terminal (the website will automatically update with any future changes), or [render your website](https://quarto.org/docs/websites/#website-render) and then open the `index.html` file inside the `docs` folder 
+(you will need to re-render and refresh the page to see new changes).
 
 ## Step 2. Serving your Website with GitHub
 
@@ -121,10 +123,10 @@ Next, you will need to configure GitHub to work with this domain.
 
 - Simplest[^3] is to follow GitHub's instructions for [Configuring an apex domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain)
 
-[^3]: In the sense that there are other, more complex things you can do, not in the sense that this is particularly straightforward
+[^3]: In the sense that there are other, more complex things you can do, 
+not in the sense that this is particularly straightforward.
 
 In short, you will tell GitHub about your Domain and then tell your Domain Registrar to point to GitHub.
-
 
 ## Examples
 
@@ -133,14 +135,35 @@ In particular, take a look at the `_quarto.yml` files as this is how the pages,
 navigation and themes are set.
 
 - **Steffi's website** 
-  - served from the `docs` folder
+  - Served from the `docs` folder
   - **Code**: <https://github.com/steffilazerte/steffilazerte.github.io>
-  - **Site**: <https://westman-naturalists.github.io>
+  - **Site**: <https://steffilazerte.ca>
 
 - **Westman Naturalists' website** 
   - Quarto, no `docs` folder, uses GitHub Actions to publish
   - **Code**: <https://github.com/westman-naturalists/westman-naturalists.github.io>
   - **Site**: <https://westman-naturalists.github.io>
+  - **Interesting bits**: This site uses a [GitHub action](https://github.com/westman-naturalists/westman-naturalists.github.io/blob/master/.github/workflows/render_site.yaml) to update the [Events](https://westman-naturalists.github.io/events.html) page
+  everyday at midnight from a Google Spreadsheet.
+
+## Other details
+
+##### [BibBase](https://bibbase.org/)
+Because I hate updating things by hand which can be automated, 
+I use BibBase to automatically list my [Publications](https://steffilazerte.ca/cv.html) 
+and [Presentations](https://steffilazerte.ca/cv.html#presentations) in my CV by
+pulling them in from [Zotero](https://www.zotero.org/).
+
+##### Using R to automate things
+Again because I hate updating things by hand, I use R code to automate many lists 
+on my webiste.
+
+- I use [code](https://github.com/steffilazerte/steffilazerte.github.io/blob/main/presentations.qmd) to create lists
+of [presentation resources](https://steffilazerte.ca/presentations.html) with links to the slides. I don't love this setup and 
+would like to fiddle it in future to be a) more attractive and b) simpler to work with.
+- I use [code](https://github.com/steffilazerte/steffilazerte.github.io/blob/main/cv.qmd) 
+to create the tables displayed in my CV (note that the actual data and some of the functions aren't included in this repository).
+
 
 ## Resources
 
@@ -151,4 +174,6 @@ navigation and themes are set.
 - [GitHub Pages documentation](https://docs.github.com/en/pages)
   - [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
   - [Custom Domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
-  
+- Working with git and GitHub
+  - [Happy Git with R](https://happygitwithr.com/)
+  - [Birds Canada's "GitHub: A Beginner's Guide"](https://birdscanada.github.io/BirdsCanada_GitHubGuide/)

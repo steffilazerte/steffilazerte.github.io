@@ -162,6 +162,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#step-2.-serving-your-website-with-github" id="toc-step-2.-serving-your-website-with-github" class="nav-link" data-scroll-target="#step-2.-serving-your-website-with-github">Step 2. Serving your Website with GitHub</a></li>
   <li><a href="#link-a-domain-name-optional" id="toc-link-a-domain-name-optional" class="nav-link" data-scroll-target="#link-a-domain-name-optional">3. Link a Domain Name (optional)</a></li>
   <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
+  <li><a href="#other-details" id="toc-other-details" class="nav-link" data-scroll-target="#other-details">Other details</a></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
 </nav>
@@ -192,6 +193,12 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">June 17, 2024</p>
+    </div>
+  </div>
     
   </div>
   
@@ -203,7 +210,7 @@ ul.task-list li input[type="checkbox"] {
 <p>There are many instructions for making Quarto websites or hosting on GitHub, but here is a list of instructions with links to other more detailed references as a roadmap to get started.</p>
 <p>This isn’t comprehensive, but hopefully shares enough resources to get you started while clarifying some of the more confusing steps.</p>
 <p>It can be a bit weird starting out and remember that you may be learning Quarto, git <em>and</em> GitHub (and possibly YAML, CSS and/or SCSS) all at once which is a lot!</p>
-<p>So if you find it tricky, that’s normal :)</p>
+<p>So if you find it tricky, that’s normal, it’s nothing you can’t handle :)</p>
 <blockquote class="blockquote">
 <p><strong>Note</strong>: These instructions assume you want to create a personal/organizational website, not a website for a project or repository (although that can be similar in many steps)</p>
 </blockquote>
@@ -212,11 +219,11 @@ ul.task-list li input[type="checkbox"] {
 <p>It helps to have a brief overview of what it takes to get a website on the Internet. Generally there are three steps</p>
 <section id="create-the-files" class="level3">
 <h3 class="anchored" data-anchor-id="create-the-files">1. Create the files</h3>
-<p>This step is where you create (by hand or with software), the actual html files which are the website. You can create these files and not put them on the Internet. Which means you have a website on your computer (local), which only you can see. This is great for previewing your website before putting it or any changes onto the Internet.</p>
+<p>This step is where you create (by hand or with software), the actual html files which are the website. You can create these files and not put them on the Internet. Which means you have a website on your computer (local), which only you can see. This is great for previewing your website before putting it, or any changes, onto the Internet.</p>
 </section>
 <section id="serve-the-files" class="level3">
 <h3 class="anchored" data-anchor-id="serve-the-files">2. Serve the files</h3>
-<p>This is when you put (serve or host) your html files on the Internet. You need a server to <em>serve</em> or <em>host</em> the files and generally<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> you go through an external company to do this for you (i.e.&nbsp;a Hosting service, or GitHub).</p>
+<p>This is when you put (serve or host) your html files on the Internet. You need a server to <em>serve</em> or <em>host</em> the files and generally you go through an external company<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> to do this for you (i.e.&nbsp;a Hosting service, or GitHub).</p>
 </section>
 <section id="link-a-domain-name" class="level3">
 <h3 class="anchored" data-anchor-id="link-a-domain-name">3. Link a domain name</h3>
@@ -239,15 +246,15 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>To get started, follow the basic steps for <a href="https://quarto.org/docs/websites/">Quarto Websites</a></li>
 <li>Check out the various <a href="https://quarto.org/docs/output-formats/html-themes.html">Website themes</a> you can use</li>
-<li>Make sure you’re working with a folder (project or repository) called <code>yourgithubusername.github.io</code></li>
+<li>Make sure you’re working in a folder (project or repository) called <code>yourgithubusername.github.io</code></li>
 </ul>
 </section>
 <section id="fiddly-bits" class="level5">
 <h5 class="anchored" data-anchor-id="fiddly-bits">Fiddly bits</h5>
-<p>There are <a href="https://quarto.org/docs/publishing/github-pages.html">several different ways</a> of hosting your site on GitHub, but the most straightforward way is to ‘render’ your site into a <code>docs</code> folder and then tell GitHub to serve that folder (next step).</p>
+<p>There are <a href="https://quarto.org/docs/publishing/github-pages.html">several different ways</a> of hosting your site on GitHub, but the most straightforward way is to ‘<a href="https://quarto.org/docs/websites/#website-render">render</a>’ your site into a <code>docs</code> folder and then tell GitHub to serve that folder (next step).</p>
 <p>By default your website is created in the <code>_site</code> folder, but you can change this by changing the <code>output-dir</code> option in the <code>_quarto.yml</code> (this is the file that defines your site options).</p>
 <p>For example, <a href="https://github.com/steffilazerte/steffilazerte.github.io/blob/33a70ef82c522d834d42ab8041452dbd89f8fcd8/_quarto.yml#L3">I use</a> <code>output-dir: docs</code> which tells R to create the website in a <code>docs</code> folder.</p>
-<p>To <a href="https://quarto.org/docs/websites/#website-preview">preview your website</a>, use <code>quarto preview</code> in the terminal, or, <a href="https://quarto.org/docs/websites/#website-render">render your website</a> and then open the <code>index.html</code> file inside the <code>docs</code> folder (in this case you will to re-render and refresh the page to see new changes).</p>
+<p>To <a href="https://quarto.org/docs/websites/#website-preview">preview your website</a>, use <code>quarto preview</code> in the terminal (the website will automatically update with any future changes), or <a href="https://quarto.org/docs/websites/#website-render">render your website</a> and then open the <code>index.html</code> file inside the <code>docs</code> folder (you will need to re-render and refresh the page to see new changes).</p>
 </section>
 </section>
 <section id="step-2.-serving-your-website-with-github" class="level2">
@@ -284,17 +291,33 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><strong>Steffi’s website</strong>
 <ul>
-<li>served from the <code>docs</code> folder</li>
+<li>Served from the <code>docs</code> folder</li>
 <li><strong>Code</strong>: <a href="https://github.com/steffilazerte/steffilazerte.github.io" class="uri">https://github.com/steffilazerte/steffilazerte.github.io</a></li>
-<li><strong>Site</strong>: <a href="https://westman-naturalists.github.io" class="uri">https://westman-naturalists.github.io</a></li>
+<li><strong>Site</strong>: <a href="https://steffilazerte.ca" class="uri">https://steffilazerte.ca</a></li>
 </ul></li>
 <li><strong>Westman Naturalists’ website</strong>
 <ul>
 <li>Quarto, no <code>docs</code> folder, uses GitHub Actions to publish</li>
 <li><strong>Code</strong>: <a href="https://github.com/westman-naturalists/westman-naturalists.github.io" class="uri">https://github.com/westman-naturalists/westman-naturalists.github.io</a></li>
 <li><strong>Site</strong>: <a href="https://westman-naturalists.github.io" class="uri">https://westman-naturalists.github.io</a></li>
+<li><strong>Interesting bits</strong>: This site uses a <a href="https://github.com/westman-naturalists/westman-naturalists.github.io/blob/master/.github/workflows/render_site.yaml">GitHub action</a> to update the <a href="https://westman-naturalists.github.io/events.html">Events</a> page everyday at midnight from a Google Spreadsheet.</li>
 </ul></li>
 </ul>
+</section>
+<section id="other-details" class="level2">
+<h2 class="anchored" data-anchor-id="other-details">Other details</h2>
+<section id="bibbase" class="level5">
+<h5 class="anchored" data-anchor-id="bibbase"><a href="https://bibbase.org/">BibBase</a></h5>
+<p>Because I hate updating things by hand which can be automated, I use BibBase to automatically list my <a href="https://steffilazerte.ca/cv.html">Publications</a> and <a href="https://steffilazerte.ca/cv.html#presentations">Presentations</a> in my CV by pulling them in from <a href="https://www.zotero.org/">Zotero</a>.</p>
+</section>
+<section id="using-r-to-automate-things" class="level5">
+<h5 class="anchored" data-anchor-id="using-r-to-automate-things">Using R to automate things</h5>
+<p>Again because I hate updating things by hand, I use R code to automate many lists on my webiste.</p>
+<ul>
+<li>I use <a href="https://github.com/steffilazerte/steffilazerte.github.io/blob/main/presentations.qmd">code</a> to create lists of <a href="https://steffilazerte.ca/presentations.html">presentation resources</a> with links to the slides. I don’t love this setup and would like to fiddle it in future to be a) more attractive and b) simpler to work with.</li>
+<li>I use <a href="https://github.com/steffilazerte/steffilazerte.github.io/blob/main/cv.qmd">code</a> to create the tables displayed in my CV (note that the actual data and some of the functions aren’t included in this repository)</li>
+</ul>
+</section>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
@@ -310,6 +333,11 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">Creating a GitHub Pages site</a></li>
 <li><a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages">Custom Domains</a></li>
 </ul></li>
+<li>Working with git and GitHub
+<ul>
+<li><a href="https://happygitwithr.com/">Happy Git with R</a></li>
+<li><a href="https://birdscanada.github.io/BirdsCanada_GitHubGuide/">Birds Canada’s “GitHub: A Beginner’s Guide”</a></li>
+</ul></li>
 </ul>
 
 
@@ -321,7 +349,7 @@ ul.task-list li input[type="checkbox"] {
 <ol>
 <li id="fn1"><p>You can have your computer do this for you, but then your computer needs be on and running (and serving) files 24/7 and requires a more complex setup.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>You have to push the <code>docs</code> folder, but generally I recommend pushing all files except anything sensitive you need to keep private. This way you can share the love of how to create your own Quarto Website on GitHub!<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>In the sense that there are other, more complex things you can do, not in the sense that this is particularly straightforward<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>In the sense that there are other, more complex things you can do, not in the sense that this is particularly straightforward.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
