@@ -13,9 +13,6 @@ source("pre-render.R")
 
 ## Academic Activities 
 
-#### Positions
-**2018-Present** Adjunct Professor, Department of Biology, Brandon University
-
 #### MSc Committees
 **2019-Present** Department of Geography & Environment, Brandon University  
 **2019-Present** Department of Biology, Brandon University  
